@@ -1,12 +1,12 @@
 
 import React from 'react';
-import { ArrowDown, Windows, Apple, Linux } from 'lucide-react';
+import { ArrowDown, Monitor, Apple, Terminal } from 'lucide-react';
 
 const Download = () => {
   const operatingSystems = [
     {
       name: 'Windows',
-      icon: <Windows size={24} />,
+      icon: <Monitor size={24} />,
       versions: [
         { name: 'Windows x64', size: '84.2 MB', url: '#' },
         { name: 'Windows ARM64', size: '82.1 MB', url: '#' }
@@ -23,7 +23,7 @@ const Download = () => {
     },
     {
       name: 'Linux',
-      icon: <Linux size={24} />,
+      icon: <Terminal size={24} />,
       versions: [
         { name: 'Linux x64 (.deb)', size: '80.1 MB', url: '#' },
         { name: 'Linux x64 (.rpm)', size: '81.4 MB', url: '#' },
