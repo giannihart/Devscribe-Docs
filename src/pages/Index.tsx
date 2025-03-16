@@ -64,24 +64,46 @@ const Index = () => {
         
         <section id="get-started" className="mt-12">
           <h2 className="text-2xl font-semibold mb-4">Get started</h2>
-          <p className="text-codium-text-secondary mb-8">
-            If you're new to Codium, start here to embark on your AI-powered coding journey.
-          </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <FeatureCard
-              title="Windsurf Editor"
-              description="Tomorrow's editor, today. The world's first truly agentic IDE."
-              icon={<WindsurfIcon />}
-              to="/windsurf/getting-started"
-            />
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Introduction</h3>
+              <p className="text-codium-text-secondary mb-4">
+                Codium is an AI-powered development platform designed to streamline your coding workflow. If you're new to Codium, start here to embark on your AI-powered coding journey.
+              </p>
+            </div>
             
-            <FeatureCard
-              title="Codium Extensions"
-              description="Available in 40+ different IDEs with support for 70+ programming languages"
-              icon={<ExtensionsIcon />}
-              to="/extensions/getting-started"
-            />
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Quickstart</h3>
+              <p className="text-codium-text-secondary mb-4">
+                Get up and running with Codium in minutes. Choose the integration that works best for you:
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <FeatureCard
+                  title="Windsurf Editor"
+                  description="Tomorrow's editor, today. The world's first truly agentic IDE."
+                  icon={<WindsurfIcon />}
+                  to="/windsurf/getting-started"
+                />
+                
+                <FeatureCard
+                  title="Codium Extensions"
+                  description="Available in 40+ different IDEs with support for 70+ programming languages"
+                  icon={<ExtensionsIcon />}
+                  to="/extensions/getting-started"
+                />
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Development</h3>
+              <p className="text-codium-text-secondary mb-4">
+                Configure your development environment and optimize your experience with Codium's powerful customization options.
+              </p>
+              <a href="/download" className="inline-flex items-center gap-2 px-4 py-2 bg-codium-teal text-black rounded-md font-medium hover:bg-codium-teal/90 transition-colors">
+                Download Development Tools
+              </a>
+            </div>
           </div>
         </section>
         
