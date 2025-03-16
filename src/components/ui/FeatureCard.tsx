@@ -17,7 +17,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   to
 }) => {
   return (
-    <Link to={to} className="feature-card block">
+    <Link to={to} className="feature-card block group">
       <div className="mb-6">{icon}</div>
       <h3 className="text-lg font-medium mb-2">{title}</h3>
       <p className="text-codium-text-secondary text-sm">{description}</p>

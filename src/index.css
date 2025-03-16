@@ -78,7 +78,7 @@
   }
 
   .feature-card {
-    @apply bg-codium-card-bg border border-codium-border rounded-xl p-6 hover:border-codium-teal/50 transition-all duration-200 relative overflow-hidden group;
+    @apply bg-codium-card-bg border border-codium-border rounded-xl p-6 hover:border-codium-teal/50 transition-all duration-200 relative overflow-hidden;
   }
 
   .feature-card:hover .arrow-icon {
