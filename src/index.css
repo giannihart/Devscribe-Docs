@@ -1,7 +1,10 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import 'swagger-ui-react/swagger-ui.css';
+@import 'swagger-ui-themes/themes/3.x/theme-material.css';
 
 @layer base {
   :root {
@@ -52,33 +55,33 @@
   }
 
   body {
-    @apply bg-codium-dark-gray text-foreground antialiased scroll-smooth;
+    @apply bg-devscribe-dark-gray text-foreground antialiased scroll-smooth;
   }
 
   ::selection {
-    @apply bg-codium-teal/30 text-white;
+    @apply bg-devscribe-teal/30 text-white;
   }
 }
 
 @layer components {
   .sidebar-link {
-    @apply flex items-center gap-3 px-4 py-2 rounded-md text-[15px] text-codium-text-secondary hover:text-white hover:bg-codium-hover-bg transition-all duration-150 ease-in-out;
+    @apply flex items-center gap-3 px-4 py-2 rounded-md text-[15px] text-devscribe-text-secondary hover:text-white hover:bg-devscribe-hover-bg transition-all duration-150 ease-in-out;
   }
 
   .sidebar-link.active {
-    @apply bg-codium-hover-bg text-white;
+    @apply bg-devscribe-hover-bg text-white;
   }
 
   .sidebar-section {
-    @apply py-2 border-t border-codium-border mt-2;
+    @apply py-2 border-t border-devscribe-border mt-2;
   }
 
   .sidebar-heading {
-    @apply text-xs uppercase tracking-wide text-codium-text-secondary font-semibold px-4 py-2;
+    @apply text-xs uppercase tracking-wide text-devscribe-text-secondary font-semibold px-4 py-2;
   }
 
   .feature-card {
-    @apply bg-codium-card-bg border border-codium-border rounded-xl p-6 hover:border-codium-teal/50 transition-all duration-200 relative overflow-hidden;
+    @apply bg-devscribe-card-bg border border-devscribe-border rounded-xl p-6 hover:border-devscribe-teal/50 transition-all duration-200 relative overflow-hidden;
   }
 
   .feature-card:hover .arrow-icon {
@@ -90,6 +93,47 @@
   }
 
   .alert-box {
-    @apply bg-codium-hover-bg border border-codium-border rounded-xl p-6 flex gap-4 items-start;
+    @apply bg-devscribe-hover-bg border border-devscribe-border rounded-xl p-6 flex gap-4 items-start;
+  }
+
+  /* Swagger UI Dark Theme Customization */
+  .swagger-ui {
+    @apply text-white;
+  }
+
+  .swagger-ui .opblock {
+    @apply border-devscribe-border;
+  }
+
+  .swagger-ui .opblock-summary {
+    @apply bg-devscribe-dark-gray;
+  }
+
+  .swagger-ui .opblock-summary-get {
+    @apply bg-green-900/30;
+  }
+
+  .swagger-ui .opblock-summary-post {
+    @apply bg-blue-900/30;
+  }
+
+  .swagger-ui .opblock-summary-put {
+    @apply bg-yellow-900/30;
+  }
+
+  .swagger-ui .opblock-summary-delete {
+    @apply bg-red-900/30;
+  }
+
+  .swagger-ui .parameters-col_description {
+    @apply text-devscribe-text-secondary;
+  }
+
+  .swagger-ui .response-col_description {
+    @apply text-devscribe-text-secondary;
+  }
+
+  .swagger-ui .model-container {
+    @apply bg-devscribe-card-bg;
   }
 }

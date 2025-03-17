@@ -54,8 +54,8 @@ const Index = () => {
       <div className="flex-1 px-12 py-10 max-w-4xl">
         <PageHeading 
           subtitle="Get Started" 
-          title="Welcome to Codium"
-          description="Codium creates highly contextual, intuitive, and trustworthy AI-powered tools to help developers dream bigger."
+          title="Welcome to Devscribe"
+          description="Devscribe creates highly contextual, intuitive, and trustworthy AI-powered tools to help developers dream bigger."
         />
         
         <InfoBox>
@@ -68,15 +68,15 @@ const Index = () => {
           <div className="space-y-8">
             <div>
               <h3 className="text-xl font-semibold mb-2">Introduction</h3>
-              <p className="text-codium-text-secondary mb-4">
-                Codium is an AI-powered development platform designed to streamline your coding workflow. If you're new to Codium, start here to embark on your AI-powered coding journey.
+              <p className="text-devscribe-text-secondary mb-4">
+                Devscribe is an AI-powered development platform designed to streamline your coding workflow. If you're new to Devscribe, start here to embark on your AI-powered coding journey.
               </p>
             </div>
             
             <div>
               <h3 className="text-xl font-semibold mb-2">Quickstart</h3>
-              <p className="text-codium-text-secondary mb-4">
-                Get up and running with Codium in minutes. Choose the integration that works best for you:
+              <p className="text-devscribe-text-secondary mb-4">
+                Get up and running with Devscribe in minutes. Choose the integration that works best for you:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <FeatureCard
@@ -87,7 +87,7 @@ const Index = () => {
                 />
                 
                 <FeatureCard
-                  title="Codium Extensions"
+                  title="Devscribe Extensions"
                   description="Available in 40+ different IDEs with support for 70+ programming languages"
                   icon={<ExtensionsIcon />}
                   to="/extensions/getting-started"
@@ -97,10 +97,10 @@ const Index = () => {
             
             <div>
               <h3 className="text-xl font-semibold mb-2">Development</h3>
-              <p className="text-codium-text-secondary mb-4">
-                Configure your development environment and optimize your experience with Codium's powerful customization options.
+              <p className="text-devscribe-text-secondary mb-4">
+                Configure your development environment and optimize your experience with Devscribe's powerful customization options.
               </p>
-              <a href="/download" className="inline-flex items-center gap-2 px-4 py-2 bg-codium-teal text-black rounded-md font-medium hover:bg-codium-teal/90 transition-colors">
+              <a href="/download" className="inline-flex items-center gap-2 px-4 py-2 bg-devscribe-teal text-black rounded-md font-medium hover:bg-devscribe-teal/90 transition-colors">
                 Download Development Tools
               </a>
             </div>
@@ -113,7 +113,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FeatureCard
               title="Context Awareness"
-              description="Codium's context engine builds a deep understanding of your codebase."
+              description="Devscribe's context engine builds a deep understanding of your codebase."
               icon={<ContextIcon />}
               to="/features/context-awareness"
             />
@@ -132,30 +132,30 @@ const Index = () => {
           
           <ul className="space-y-2">
             <li>
-              <a href="/features/autocomplete" className="group flex items-center justify-between p-4 bg-codium-card-bg border border-codium-border rounded-lg hover:border-codium-teal/50 transition-all">
+              <a href="/features/autocomplete" className="group flex items-center justify-between p-4 bg-devscribe-card-bg border border-devscribe-border rounded-lg hover:border-devscribe-teal/50 transition-all">
                 <div className="flex items-center gap-2">
-                  <span className="text-codium-teal">⟨/⟩</span>
+                  <span className="text-devscribe-teal">⟨/⟩</span>
                   <span>Autocomplete</span>
                 </div>
-                <ChevronRight size={16} className="text-codium-text-secondary group-hover:translate-x-1 transition-transform" />
+                <ChevronRight size={16} className="text-devscribe-text-secondary group-hover:translate-x-1 transition-transform" />
               </a>
             </li>
             <li>
-              <a href="/features/chat" className="group flex items-center justify-between p-4 bg-codium-card-bg border border-codium-border rounded-lg hover:border-codium-teal/50 transition-all">
+              <a href="/features/chat" className="group flex items-center justify-between p-4 bg-devscribe-card-bg border border-devscribe-border rounded-lg hover:border-devscribe-teal/50 transition-all">
                 <div className="flex items-center gap-2">
-                  <span className="text-codium-teal">💬</span>
+                  <span className="text-devscribe-teal">💬</span>
                   <span>Chat</span>
                 </div>
-                <ChevronRight size={16} className="text-codium-text-secondary group-hover:translate-x-1 transition-transform" />
+                <ChevronRight size={16} className="text-devscribe-text-secondary group-hover:translate-x-1 transition-transform" />
               </a>
             </li>
             <li>
-              <a href="/features/command" className="group flex items-center justify-between p-4 bg-codium-card-bg border border-codium-border rounded-lg hover:border-codium-teal/50 transition-all">
+              <a href="/features/command" className="group flex items-center justify-between p-4 bg-devscribe-card-bg border border-devscribe-border rounded-lg hover:border-devscribe-teal/50 transition-all">
                 <div className="flex items-center gap-2">
-                  <span className="text-codium-teal">&gt;_</span>
+                  <span className="text-devscribe-teal">&gt;_</span>
                   <span>Command</span>
                 </div>
-                <ChevronRight size={16} className="text-codium-text-secondary group-hover:translate-x-1 transition-transform" />
+                <ChevronRight size={16} className="text-devscribe-text-secondary group-hover:translate-x-1 transition-transform" />
               </a>
             </li>
           </ul>

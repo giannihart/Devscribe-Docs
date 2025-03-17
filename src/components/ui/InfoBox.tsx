@@ -9,7 +9,7 @@ interface InfoBoxProps {
 const InfoBox: React.FC<InfoBoxProps> = ({ children }) => {
   return (
     <div className="alert-box">
-      <div className="text-codium-teal mt-0.5">
+      <div className="text-devscribe-teal mt-0.5">
         <Info size={20} />
       </div>
       <div className="text-sm">{children}</div>

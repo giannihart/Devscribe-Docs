@@ -1,71 +1,233 @@
-
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { BookOpen, MessageSquare, FileText, HelpCircle, ChevronRight } from 'lucide-react';
+import { 
+  BookOpen, 
+  MessageSquare, 
+  FileText, 
+  FileEdit, 
+  Code2, 
+  Link2, 
+  Settings, 
+  Navigation, 
+  Scissors,
+  BookOpenText 
+} from 'lucide-react';
 
 const Sidebar = () => {
   const location = useLocation();
-  const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({
-    'get-started': true
-  });
-
-  const toggleSection = (section: string) => {
-    setExpandedSections(prev => ({
-      ...prev,
-      [section]: !prev[section]
-    }));
-  };
 
   const isActive = (path: string) => location.pathname === path;
 
   return (
     <aside className="w-64 h-[calc(100vh-4rem)] overflow-y-auto pt-4 border-r border-codium-border fixed top-16 left-0 bg-codium-dark-gray">
       <div className="flex flex-col h-full">
-        <div className="px-2 py-2">
+        <div className="px-6 py-2">
           {/* Main navigation */}
           <nav className="space-y-1">
-            <Link to="/documentation" className={`sidebar-link ${isActive('/documentation') ? 'active' : ''}`}>
+            <Link 
+              to="/documentation" 
+              className={`
+                sidebar-link text-white font-bold
+                flex items-center gap-4 
+                px-4 py-2 rounded-md 
+                transition-all duration-200 
+                hover:bg-codium-hover-bg 
+                hover:text-white 
+                ${isActive('/documentation') ? 'bg-codium-hover-bg' : ''}
+              `}
+            >
               <BookOpen size={18} />
               <span>Documentation</span>
             </Link>
-            <Link to="/community" className={`sidebar-link ${isActive('/community') ? 'active' : ''}`}>
-              <MessageSquare size={18} />
-              <span>Discord Community</span>
+            <Link 
+              to="/guides" 
+              className={`
+                sidebar-link text-white font-bold
+                flex items-center gap-4 
+                px-4 py-2 rounded-md 
+                transition-all duration-200 
+                hover:bg-codium-hover-bg 
+                hover:text-white 
+                ${isActive('/guides') ? 'bg-codium-hover-bg' : ''}
+              `}
+            >
+              <BookOpenText size={18} />
+              <span>Guides</span>
             </Link>
-            <Link to="/blog" className={`sidebar-link ${isActive('/blog') ? 'active' : ''}`}>
+            <Link 
+              to="/community" 
+              className={`
+                sidebar-link text-white font-bold
+                flex items-center gap-4 
+                px-4 py-2 rounded-md 
+                transition-all duration-200 
+                hover:bg-codium-hover-bg 
+                hover:text-white 
+                ${isActive('/community') ? 'bg-codium-hover-bg' : ''}
+              `}
+            >
+              <MessageSquare size={18} />
+              <span>Community</span>
+            </Link>
+            <Link 
+              to="/blog" 
+              className={`
+                sidebar-link text-white font-bold
+                flex items-center gap-4 
+                px-4 py-2 rounded-md 
+                transition-all duration-200 
+                hover:bg-codium-hover-bg 
+                hover:text-white 
+                ${isActive('/blog') ? 'bg-codium-hover-bg' : ''}
+              `}
+            >
               <FileText size={18} />
               <span>Blog</span>
-            </Link>
-            <Link to="/support" className={`sidebar-link ${isActive('/support') ? 'active' : ''}`}>
-              <HelpCircle size={18} />
-              <span>Support</span>
             </Link>
           </nav>
         </div>
 
         {/* Get Started Section */}
         <div className="sidebar-section">
-          <div onClick={() => toggleSection('get-started')} className="sidebar-heading flex items-center justify-between cursor-pointer">
+          <div className="sidebar-heading text-white mb-2 px-6 font-bold">
             <span>Get Started</span>
-            <ChevronRight size={16} className={`transition-transform duration-200 ${expandedSections['get-started'] ? 'rotate-90' : ''}`} />
           </div>
           
-          {expandedSections['get-started'] && (
-            <div className="mt-1 space-y-1">
-              <Link to="/" className={`sidebar-link ${isActive('/') ? 'active' : ''}`}>
-                Introduction
-              </Link>
-              <Link to="/quickstart" className={`sidebar-link ${isActive('/quickstart') ? 'active' : ''}`}>
-                Quickstart
-              </Link>
-              <Link to="/development" className={`sidebar-link ${isActive('/development') ? 'active' : ''}`}>
-                Development
-              </Link>
-              <Link to="/auth" className={`sidebar-link ${isActive('/auth') ? 'active' : ''}`}>
-                Authentication (Enterprise)
-              </Link>
-            </div>
-          )}
+          <div className="mt-1 space-y-1">
+            <Link 
+              to="/" 
+              className={`
+                sidebar-link font-bold
+                flex items-center gap-4 
+                px-10 py-2 rounded-md 
+                transition-all duration-200 
+                hover:bg-codium-hover-bg 
+                ${isActive('/') ? 'bg-codium-hover-bg text-white' : 'text-codium-text-secondary'}
+              `}
+            >
+              Introduction
+            </Link>
+            <Link 
+              to="/quickstart" 
+              className={`
+                sidebar-link font-bold
+                flex items-center gap-4 
+                px-10 py-2 rounded-md 
+                transition-all duration-200 
+                hover:bg-codium-hover-bg 
+                ${isActive('/quickstart') ? 'bg-codium-hover-bg text-white' : 'text-codium-text-secondary'}
+              `}
+            >
+              Quickstart
+            </Link>
+            <Link 
+              to="/development" 
+              className={`
+                sidebar-link font-bold
+                flex items-center gap-4 
+                px-10 py-2 rounded-md 
+                transition-all duration-200 
+                hover:bg-codium-hover-bg 
+                ${isActive('/development') ? 'bg-codium-hover-bg text-white' : 'text-codium-text-secondary'}
+              `}
+            >
+              Development
+            </Link>
+          </div>
+        </div>
+
+        {/* Essentials Section */}
+        <div className="sidebar-section">
+          <div className="sidebar-heading text-white mb-2 px-6 font-bold">
+            <span>Essentials</span>
+          </div>
+          
+          <div className="mt-1 space-y-1">
+            <Link 
+              to="/doc-editing" 
+              className={`
+                sidebar-link font-bold
+                flex items-center gap-4 
+                px-10 py-2 rounded-md 
+                transition-all duration-200 
+                hover:bg-codium-hover-bg 
+                ${isActive('/doc-editing') ? 'bg-codium-hover-bg text-white' : 'text-codium-text-secondary'}
+              `}
+            >
+              <FileEdit size={18} />
+              <span>Doc Editing</span>
+            </Link>
+            <Link 
+              to="/code-blocks" 
+              className={`
+                sidebar-link font-bold
+                flex items-center gap-4 
+                px-10 py-2 rounded-md 
+                transition-all duration-200 
+                hover:bg-codium-hover-bg 
+                ${isActive('/code-blocks') ? 'bg-codium-hover-bg text-white' : 'text-codium-text-secondary'}
+              `}
+            >
+              <Code2 size={18} />
+              <span>Code Blocks</span>
+            </Link>
+            <Link 
+              to="/embeds" 
+              className={`
+                sidebar-link font-bold
+                flex items-center gap-4 
+                px-10 py-2 rounded-md 
+                transition-all duration-200 
+                hover:bg-codium-hover-bg 
+                ${isActive('/embeds') ? 'bg-codium-hover-bg text-white' : 'text-codium-text-secondary'}
+              `}
+            >
+              <Link2 size={18} />
+              <span>Embeds</span>
+            </Link>
+            <Link 
+              to="/global-settings" 
+              className={`
+                sidebar-link font-bold
+                flex items-center gap-4 
+                px-10 py-2 rounded-md 
+                transition-all duration-200 
+                hover:bg-codium-hover-bg 
+                ${isActive('/global-settings') ? 'bg-codium-hover-bg text-white' : 'text-codium-text-secondary'}
+              `}
+            >
+              <Settings size={18} />
+              <span>Global Settings</span>
+            </Link>
+            <Link 
+              to="/navigation" 
+              className={`
+                sidebar-link font-bold
+                flex items-center gap-4 
+                px-10 py-2 rounded-md 
+                transition-all duration-200 
+                hover:bg-codium-hover-bg 
+                ${isActive('/navigation') ? 'bg-codium-hover-bg text-white' : 'text-codium-text-secondary'}
+              `}
+            >
+              <Navigation size={18} />
+              <span>Navigation</span>
+            </Link>
+            <Link 
+              to="/snippets" 
+              className={`
+                sidebar-link font-bold
+                flex items-center gap-4 
+                px-10 py-2 rounded-md 
+                transition-all duration-200 
+                hover:bg-codium-hover-bg 
+                ${isActive('/snippets') ? 'bg-codium-hover-bg text-white' : 'text-codium-text-secondary'}
+              `}
+            >
+              <Scissors size={18} />
+              <span>Snippets</span>
+            </Link>
+          </div>
         </div>
       </div>
     </aside>

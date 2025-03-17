@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
@@ -13,11 +12,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const showSidebar = location.pathname !== '/download';
 
   return (
-    <div className="min-h-screen bg-codium-dark-gray text-white">
+    <div className="min-h-screen bg-devscribe-dark-gray text-white">
       <Navbar />
       <div className="flex pt-16">
         {showSidebar && <Sidebar />}
-        <main className={`${showSidebar ? 'ml-64' : ''} flex-1 min-h-[calc(100vh-4rem)]`}>
+        <main className={`${showSidebar ? 'ml-72' : ''} flex-1 min-h-[calc(100vh-4rem)]`}>
           {children}
         </main>
       </div>

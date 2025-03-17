@@ -10,7 +10,7 @@ const Blog = () => {
       title: "Introducing Cascade: An Agentic Coding Assistant",
       excerpt: "Today, we're excited to announce Cascade, a revolutionary new way to interact with AI for software development.",
       author: "Sarah Chen",
-      role: "CTO at Codium",
+      role: "CTO at Devscribe",
       date: "June 15, 2023",
       category: "Product Updates",
       image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2034&h=1356&auto=format&fit=crop"
@@ -27,7 +27,7 @@ const Blog = () => {
     },
     {
       id: 3,
-      title: "Best Practices for Using Codium in Large Teams",
+      title: "Best Practices for Using Devscribe in Large Teams",
       excerpt: "Implementing AI tools in enterprise teams requires careful planning. Here's our guide for successful deployment.",
       author: "Jenna Kim",
       role: "DevOps Specialist",
@@ -51,13 +51,13 @@ const Blog = () => {
     <div className="px-12 py-10 max-w-6xl">
       <PageHeading 
         subtitle="Blog" 
-        title="Codium Blog"
-        description="News, tutorials, and insights about Codium and AI-assisted development."
+        title="Devscribe Blog"
+        description="News, tutorials, and insights about Devscribe and AI-assisted development."
       />
       
       <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
         {blogPosts.map(post => (
-          <div key={post.id} className="flex flex-col overflow-hidden border border-codium-border rounded-xl hover:border-codium-teal/50 transition-all duration-200 group">
+          <div key={post.id} className="flex flex-col overflow-hidden border border-devscribe-border rounded-xl hover:border-devscribe-teal/50 transition-all duration-200 group">
             <div className="h-48 overflow-hidden">
               <img 
                 src={post.image} 
@@ -67,27 +67,27 @@ const Blog = () => {
             </div>
             <div className="flex-1 p-6 flex flex-col">
               <div className="mb-2">
-                <span className="inline-block text-xs font-medium bg-codium-teal/10 text-codium-teal px-2.5 py-1 rounded">
+                <span className="inline-block text-xs font-medium bg-devscribe-teal/10 text-devscribe-teal px-2.5 py-1 rounded">
                   {post.category}
                 </span>
               </div>
-              <h3 className="text-xl font-semibold mb-3 group-hover:text-codium-teal transition-colors">
+              <h3 className="text-xl font-semibold mb-3 group-hover:text-devscribe-teal transition-colors">
                 {post.title}
               </h3>
-              <p className="text-codium-text-secondary mb-4 flex-1">
+              <p className="text-devscribe-text-secondary mb-4 flex-1">
                 {post.excerpt}
               </p>
               <div className="mt-auto flex justify-between items-center">
                 <div className="flex items-center space-x-2">
-                  <div className="w-10 h-10 rounded-full bg-codium-hover-bg flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-full bg-devscribe-hover-bg flex items-center justify-center">
                     <span className="text-sm font-medium">{post.author.split(' ').map(n => n[0]).join('')}</span>
                   </div>
                   <div>
                     <div className="text-sm font-medium">{post.author}</div>
-                    <div className="text-xs text-codium-text-secondary">{post.role}</div>
+                    <div className="text-xs text-devscribe-text-secondary">{post.role}</div>
                   </div>
                 </div>
-                <div className="flex items-center text-xs text-codium-text-secondary">
+                <div className="flex items-center text-xs text-devscribe-text-secondary">
                   <Calendar size={14} className="mr-1" />
                   {post.date}
                 </div>
@@ -98,7 +98,7 @@ const Blog = () => {
       </div>
       
       <div className="mt-10 flex justify-center">
-        <button className="px-6 py-2.5 border border-codium-border rounded-md hover:bg-codium-hover-bg transition-colors">
+        <button className="px-6 py-2.5 border border-devscribe-border rounded-md hover:bg-devscribe-hover-bg transition-colors">
           Load More Articles
         </button>
       </div>

@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -14,6 +13,15 @@ import Community from "./pages/Community";
 import Blog from "./pages/Blog";
 import Support from "./pages/Support";
 import Auth from "./pages/Auth";
+import Guides from "./pages/Guides";
+import DocEditing from "./pages/DocEditing";
+import CodeBlocks from "./pages/CodeBlocks";
+import Embeds from "./pages/Embeds";
+import Snippets from "./pages/Snippets";
+import GlobalSettings from "./pages/GlobalSettings";
+import Navigation from "./pages/Navigation";
+import Quickstart from "./pages/Quickstart";
+import Development from "./pages/Development";
 import WindsurfGettingStarted from "./pages/windsurf/GettingStarted";
 import WindsurfCascade from "./pages/windsurf/Cascade";
 import WindsurfModels from "./pages/windsurf/Models";
@@ -45,6 +53,17 @@ const App = () => (
           <Route path="/blog" element={<Layout><Blog /></Layout>} />
           <Route path="/support" element={<Layout><Support /></Layout>} />
           <Route path="/auth" element={<Layout><Auth /></Layout>} />
+          <Route path="/guides" element={<Layout><Guides /></Layout>} />
+          <Route path="/quickstart" element={<Layout><Quickstart /></Layout>} />
+          <Route path="/development" element={<Layout><Development /></Layout>} />
+          
+          {/* Essentials Routes */}
+          <Route path="/doc-editing" element={<Layout><DocEditing /></Layout>} />
+          <Route path="/code-blocks" element={<Layout><CodeBlocks /></Layout>} />
+          <Route path="/embeds" element={<Layout><Embeds /></Layout>} />
+          <Route path="/snippets" element={<Layout><Snippets /></Layout>} />
+          <Route path="/global-settings" element={<Layout><GlobalSettings /></Layout>} />
+          <Route path="/navigation" element={<Layout><Navigation /></Layout>} />
           
           {/* Windsurf Routes */}
           <Route path="/windsurf/getting-started" element={<Layout><WindsurfGettingStarted /></Layout>} />

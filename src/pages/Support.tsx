@@ -7,7 +7,7 @@ import InfoBox from '../components/ui/InfoBox';
 const Support = () => {
   const faqs = [
     {
-      question: "How do I get started with Codium?",
+      question: "How do I get started with Devscribe?",
       answer: "To get started, download Codium for your platform from our download page, or install one of our IDE extensions. Follow the installation instructions and you'll be up and running in minutes."
     },
     {
