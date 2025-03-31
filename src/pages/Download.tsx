@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { ArrowDown, Monitor, Apple, Terminal, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import GroupLogo from '@/lib/Group 19.png';
 
 const Download = () => {
   const operatingSystems = [
@@ -37,14 +37,13 @@ const Download = () => {
     <div className="min-h-screen bg-gradient-to-b from-devscribe-dark-gray to-black py-24 px-6">
       <div className="max-w-3xl mx-auto text-center">
         <div className="mb-12">
-          <div className="flex justify-center items-center gap-3 mb-4">
-            <div className="w-10 h-10 rounded bg-white flex items-center justify-center">
-              <span className="text-black font-bold text-sm">C</span>
-            </div>
-            <span className="text-white font-medium text-2xl">devscribe</span>
-          </div>
+          <img 
+            src={GroupLogo} 
+            alt="Devscribe Logo" 
+            className="mx-auto h-16 w-auto mb-8"
+          />
           
-          <h1 className="text-4xl font-bold mb-4">Download Devscribe</h1>
+          <h1 className="text-3xl font-bold mb-4">Download Today</h1>
           <p className="text-devscribe-text-secondary max-w-xl mx-auto">
             Get started with Devscribe's AI-powered development tools. Download the latest version for your platform.
           </p>
