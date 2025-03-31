@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
@@ -14,7 +13,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   
   // Determine which pages should show a sidebar and which one
   const showSidebar = location.pathname !== '/download';
-  const isApiRelatedPage = location.pathname === '/api-marketplace' || location.pathname.startsWith('/api-docs/');
+  const isApiRelatedPage = location.pathname === '/api-marketplace' || 
+    location.pathname === '/api-deepsearch' || 
+    location.pathname.startsWith('/api-docs/');
   
   // Choose the appropriate sidebar
   const SidebarComponent = isApiRelatedPage ? APISidebar : Sidebar;

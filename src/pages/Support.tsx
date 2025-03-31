@@ -1,4 +1,3 @@
-
 import React from 'react';
 import PageHeading from '../components/ui/PageHeading';
 import { MessageCircle, File, Mail, HelpCircle } from 'lucide-react';
@@ -8,19 +7,19 @@ const Support = () => {
   const faqs = [
     {
       question: "How do I get started with Devscribe?",
-      answer: "To get started, download Codium for your platform from our download page, or install one of our IDE extensions. Follow the installation instructions and you'll be up and running in minutes."
+      answer: "To get started, download Devscribe for your platform from our download page, or install one of our IDE extensions. Follow the installation instructions and you'll be up and running in minutes."
     },
     {
-      question: "Is Codium free to use?",
-      answer: "Codium offers both free and paid plans. The free plan includes basic features, while our paid plans include additional capabilities like access to more powerful models, higher usage limits, and team collaboration features."
+      question: "Is Devscribe free to use?",
+      answer: "Devscribe offers both free and paid plans. The free plan includes basic features, while our paid plans include additional capabilities like access to more powerful models, higher usage limits, and team collaboration features."
     },
     {
-      question: "How does Codium handle my code data?",
-      answer: "Codium takes data privacy seriously. We do not store your code permanently on our servers, and all data transmission is encrypted. Your code is only used to provide suggestions and is not used to train our models without explicit consent."
+      question: "How does Devscribe handle my code data?",
+      answer: "Devscribe takes data privacy seriously. We do not store your code permanently on our servers, and all data transmission is encrypted. Your code is only used to provide suggestions and is not used to train our models without explicit consent."
     },
     {
-      question: "Can I use Codium offline?",
-      answer: "Some features of Codium require an internet connection to communicate with our AI models. However, we do offer offline capabilities for certain features with our Enterprise plan."
+      question: "Can I use Devscribe offline?",
+      answer: "Some features of Devscribe require an internet connection to communicate with our AI models. However, we do offer offline capabilities for certain features with our Enterprise plan."
     },
     {
       question: "How do I cancel my subscription?",
@@ -32,7 +31,7 @@ const Support = () => {
     <div className="px-12 py-10 max-w-5xl">
       <PageHeading 
         subtitle="Support" 
-        title="Get Help with Codium"
+        title="Get Help with Devscribe"
         description="Find resources, answers to common questions, and ways to contact our support team."
       />
       
@@ -46,7 +45,7 @@ const Support = () => {
           <p className="text-codium-text-secondary text-sm mb-4">
             Get real-time help from our support team. Available Monday through Friday, 9am-5pm PT.
           </p>
-          <button className="inline-flex items-center gap-2 px-4 py-2 bg-codium-teal text-black rounded-md font-medium hover:bg-codium-teal/90 transition-colors">
+          <button className="inline-flex items-center gap-2 px-4 py-2 bg-codium-teal text-devscribe-dark rounded-md font-medium hover:bg-codium-teal/90 transition-colors">
             Start Chat
           </button>
         </div>
@@ -74,7 +73,7 @@ const Support = () => {
           <p className="text-codium-text-secondary text-sm mb-4">
             Send us an email and we'll get back to you within 24 hours on business days.
           </p>
-          <a href="mailto:support@codium.ai" className="inline-flex items-center gap-2 px-4 py-2 bg-codium-hover-bg text-white rounded-md hover:bg-codium-hover-bg/80 transition-colors">
+          <a href="mailto:support@devscribe.ai" className="inline-flex items-center gap-2 px-4 py-2 bg-codium-hover-bg text-white rounded-md hover:bg-codium-hover-bg/80 transition-colors">
             Email Us
           </a>
         </div>
@@ -86,7 +85,7 @@ const Support = () => {
           </div>
           <h3 className="text-lg font-medium mb-2">Community Help</h3>
           <p className="text-codium-text-secondary text-sm mb-4">
-            Join our Discord community to get help from other users and Codium team members.
+            Join our Discord community to get help from other users and Devscribe team members.
           </p>
           <a href="/community" className="inline-flex items-center gap-2 px-4 py-2 bg-codium-hover-bg text-white rounded-md hover:bg-codium-hover-bg/80 transition-colors">
             Join Community

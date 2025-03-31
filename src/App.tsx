@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -38,6 +37,7 @@ import FeaturesCommand from "./pages/features/Command";
 import FeaturesContextAwareness from "./pages/features/ContextAwareness";
 import APIMarketplace from "./pages/APIMarketplace";
 import APIDocumentation from "./pages/APIDocumentation";
+import APIDeepsearch from "./pages/APIDeepsearch";
 
 const queryClient = new QueryClient();
 
@@ -63,6 +63,7 @@ const App = () => (
           {/* API Marketplace Routes */}
           <Route path="/api-marketplace" element={<Layout><APIMarketplace /></Layout>} />
           <Route path="/api-docs/:apiId" element={<Layout><APIDocumentation /></Layout>} />
+          <Route path="/api-deepsearch" element={<Layout><APIDeepsearch /></Layout>} />
           
           {/* Essentials Routes */}
           <Route path="/doc-editing" element={<Layout><DocEditing /></Layout>} />

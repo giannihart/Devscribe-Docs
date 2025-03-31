@@ -154,7 +154,6 @@ const Sidebar = () => {
                 ${isActive('/doc-editing') ? 'bg-codium-hover-bg text-white' : 'text-codium-text-secondary'}
               `}
             >
-              <FileEdit size={18} />
               <span>Doc Editing</span>
             </Link>
             <Link 
@@ -168,7 +167,6 @@ const Sidebar = () => {
                 ${isActive('/code-blocks') ? 'bg-codium-hover-bg text-white' : 'text-codium-text-secondary'}
               `}
             >
-              <Code2 size={18} />
               <span>Code Blocks</span>
             </Link>
             <Link 
@@ -182,7 +180,6 @@ const Sidebar = () => {
                 ${isActive('/embeds') ? 'bg-codium-hover-bg text-white' : 'text-codium-text-secondary'}
               `}
             >
-              <Link2 size={18} />
               <span>Embeds</span>
             </Link>
             <Link 
@@ -196,7 +193,6 @@ const Sidebar = () => {
                 ${isActive('/global-settings') ? 'bg-codium-hover-bg text-white' : 'text-codium-text-secondary'}
               `}
             >
-              <Settings size={18} />
               <span>Global Settings</span>
             </Link>
             <Link 
@@ -210,7 +206,6 @@ const Sidebar = () => {
                 ${isActive('/navigation') ? 'bg-codium-hover-bg text-white' : 'text-codium-text-secondary'}
               `}
             >
-              <Navigation size={18} />
               <span>Navigation</span>
             </Link>
             <Link 
@@ -224,7 +219,6 @@ const Sidebar = () => {
                 ${isActive('/snippets') ? 'bg-codium-hover-bg text-white' : 'text-codium-text-secondary'}
               `}
             >
-              <Scissors size={18} />
               <span>Snippets</span>
             </Link>
           </div>

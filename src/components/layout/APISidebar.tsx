@@ -3,24 +3,17 @@ import { Link, useLocation } from 'react-router-dom';
 import { 
   ChevronDown, 
   ChevronRight, 
-  Database, 
-  MessageSquare, 
-  CreditCard, 
-  BarChart, 
-  Lock, 
-  Cloud,
-  Brain,
-  BookOpen,
+  Grid,
   MessageCircle,
+  BookOpen,
   HelpCircle,
-  Grid
+  Search
 } from 'lucide-react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 
 // API category type and data structure
 type APICategory = {
   name: string;
-  icon: React.ElementType;
   apis: {
     id: string;
     name: string;
@@ -31,7 +24,6 @@ type APICategory = {
 const apiCategories: APICategory[] = [
   {
     name: 'Analytics',
-    icon: BarChart,
     apis: [
       { id: 'analyticshq', name: 'AnalyticsHQ', description: 'User behavior tracking & insights' },
       { id: 'metricflow', name: 'MetricFlow', description: 'Real-time data analytics pipeline' },
@@ -40,7 +32,6 @@ const apiCategories: APICategory[] = [
   },
   {
     name: 'Payments',
-    icon: CreditCard,
     apis: [
       { id: 'paystream', name: 'PayStream', description: 'Multi-currency payment processing' },
       { id: 'invoicepal', name: 'InvoicePal', description: 'Automated invoicing system' },
@@ -49,7 +40,6 @@ const apiCategories: APICategory[] = [
   },
   {
     name: 'Communication',
-    icon: MessageSquare,
     apis: [
       { id: 'messagenet', name: 'MessageNet', description: 'SMS, email & push notifications' },
       { id: 'chatbridge', name: 'ChatBridge', description: 'Real-time chat integration' },
@@ -58,7 +48,6 @@ const apiCategories: APICategory[] = [
   },
   {
     name: 'AI',
-    icon: Brain,
     apis: [
       { id: 'ai-insights', name: 'AI Insights', description: 'Natural language processing' },
       { id: 'visionai', name: 'VisionAI', description: 'Image recognition & analysis' },
@@ -67,7 +56,6 @@ const apiCategories: APICategory[] = [
   },
   {
     name: 'Storage',
-    icon: Cloud,
     apis: [
       { id: 'cloudstore', name: 'CloudStore', description: 'Scalable object storage' },
       { id: 'blobvault', name: 'BlobVault', description: 'Secure blob storage service' },
@@ -76,7 +64,6 @@ const apiCategories: APICategory[] = [
   },
   {
     name: 'Authentication',
-    icon: Lock,
     apis: [
       { id: 'authguard', name: 'AuthGuard', description: 'Secure authentication & authorization' },
       { id: 'identitycore', name: 'IdentityCore', description: 'Identity management system' },
@@ -85,7 +72,6 @@ const apiCategories: APICategory[] = [
   },
   {
     name: 'Database',
-    icon: Database,
     apis: [
       { id: 'querymaster', name: 'QueryMaster', description: 'Advanced database operations' },
       { id: 'nosqlcloud', name: 'NoSQLCloud', description: 'Document-based database service' },
@@ -105,7 +91,9 @@ const APISidebar = () => {
     location.pathname.split('/api-docs/')[1] : '';
 
   return (
-    <aside className="w-64 h-[calc(100vh-4rem)] overflow-y-auto overflow-x-hidden pt-4 border-r border-codium-border fixed top-16 left-0 bg-codium-dark-gray">
+    <aside className="w-64 h-[calc(100vh-4rem)] overflow-y-auto overflow-x-hidden pt-4 border-r border-codium-border fixed top-16 left-0 bg-codium-dark-gray 
+      scrollbar-thin scrollbar-track-devscribe-dark-gray scrollbar-thumb-devscribe-hover-bg/80 hover:scrollbar-thumb-devscribe-hover-bg/90"
+    >
       <div className="flex flex-col h-full">
         <div className="px-6 py-2">
           <nav className="space-y-1">
@@ -123,6 +111,21 @@ const APISidebar = () => {
             >
               <Grid size={18} />
               <span>API Marketplace</span>
+            </Link>
+            <Link 
+              to="/api-deepsearch" 
+              className={`
+                sidebar-link text-white font-bold
+                flex items-center gap-4 
+                px-4 py-2 rounded-md 
+                transition-all duration-200 
+                hover:bg-codium-hover-bg 
+                hover:text-white 
+                ${location.pathname === '/api-deepsearch' ? 'bg-codium-hover-bg' : ''}
+              `}
+            >
+              <Search size={18} />
+              <span>API Deepsearch</span>
             </Link>
           </nav>
         </div>
@@ -254,11 +257,10 @@ const APISidebar = () => {
                     w-full
                   `}>
                     <div className="flex items-center gap-4 flex-grow">
-                      <category.icon size={18} className="flex-shrink-0" />
                       <span className="truncate">{category.name}</span>
                     </div>
-                    <div className="flex-shrink-0">
-                      {isOpen ? <ChevronDown size={18} /> : <ChevronRight size={18} />}
+                    <div>
+                      {isOpen ? <ChevronDown size={14} /> : <ChevronRight size={14} />}
                     </div>
                   </CollapsibleTrigger>
                   <CollapsibleContent>

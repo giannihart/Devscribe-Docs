@@ -28,7 +28,11 @@ const Introduction = () => {
   };
 
   return (
-    <div className="p-8 max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto px-4 py-8">
+      <Helmet>
+        <title>Introduction - Devscribe</title>
+      </Helmet>
+
       {/* On this page navigation */}
       <div className="fixed right-8 top-24 w-64 hidden xl:block">
         <div className="bg-devscribe-card-bg border border-devscribe-border rounded-lg p-4">
@@ -156,12 +160,7 @@ const Introduction = () => {
           </ol>
         </div>
 
-        <PageNavigation 
-          nextPage={{
-            name: "Quickstart",
-            path: "/quickstart"
-          }}
-        />
+        <PageNavigation prevPage={prevPage} nextPage={nextPage} />
       </div>
     </div>
   );
