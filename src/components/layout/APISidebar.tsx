@@ -152,9 +152,9 @@ const APISidebar = () => {
                     <category.icon size={16} />
                     <span>{category.name}</span>
                   </div>
-                  {({ open }) => (
+                  {open => 
                     open ? <ChevronDown size={16} /> : <ChevronRight size={16} />
-                  )}
+                  }
                 </CollapsibleTrigger>
                 <CollapsibleContent>
                   <div className="ml-2 pl-4 border-l border-devscribe-border space-y-1 py-1">
