@@ -419,7 +419,40 @@ const APIDocumentation = () => {
           </div>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
+        {/* Modified layout to make Swagger UI wider */}
+        <div className="mb-10">
+          <div className="mb-6 flex justify-between items-center">
+            <h2 className="text-2xl font-semibold">API Explorer</h2>
+            <div className="space-y-2 flex items-center gap-4">
+              <Button 
+                onClick={() => setShowSwagger(!showSwagger)} 
+                variant="outline" 
+                className="bg-devscribe-teal text-black hover:bg-devscribe-teal/90 border-none">
+                {showSwagger ? 'Hide API Explorer' : 'Try API Explorer'}
+              </Button>
+              <a href="#" className="text-devscribe-teal hover:underline flex items-center gap-1 text-sm">
+                <Download size={16} />
+                Download SDK
+              </a>
+              <a href="#" className="text-devscribe-teal hover:underline flex items-center gap-1 text-sm">
+                <ExternalLink size={16} />
+                View Full API Reference
+              </a>
+            </div>
+          </div>
+          
+          {showSwagger && (
+            <div className="bg-white rounded-xl p-4 mb-10 overflow-hidden">
+              <SwaggerUI url={apiInfo.swaggerUrl} />
+            </div>
+          )}
+          
+          <InfoBox className="mb-10">
+            Need help integrating this API? Our support team is available to assist you. Contact us at support@devscribe.com
+          </InfoBox>
+        </div>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
             <div className="mb-10">
               <h2 className="text-2xl font-semibold mb-4">Overview</h2>
@@ -524,39 +557,9 @@ const APIDocumentation = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="lg:col-span-1">
-            <div className="sticky top-20">
-              <div className="mb-6">
-                <Button 
-                  onClick={() => setShowSwagger(!showSwagger)} 
-                  variant="outline" 
-                  className="w-full mb-4 bg-devscribe-teal text-black hover:bg-devscribe-teal/90 border-none">
-                  {showSwagger ? 'Hide API Explorer' : 'Try API Explorer'}
-                </Button>
-                
-                <div className="space-y-2">
-                  <a href="#" className="text-devscribe-teal hover:underline flex items-center gap-1 text-sm">
-                    <Download size={16} />
-                    Download SDK
-                  </a>
-                  <a href="#" className="text-devscribe-teal hover:underline flex items-center gap-1 text-sm">
-                    <ExternalLink size={16} />
-                    View Full API Reference
-                  </a>
-                </div>
-              </div>
-              
-              {showSwagger && (
-                <div className="bg-white rounded-xl p-4 overflow-hidden" style={{ height: '500px', overflow: 'auto' }}>
-                  <SwaggerUI url={apiInfo.swaggerUrl} />
-                </div>
-              )}
-              
-              <InfoBox>
-                Need help integrating this API? Our support team is available to assist you. Contact us at support@devscribe.com
-              </InfoBox>
-            </div>
+            {/* Additional content can be placed here if needed */}
           </div>
         </div>
       </div>
