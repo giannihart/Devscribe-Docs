@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Search } from 'lucide-react';
 import { ArrowUpRight } from 'lucide-react';
@@ -12,7 +11,6 @@ type APICategory = 'All' | 'Analytics' | 'Payments' | 'Communication' | 'AI' | '
 interface APIProvider {
   id: string;
   name: string;
-  logo: string;
   category: APICategory;
   description: string;
   pricing: string;
@@ -29,7 +27,6 @@ const APIMarketplace = () => {
     {
       id: '1',
       name: 'AnalyticsHQ',
-      logo: 'https://via.placeholder.com/50',
       category: 'Analytics',
       description: 'Comprehensive analytics API for tracking user behavior and engagement.',
       pricing: 'Free tier available',
@@ -39,7 +36,6 @@ const APIMarketplace = () => {
     {
       id: '2',
       name: 'PayStream',
-      logo: 'https://via.placeholder.com/50',
       category: 'Payments',
       description: 'Secure payment processing API with support for multiple currencies.',
       pricing: 'Usage-based',
@@ -49,7 +45,6 @@ const APIMarketplace = () => {
     {
       id: '3',
       name: 'MessageNet',
-      logo: 'https://via.placeholder.com/50',
       category: 'Communication',
       description: 'Send SMS, email, and push notifications through a single API.',
       pricing: 'Per message',
@@ -59,7 +54,6 @@ const APIMarketplace = () => {
     {
       id: '4',
       name: 'AI Insights',
-      logo: 'https://via.placeholder.com/50',
       category: 'AI',
       description: 'Natural language processing and machine learning APIs for your applications.',
       pricing: 'Token-based',
@@ -69,7 +63,6 @@ const APIMarketplace = () => {
     {
       id: '5',
       name: 'CloudStore',
-      logo: 'https://via.placeholder.com/50',
       category: 'Storage',
       description: 'Scalable object storage API for developers.',
       pricing: 'Pay as you go',
@@ -79,7 +72,6 @@ const APIMarketplace = () => {
     {
       id: '6',
       name: 'AuthGuard',
-      logo: 'https://via.placeholder.com/50',
       category: 'Authentication',
       description: 'Secure authentication and authorization API for your applications.',
       pricing: 'Free tier available',
@@ -129,9 +121,8 @@ const APIMarketplace = () => {
             {filteredApis.map((api) => (
               <div key={api.id} className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-6 hover:border-devscribe-teal/50 transition-all relative group">
                 <div className="flex items-center gap-4 mb-4">
-                  <img src={api.logo} alt={api.name} className="w-12 h-12 rounded-lg bg-black/20" />
                   <div>
-                    <h3 className="font-medium">{api.name}</h3>
+                    <h3 className="text-xl font-bold text-white mb-2">{api.name}</h3>
                     <span className="text-xs px-2 py-0.5 bg-devscribe-hover-bg rounded-full text-devscribe-text-secondary">
                       {api.category}
                     </span>

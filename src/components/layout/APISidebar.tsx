@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
@@ -11,7 +10,10 @@ import {
   Lock, 
   Cloud,
   Brain,
-  Search
+  BookOpen,
+  MessageCircle,
+  HelpCircle,
+  Grid
 } from 'lucide-react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 
@@ -94,17 +96,7 @@ const apiCategories: APICategory[] = [
 
 const APISidebar = () => {
   const location = useLocation();
-  const [searchTerm, setSearchTerm] = useState('');
   
-  // Filter API categories and items based on search term
-  const filteredCategories = apiCategories.map(category => ({
-    ...category,
-    apis: category.apis.filter(api => 
-      api.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      api.description.toLowerCase().includes(searchTerm.toLowerCase())
-    )
-  })).filter(category => category.apis.length > 0);
-
   const isApiPath = (path: string) => {
     return path.startsWith('/api-docs/');
   };
@@ -113,69 +105,190 @@ const APISidebar = () => {
     location.pathname.split('/api-docs/')[1] : '';
 
   return (
-    <aside className="w-64 h-[calc(100vh-4rem)] overflow-y-auto pt-4 border-r border-devscribe-border fixed top-16 left-0 bg-devscribe-dark-gray">
-      <div className="px-6 py-2 mb-4">
-        <div className="relative">
-          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-            <Search size={16} className="text-devscribe-text-secondary" />
-          </div>
-          <input
-            type="text"
-            placeholder="Search APIs..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full bg-devscribe-card-bg border border-devscribe-border rounded-md pl-10 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-devscribe-teal"
-          />
-        </div>
-      </div>
-      
+    <aside className="w-64 h-[calc(100vh-4rem)] overflow-y-auto overflow-x-hidden pt-4 border-r border-codium-border fixed top-16 left-0 bg-codium-dark-gray">
       <div className="flex flex-col h-full">
-        <div className="px-6">
-          <Link 
-            to="/api-marketplace" 
-            className={`flex items-center gap-2 px-3 py-2 rounded-md transition-colors ${
-              location.pathname === '/api-marketplace' 
-                ? 'bg-devscribe-hover-bg text-white' 
-                : 'text-devscribe-text-secondary hover:bg-devscribe-hover-bg hover:text-white'
-            }`}
-          >
-            <span className="font-medium">API Marketplace</span>
-          </Link>
+        <div className="px-6 py-2">
+          <nav className="space-y-1">
+            <Link 
+              to="/api-marketplace" 
+              className={`
+                sidebar-link text-white font-bold
+                flex items-center gap-4 
+                px-4 py-2 rounded-md 
+                transition-all duration-200 
+                hover:bg-codium-hover-bg 
+                hover:text-white 
+                ${location.pathname === '/api-marketplace' ? 'bg-codium-hover-bg' : ''}
+              `}
+            >
+              <Grid size={18} />
+              <span>API Marketplace</span>
+            </Link>
+          </nav>
+        </div>
+
+        {/* Resources Section */}
+        <div className="sidebar-section">
+          <div className="sidebar-heading text-white mb-2 px-6 font-bold">
+            <span>Resources</span>
+          </div>
           
-          <h3 className="font-semibold text-xs uppercase text-devscribe-text-secondary mt-6 mb-2 px-3">API Categories</h3>
+          <div className="mt-1 space-y-1">
+            <Link 
+              to="/community" 
+              className={`
+                sidebar-link font-bold
+                flex items-center gap-4 
+                px-10 py-2 rounded-md 
+                transition-all duration-200 
+                hover:bg-codium-hover-bg 
+                text-codium-text-secondary
+              `}
+            >
+              <MessageCircle size={18} />
+              <span>Community</span>
+            </Link>
+            <Link 
+              to="/blog" 
+              className={`
+                sidebar-link font-bold
+                flex items-center gap-4 
+                px-10 py-2 rounded-md 
+                transition-all duration-200 
+                hover:bg-codium-hover-bg 
+                text-codium-text-secondary
+              `}
+            >
+              <BookOpen size={18} />
+              <span>Devscribe Blog</span>
+            </Link>
+            <Link 
+              to="/support" 
+              className={`
+                sidebar-link font-bold
+                flex items-center gap-4 
+                px-10 py-2 rounded-md 
+                transition-all duration-200 
+                hover:bg-codium-hover-bg 
+                text-codium-text-secondary
+              `}
+            >
+              <HelpCircle size={18} />
+              <span>Support</span>
+            </Link>
+          </div>
+        </div>
+
+        {/* Getting Started Section */}
+        <div className="sidebar-section mt-4">
+          <div className="sidebar-heading text-white mb-2 px-6 font-bold">
+            <span>Getting Started</span>
+          </div>
           
-          <div className="space-y-1">
-            {filteredCategories.map((category) => (
-              <Collapsible key={category.name} defaultOpen={category.apis.some(api => api.id === currentApiId)}>
-                <CollapsibleTrigger className="w-full flex items-center justify-between px-3 py-2 rounded-md text-sm text-devscribe-text-secondary hover:bg-devscribe-hover-bg hover:text-white transition-colors">
-                  <div className="flex items-center gap-2">
-                    <category.icon size={16} />
-                    <span>{category.name}</span>
-                  </div>
-                  {open => open ? <ChevronDown size={16} /> : <ChevronRight size={16} />}
-                </CollapsibleTrigger>
-                <CollapsibleContent>
-                  <div className="ml-2 pl-4 border-l border-devscribe-border space-y-1 py-1">
-                    {category.apis.map((api) => (
-                      <Link
-                        key={api.id}
-                        to={`/api-docs/${api.id}`}
-                        className={`block px-3 py-2 rounded-md text-sm transition-colors ${
-                          currentApiId === api.id
-                            ? 'bg-devscribe-teal/20 text-devscribe-teal'
-                            : 'text-devscribe-text-secondary hover:bg-devscribe-hover-bg hover:text-white'
-                        }`}
-                      >
-                        <div>
-                          <div>{api.name}</div>
-                          <div className="text-xs text-devscribe-text-secondary truncate mt-1">{api.description}</div>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </CollapsibleContent>
-              </Collapsible>
-            ))}
+          <div className="mt-1 space-y-1">
+            <Link 
+              to="/api-quickstart" 
+              className={`
+                sidebar-link font-bold
+                flex items-center gap-4 
+                px-10 py-2 rounded-md 
+                transition-all duration-200 
+                hover:bg-codium-hover-bg 
+                text-codium-text-secondary
+              `}
+            >
+              <span>Quickstart Guide</span>
+            </Link>
+            <Link 
+              to="/api-authentication" 
+              className={`
+                sidebar-link font-bold
+                flex items-center gap-4 
+                px-10 py-2 rounded-md 
+                transition-all duration-200 
+                hover:bg-codium-hover-bg 
+                text-codium-text-secondary
+              `}
+            >
+              <span>Authentication</span>
+            </Link>
+            <Link 
+              to="/api-best-practices" 
+              className={`
+                sidebar-link font-bold
+                flex items-center gap-4 
+                px-10 py-2 rounded-md 
+                transition-all duration-200 
+                hover:bg-codium-hover-bg 
+                text-codium-text-secondary
+              `}
+            >
+              <span>Best Practices</span>
+            </Link>
+          </div>
+        </div>
+
+        {/* API Categories Section */}
+        <div className="sidebar-section mt-4">
+          <div className="sidebar-heading text-white mb-2 px-6 font-bold">
+            <span>API Categories</span>
+          </div>
+          
+          <div className="mt-1 space-y-1">
+            {apiCategories.map((category) => {
+              const [isOpen, setIsOpen] = useState(category.apis.some(api => api.id === currentApiId));
+              
+              return (
+                <Collapsible 
+                  key={category.name} 
+                  open={isOpen} 
+                  onOpenChange={setIsOpen}
+                >
+                  <CollapsibleTrigger className={`
+                    sidebar-link font-bold
+                    flex items-center 
+                    px-10 py-2 rounded-md 
+                    transition-all duration-200 
+                    hover:bg-codium-hover-bg 
+                    text-codium-text-secondary
+                    w-full
+                    relative
+                  `}>
+                    <div className="flex items-center gap-4 flex-grow">
+                      <category.icon size={18} className="flex-shrink-0" />
+                      <span className="truncate">{category.name}</span>
+                    </div>
+                    <div className="absolute right-10 top-1/2 transform -translate-y-1/2">
+                      {isOpen ? <ChevronDown size={18} /> : <ChevronRight size={18} />}
+                    </div>
+                  </CollapsibleTrigger>
+                  <CollapsibleContent>
+                    <div className="ml-2 pl-4 border-l border-codium-border space-y-1 py-1">
+                      {category.apis.map((api) => (
+                        <Link
+                          key={api.id}
+                          to={`/api-docs/${api.id}`}
+                          className={`
+                            sidebar-link font-bold
+                            flex items-center 
+                            px-10 py-2 rounded-md 
+                            transition-all duration-200 
+                            hover:bg-codium-hover-bg 
+                            w-full
+                            ${currentApiId === api.id ? 'bg-codium-hover-bg text-white' : 'text-codium-text-secondary'}
+                          `}
+                        >
+                          <div className="w-full text-left">
+                            <div className="truncate">{api.name}</div>
+                            <div className="text-xs text-codium-text-secondary truncate">{api.description}</div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </CollapsibleContent>
+                </Collapsible>
+              );
+            })}
           </div>
         </div>
       </div>
