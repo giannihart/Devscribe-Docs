@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { ArrowDown, Monitor, Apple, Terminal } from 'lucide-react';
+import { ArrowDown, Monitor, Apple, Terminal, ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Download = () => {
   const operatingSystems = [
@@ -116,6 +117,20 @@ const Download = () => {
               <span className="text-sm">More Editors</span>
             </a>
           </div>
+        </div>
+        
+        <div className="mt-16 p-8 bg-devscribe-card-bg border border-devscribe-border rounded-xl">
+          <h3 className="text-xl font-semibold mb-4">Looking for our APIs?</h3>
+          <p className="text-devscribe-text-secondary mb-6">
+            Explore our API marketplace for a variety of services including analytics, payments, AI, and more.
+          </p>
+          <Link 
+            to="/api-marketplace" 
+            className="inline-flex items-center px-6 py-3 bg-devscribe-teal text-black font-medium rounded-full hover:bg-devscribe-teal/90 transition-colors"
+          >
+            Browse API Marketplace
+            <ExternalLink size={16} className="ml-2" />
+          </Link>
         </div>
       </div>
     </div>

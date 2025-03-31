@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Moon, Search } from 'lucide-react';
@@ -23,8 +24,8 @@ const Navbar = () => {
             Feature Request
           </Link>
           
-          <Link to="/download" className="bg-devscribe-teal text-black font-medium px-4 py-1.5 rounded-full text-sm flex items-center gap-2 hover:bg-devscribe-teal/90 transition-colors">
-            Download
+          <Link to="/api-marketplace" className="bg-devscribe-teal text-black font-medium px-4 py-1.5 rounded-full text-sm flex items-center gap-2 hover:bg-devscribe-teal/90 transition-colors">
+            APIs
             <span className="text-xs bg-black/20 px-1.5 py-0.5 rounded-full">↓</span>
           </Link>
           

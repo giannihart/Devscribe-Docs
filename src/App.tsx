@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -35,6 +36,8 @@ import FeaturesAutocomplete from "./pages/features/Autocomplete";
 import FeaturesChat from "./pages/features/Chat";
 import FeaturesCommand from "./pages/features/Command";
 import FeaturesContextAwareness from "./pages/features/ContextAwareness";
+import APIMarketplace from "./pages/APIMarketplace";
+import APIDocumentation from "./pages/APIDocumentation";
 
 const queryClient = new QueryClient();
 
@@ -56,6 +59,10 @@ const App = () => (
           <Route path="/guides" element={<Layout><Guides /></Layout>} />
           <Route path="/quickstart" element={<Layout><Quickstart /></Layout>} />
           <Route path="/development" element={<Layout><Development /></Layout>} />
+          
+          {/* API Marketplace Routes */}
+          <Route path="/api-marketplace" element={<Layout><APIMarketplace /></Layout>} />
+          <Route path="/api-docs/:apiId" element={<Layout><APIDocumentation /></Layout>} />
           
           {/* Essentials Routes */}
           <Route path="/doc-editing" element={<Layout><DocEditing /></Layout>} />
