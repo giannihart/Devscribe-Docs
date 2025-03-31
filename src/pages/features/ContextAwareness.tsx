@@ -15,8 +15,8 @@ const FeaturesContextAwareness = () => {
       <div className="mt-8 space-y-6">
         <div className="bg-devscribe-hover-bg border border-devscribe-border rounded-lg p-6">
           <div className="flex items-start gap-4">
-            <div className="p-3 bg-devscribe-teal/10 rounded-lg">
-              <Eye size={24} className="text-devscribe-teal" />
+            <div className="p-3 bg-white/10 rounded-lg">
+              <Eye size={24} className="text-white" />
             </div>
             <div>
               <h3 className="text-xl font-semibold mb-2">Deep Code Understanding</h3>
@@ -34,7 +34,7 @@ const FeaturesContextAwareness = () => {
           <div className="bg-devscribe-dark-gray border border-devscribe-border rounded-lg p-6">
             <div className="text-center mb-4">
               <div className="inline-flex items-center justify-center p-3 bg-devscribe-hover-bg rounded-full mb-3">
-                <Folder size={24} className="text-devscribe-teal" />
+                <Folder size={24} className="text-white" />
               </div>
               <h3 className="text-lg font-semibold">Code Indexing</h3>
             </div>
@@ -46,7 +46,7 @@ const FeaturesContextAwareness = () => {
           <div className="bg-devscribe-dark-gray border border-devscribe-border rounded-lg p-6">
             <div className="text-center mb-4">
               <div className="inline-flex items-center justify-center p-3 bg-devscribe-hover-bg rounded-full mb-3">
-                <GitBranch size={24} className="text-devscribe-teal" />
+                <GitBranch size={24} className="text-white" />
               </div>
               <h3 className="text-lg font-semibold">Version Control</h3>
             </div>
@@ -58,7 +58,7 @@ const FeaturesContextAwareness = () => {
           <div className="bg-devscribe-dark-gray border border-devscribe-border rounded-lg p-6">
             <div className="text-center mb-4">
               <div className="inline-flex items-center justify-center p-3 bg-devscribe-hover-bg rounded-full mb-3">
-                <Server size={24} className="text-devscribe-teal" />
+                <Server size={24} className="text-white" />
               </div>
               <h3 className="text-lg font-semibold">Dependency Analysis</h3>
             </div>
@@ -90,7 +90,7 @@ const FeaturesContextAwareness = () => {
             </p>
             <div className="mt-4 bg-devscribe-dark-gray p-3 rounded-md">
               <p className="text-xs text-devscribe-text-secondary">
-                When you use a component like <code className="text-devscribe-teal">Button</code> from your project's UI library, Devscribe will automatically add the correct import from your component library.
+                When you use a component like <code className="text-white">Button</code> from your project's UI library, Devscribe will automatically add the correct import from your component library.
               </p>
             </div>
           </div>

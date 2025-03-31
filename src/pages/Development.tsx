@@ -37,28 +37,28 @@ const Development = () => {
               </p>
               <div className="p-4 bg-devscribe-card-bg border border-devscribe-border rounded-md space-y-4">
                 <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-devscribe-teal flex items-center justify-center text-black font-medium">1</div>
+                  <div className="w-6 h-6 rounded-full bg-white flex items-center justify-center text-black font-medium">1</div>
                   <div>
                     <div className="font-medium">Install Node.js and npm</div>
                     <p className="text-sm text-devscribe-text-secondary mt-1">Devscribe development requires Node.js 16 or later and npm 7+</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-devscribe-teal flex items-center justify-center text-black font-medium">2</div>
+                  <div className="w-6 h-6 rounded-full bg-white flex items-center justify-center text-black font-medium">2</div>
                   <div>
                     <div className="font-medium">Install the Devscribe CLI</div>
                     <p className="text-sm text-devscribe-text-secondary mt-1">Run <code className="px-2 py-0.5 bg-devscribe-hover-bg rounded">npm install -g @devscribe/cli</code> to install the command-line tools</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-devscribe-teal flex items-center justify-center text-black font-medium">3</div>
+                  <div className="w-6 h-6 rounded-full bg-white flex items-center justify-center text-black font-medium">3</div>
                   <div>
                     <div className="font-medium">Create a new project</div>
                     <p className="text-sm text-devscribe-text-secondary mt-1">Run <code className="px-2 py-0.5 bg-devscribe-hover-bg rounded">devscribe create-plugin my-plugin</code> to scaffold a new plugin project</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-devscribe-teal flex items-center justify-center text-black font-medium">4</div>
+                  <div className="w-6 h-6 rounded-full bg-white flex items-center justify-center text-black font-medium">4</div>
                   <div>
                     <div className="font-medium">Start development server</div>
                     <p className="text-sm text-devscribe-text-secondary mt-1">Run <code className="px-2 py-0.5 bg-devscribe-hover-bg rounded">npm run dev</code> in your project directory to start the development server</p>
@@ -102,7 +102,7 @@ const Development = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="p-4 bg-devscribe-card-bg border border-devscribe-border rounded-md">
                   <h4 className="font-medium mb-2 flex items-center gap-2">
-                    <Puzzle size={18} className="text-devscribe-teal" />
+                    <Puzzle size={18} className="text-white" />
                     Extension Points
                   </h4>
                   <p className="text-sm text-devscribe-text-secondary">
@@ -111,7 +111,7 @@ const Development = () => {
                 </div>
                 <div className="p-4 bg-devscribe-card-bg border border-devscribe-border rounded-md">
                   <h4 className="font-medium mb-2 flex items-center gap-2">
-                    <Code size={18} className="text-devscribe-teal" />
+                    <Code size={18} className="text-white" />
                     API Surface
                   </h4>
                   <p className="text-sm text-devscribe-text-secondary">
@@ -120,7 +120,7 @@ const Development = () => {
                 </div>
                 <div className="p-4 bg-devscribe-card-bg border border-devscribe-border rounded-md">
                   <h4 className="font-medium mb-2 flex items-center gap-2">
-                    <Package size={18} className="text-devscribe-teal" />
+                    <Package size={18} className="text-white" />
                     Plugin Manifest
                   </h4>
                   <p className="text-sm text-devscribe-text-secondary">
@@ -129,7 +129,7 @@ const Development = () => {
                 </div>
                 <div className="p-4 bg-devscribe-card-bg border border-devscribe-border rounded-md">
                   <h4 className="font-medium mb-2 flex items-center gap-2">
-                    <GitBranch size={18} className="text-devscribe-teal" />
+                    <GitBranch size={18} className="text-white" />
                     Lifecycle Hooks
                   </h4>
                   <p className="text-sm text-devscribe-text-secondary">
@@ -467,14 +467,14 @@ context.subscriptions.push(disposable, selectionDisposable);`}
           
           <div className="mt-8 p-4 bg-devscribe-card-bg border border-devscribe-border rounded-lg">
             <div className="flex items-center gap-3 mb-4">
-              <Code size={20} className="text-devscribe-teal" />
+              <Code size={20} className="text-white" />
               <h3 className="text-lg font-semibold">Ready to build your plugin?</h3>
             </div>
             <p className="text-devscribe-text-secondary mb-4">
               Check out our sample plugins and join the developer community to get help and share your creations.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
-              <a href="https://github.com/devscribe/plugin-samples" className="px-4 py-2 bg-devscribe-teal text-black rounded-md font-medium hover:bg-devscribe-teal/90 transition-colors">
+              <a href="https://github.com/devscribe/plugin-samples" className="px-4 py-2 bg-white text-black rounded-md font-medium hover:bg-white/90 transition-colors">
                 Sample Plugins
               </a>
               <a href="/community" className="px-4 py-2 bg-transparent border border-devscribe-border text-white rounded-md font-medium hover:bg-devscribe-hover-bg transition-colors">

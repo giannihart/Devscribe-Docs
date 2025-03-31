@@ -19,7 +19,7 @@ const Auth = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-6">
               <div className="mb-4">
-                <ShieldCheck size={24} className="text-devscribe-teal" />
+                <ShieldCheck size={24} className="text-white" />
               </div>
               <h3 className="text-lg font-medium mb-2">SSO Integration</h3>
               <p className="text-devscribe-text-secondary text-sm">
@@ -29,7 +29,7 @@ const Auth = () => {
             
             <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-6">
               <div className="mb-4">
-                <Lock size={24} className="text-devscribe-teal" />
+                <Lock size={24} className="text-white" />
               </div>
               <h3 className="text-lg font-medium mb-2">Multi-factor Authentication</h3>
               <p className="text-devscribe-text-secondary text-sm">
@@ -39,7 +39,7 @@ const Auth = () => {
             
             <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-6">
               <div className="mb-4">
-                <Key size={24} className="text-devscribe-teal" />
+                <Key size={24} className="text-white" />
               </div>
               <h3 className="text-lg font-medium mb-2">API Key Management</h3>
               <p className="text-devscribe-text-secondary text-sm">
@@ -49,7 +49,7 @@ const Auth = () => {
             
             <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-6">
               <div className="mb-4">
-                <Server size={24} className="text-devscribe-teal" />
+                <Server size={24} className="text-white" />
               </div>
               <h3 className="text-lg font-medium mb-2">LDAP Directory Integration</h3>
               <p className="text-devscribe-text-secondary text-sm">
@@ -83,19 +83,19 @@ const Auth = () => {
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="bg-devscribe-hover-bg p-4 rounded-lg flex flex-col items-center">
-                  <div className="text-xl font-semibold text-devscribe-teal mb-1">SOC 2</div>
+                  <div className="text-xl font-semibold text-white mb-1">SOC 2</div>
                   <div className="text-xs text-center">Type II Certified</div>
                 </div>
                 <div className="bg-devscribe-hover-bg p-4 rounded-lg flex flex-col items-center">
-                  <div className="text-xl font-semibold text-devscribe-teal mb-1">GDPR</div>
+                  <div className="text-xl font-semibold text-white mb-1">GDPR</div>
                   <div className="text-xs text-center">Compliant</div>
                 </div>
                 <div className="bg-devscribe-hover-bg p-4 rounded-lg flex flex-col items-center">
-                  <div className="text-xl font-semibold text-devscribe-teal mb-1">HIPAA</div>
+                  <div className="text-xl font-semibold text-white mb-1">HIPAA</div>
                   <div className="text-xs text-center">Ready</div>
                 </div>
                 <div className="bg-devscribe-hover-bg p-4 rounded-lg flex flex-col items-center">
-                  <div className="text-xl font-semibold text-devscribe-teal mb-1">ISO 27001</div>
+                  <div className="text-xl font-semibold text-white mb-1">ISO 27001</div>
                   <div className="text-xs text-center">Certified</div>
                 </div>
               </div>
@@ -123,7 +123,7 @@ const Auth = () => {
             Ready to deploy Devscribe with enterprise-grade security and authentication? Our team is here to help you customize a solution that meets your organization's specific requirements.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <a href="#" className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-devscribe-teal text-black rounded-md font-medium hover:bg-devscribe-teal/90 transition-colors">
+            <a href="#" className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-white text-black rounded-md font-medium hover:bg-white/90 transition-colors">
               Contact Enterprise Sales
             </a>
             <a href="#" className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-devscribe-hover-bg text-white rounded-md hover:bg-devscribe-hover-bg/80 transition-colors">

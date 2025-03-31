@@ -34,7 +34,7 @@ const Guides = () => {
               <p className="text-devscribe-text-secondary mb-4">
                 Step-by-step instructions for installing Devscribe on different platforms and environments.
               </p>
-              <a href="/quickstart" className="inline-flex items-center gap-2 text-devscribe-teal hover:underline">
+              <a href="/quickstart" className="inline-flex items-center gap-2 text-white hover:underline">
                 View installation guide <ChevronRight size={16} />
               </a>
             </div>
@@ -44,7 +44,7 @@ const Guides = () => {
               <p className="text-devscribe-text-secondary mb-4">
                 Learn the basics of using Devscribe's interface and core features to enhance your development workflow.
               </p>
-              <a href="/documentation" className="inline-flex items-center gap-2 text-devscribe-teal hover:underline">
+              <a href="/documentation" className="inline-flex items-center gap-2 text-white hover:underline">
                 Explore documentation <ChevronRight size={16} />
               </a>
             </div>
@@ -128,7 +128,7 @@ const Guides = () => {
               <p className="text-devscribe-text-secondary mb-4">
                 Resources for getting additional support, including community forums, documentation, and direct support channels.
               </p>
-              <a href="/support" className="inline-flex items-center gap-2 text-devscribe-teal hover:underline">
+              <a href="/support" className="inline-flex items-center gap-2 text-white hover:underline">
                 Visit support page <ChevronRight size={16} />
               </a>
             </div>

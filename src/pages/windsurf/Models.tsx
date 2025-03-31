@@ -18,7 +18,7 @@ const WindsurfModels = () => {
           <h2 className="text-2xl font-semibold mb-6">Available Models</h2>
           
           <div className="space-y-6">
-            <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-6 hover:border-devscribe-teal/50 transition-all">
+            <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-6 hover:border-white/50 transition-all">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-devscribe-teal to-blue-500 flex items-center justify-center">
                   <Zap size={24} className="text-white" />
@@ -26,7 +26,7 @@ const WindsurfModels = () => {
                 <div>
                   <div className="flex items-center gap-2">
                     <h3 className="text-xl font-semibold">Devscribe Standard</h3>
-                    <span className="text-xs bg-devscribe-teal/20 text-devscribe-teal px-2 py-0.5 rounded-full">Default</span>
+                    <span className="text-xs bg-white/20 text-white px-2 py-0.5 rounded-full">Default</span>
                   </div>
                   <p className="text-devscribe-text-secondary mt-2">
                     A balanced model optimized for everyday coding tasks with fast response times and broad language support.
@@ -56,7 +56,7 @@ const WindsurfModels = () => {
               </div>
             </div>
             
-            <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-6 hover:border-devscribe-teal/50 transition-all">
+            <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-6 hover:border-white/50 transition-all">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
                   <BarChart4 size={24} className="text-white" />
@@ -94,7 +94,7 @@ const WindsurfModels = () => {
               </div>
             </div>
             
-            <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-6 hover:border-devscribe-teal/50 transition-all">
+            <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-6 hover:border-white/50 transition-all">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center">
                   <Cpu size={24} className="text-white" />
@@ -132,7 +132,7 @@ const WindsurfModels = () => {
               </div>
             </div>
             
-            <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-6 hover:border-devscribe-teal/50 transition-all">
+            <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-6 hover:border-white/50 transition-all">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center">
                   <Shield size={24} className="text-white" />

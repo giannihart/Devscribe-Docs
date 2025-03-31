@@ -100,7 +100,7 @@ const Index = () => {
               <p className="text-devscribe-text-secondary mb-4">
                 Configure your development environment and optimize your experience with Devscribe's powerful customization options.
               </p>
-              <a href="/download" className="inline-flex items-center gap-2 px-4 py-2 bg-devscribe-teal text-black rounded-md font-medium hover:bg-devscribe-teal/90 transition-colors">
+              <a href="/download" className="inline-flex items-center gap-2 px-4 py-2 bg-white text-black rounded-md font-medium hover:bg-white/90 transition-colors">
                 Download Development Tools
               </a>
             </div>
@@ -132,27 +132,27 @@ const Index = () => {
           
           <ul className="space-y-2">
             <li>
-              <a href="/features/autocomplete" className="group flex items-center justify-between p-4 bg-devscribe-card-bg border border-devscribe-border rounded-lg hover:border-devscribe-teal/50 transition-all">
+              <a href="/features/autocomplete" className="group flex items-center justify-between p-4 bg-devscribe-card-bg border border-devscribe-border rounded-lg hover:border-white/50 transition-all">
                 <div className="flex items-center gap-2">
-                  <span className="text-devscribe-teal">⟨/⟩</span>
+                  <span className="text-white">⟨/⟩</span>
                   <span>Autocomplete</span>
                 </div>
                 <ChevronRight size={16} className="text-devscribe-text-secondary group-hover:translate-x-1 transition-transform" />
               </a>
             </li>
             <li>
-              <a href="/features/chat" className="group flex items-center justify-between p-4 bg-devscribe-card-bg border border-devscribe-border rounded-lg hover:border-devscribe-teal/50 transition-all">
+              <a href="/features/chat" className="group flex items-center justify-between p-4 bg-devscribe-card-bg border border-devscribe-border rounded-lg hover:border-white/50 transition-all">
                 <div className="flex items-center gap-2">
-                  <span className="text-devscribe-teal">💬</span>
+                  <span className="text-white">💬</span>
                   <span>Chat</span>
                 </div>
                 <ChevronRight size={16} className="text-devscribe-text-secondary group-hover:translate-x-1 transition-transform" />
               </a>
             </li>
             <li>
-              <a href="/features/command" className="group flex items-center justify-between p-4 bg-devscribe-card-bg border border-devscribe-border rounded-lg hover:border-devscribe-teal/50 transition-all">
+              <a href="/features/command" className="group flex items-center justify-between p-4 bg-devscribe-card-bg border border-devscribe-border rounded-lg hover:border-white/50 transition-all">
                 <div className="flex items-center gap-2">
-                  <span className="text-devscribe-teal">&gt;_</span>
+                  <span className="text-white">&gt;_</span>
                   <span>Command</span>
                 </div>
                 <ChevronRight size={16} className="text-devscribe-text-secondary group-hover:translate-x-1 transition-transform" />

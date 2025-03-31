@@ -63,7 +63,7 @@ const Introduction = () => {
               />
               <button
                 onClick={handleSpecUpdate}
-                className="mt-4 px-6 py-2 bg-devscribe-teal text-white rounded-md hover:bg-opacity-90 transition-colors font-semibold"
+                className="mt-4 px-6 py-2 bg-white text-white rounded-md hover:bg-opacity-90 transition-colors font-semibold"
               >
                 Update API Documentation
               </button>
@@ -105,7 +105,7 @@ const Introduction = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
             <div className="feature-card">
               <div className="flex items-start mb-4">
-                <FileJson className="w-6 h-6 text-devscribe-teal mr-3" />
+                <FileJson className="w-6 h-6 text-white mr-3" />
                 <h3 className="text-lg font-semibold text-white">Schema Validation</h3>
               </div>
               <p className="text-devscribe-text-secondary">
@@ -115,7 +115,7 @@ const Introduction = () => {
 
             <div className="feature-card">
               <div className="flex items-start mb-4">
-                <Bot className="w-6 h-6 text-devscribe-teal mr-3" />
+                <Bot className="w-6 h-6 text-white mr-3" />
                 <h3 className="text-lg font-semibold text-white">AI-Powered Analysis</h3>
               </div>
               <p className="text-devscribe-text-secondary">
@@ -125,7 +125,7 @@ const Introduction = () => {
 
             <div className="feature-card">
               <div className="flex items-start mb-4">
-                <Code2 className="w-6 h-6 text-devscribe-teal mr-3" />
+                <Code2 className="w-6 h-6 text-white mr-3" />
                 <h3 className="text-lg font-semibold text-white">Code Generation</h3>
               </div>
               <p className="text-devscribe-text-secondary">
@@ -135,7 +135,7 @@ const Introduction = () => {
 
             <div className="feature-card">
               <div className="flex items-start mb-4">
-                <CheckCircle className="w-6 h-6 text-devscribe-teal mr-3" />
+                <CheckCircle className="w-6 h-6 text-white mr-3" />
                 <h3 className="text-lg font-semibold text-white">Continuous Validation</h3>
               </div>
               <p className="text-devscribe-text-secondary">

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import PageHeading from '../components/ui/PageHeading';
 import TableOfContents from '../components/ui/TableOfContents';
@@ -47,7 +46,7 @@ const Documentation = () => {
               <p className="text-devscribe-text-secondary text-sm mb-3">
                 Download and install the Windsurf editor for a fully integrated Devscribe experience.
               </p>
-              <a href="/download" className="text-devscribe-teal text-sm hover:underline inline-flex items-center gap-1">
+              <a href="/download" className="text-white text-sm hover:underline inline-flex items-center gap-1">
                 Download Windsurf
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7 17L17 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -61,7 +60,7 @@ const Documentation = () => {
               <p className="text-devscribe-text-secondary text-sm mb-3">
                 Install Devscribe extensions for your preferred IDE (VSCode, JetBrains, Neovim, etc).
               </p>
-              <a href="/extensions/getting-started" className="text-devscribe-teal text-sm hover:underline inline-flex items-center gap-1">
+              <a href="/extensions/getting-started" className="text-white text-sm hover:underline inline-flex items-center gap-1">
                 Browse Extensions
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7 17L17 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -94,8 +93,12 @@ const Documentation = () => {
           
           <div className="space-y-6">
             <div className="flex gap-4">
-              <div className="w-8 h-8 flex items-center justify-center rounded-full bg-devscribe-teal/10 text-devscribe-teal flex-shrink-0">
-                1
+              <div className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-white flex-shrink-0">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 4L4 8L12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M20 8L12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M12 12V20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
               </div>
               <div>
                 <h4 className="font-medium mb-1">Autocomplete</h4>
@@ -106,8 +109,11 @@ const Documentation = () => {
             </div>
             
             <div className="flex gap-4">
-              <div className="w-8 h-8 flex items-center justify-center rounded-full bg-devscribe-teal/10 text-devscribe-teal flex-shrink-0">
-                2
+              <div className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-white flex-shrink-0">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M12 6V12L16 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
               </div>
               <div>
                 <h4 className="font-medium mb-1">Chat Interface</h4>
@@ -118,8 +124,12 @@ const Documentation = () => {
             </div>
             
             <div className="flex gap-4">
-              <div className="w-8 h-8 flex items-center justify-center rounded-full bg-devscribe-teal/10 text-devscribe-teal flex-shrink-0">
-                3
+              <div className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-white flex-shrink-0">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 12H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M4 6H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M4 18H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
               </div>
               <div>
                 <h4 className="font-medium mb-1">Command Mode</h4>

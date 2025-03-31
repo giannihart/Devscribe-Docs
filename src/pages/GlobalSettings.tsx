@@ -35,16 +35,16 @@ const GlobalSettings = () => {
                 Choose between light, dark, or system-based theme for the Devscribe interface.
               </p>
               <div className="flex items-center gap-4 mt-4">
-                <div className="flex-1 p-4 bg-devscribe-card-bg border border-devscribe-border rounded-md flex items-center gap-3 cursor-pointer hover:border-devscribe-teal/50 transition-colors">
+                <div className="flex-1 p-4 bg-devscribe-card-bg border border-devscribe-border rounded-md flex items-center gap-3 cursor-pointer hover:border-white/50 transition-colors">
                   <Moon size={18} className="text-devscribe-text-secondary" />
                   <span>Dark</span>
-                  <div className="ml-auto w-4 h-4 rounded-full bg-devscribe-teal"></div>
+                  <div className="ml-auto w-4 h-4 rounded-full bg-white"></div>
                 </div>
-                <div className="flex-1 p-4 bg-devscribe-card-bg border border-devscribe-border rounded-md flex items-center gap-3 cursor-pointer hover:border-devscribe-teal/50 transition-colors">
+                <div className="flex-1 p-4 bg-devscribe-card-bg border border-devscribe-border rounded-md flex items-center gap-3 cursor-pointer hover:border-white/50 transition-colors">
                   <Sun size={18} className="text-devscribe-text-secondary" />
                   <span>Light</span>
                 </div>
-                <div className="flex-1 p-4 bg-devscribe-card-bg border border-devscribe-border rounded-md flex items-center gap-3 cursor-pointer hover:border-devscribe-teal/50 transition-colors">
+                <div className="flex-1 p-4 bg-devscribe-card-bg border border-devscribe-border rounded-md flex items-center gap-3 cursor-pointer hover:border-white/50 transition-colors">
                   <Laptop size={18} className="text-devscribe-text-secondary" />
                   <span>System</span>
                 </div>
@@ -59,7 +59,7 @@ const GlobalSettings = () => {
               <div className="flex items-center gap-4">
                 <span className="text-sm">Small</span>
                 <div className="flex-1 h-2 bg-devscribe-card-bg rounded-full overflow-hidden">
-                  <div className="w-1/2 h-full bg-devscribe-teal"></div>
+                  <div className="w-1/2 h-full bg-white"></div>
                 </div>
                 <span className="text-sm">Large</span>
               </div>
@@ -100,11 +100,11 @@ const GlobalSettings = () => {
                 Choose the default editing mode when creating new documents.
               </p>
               <div className="flex items-center gap-4">
-                <div className="flex-1 p-4 bg-devscribe-card-bg border border-devscribe-border rounded-md flex items-center gap-3 cursor-pointer hover:border-devscribe-teal/50 transition-colors">
+                <div className="flex-1 p-4 bg-devscribe-card-bg border border-devscribe-border rounded-md flex items-center gap-3 cursor-pointer hover:border-white/50 transition-colors">
                   <span>Visual</span>
-                  <div className="ml-auto w-4 h-4 rounded-full bg-devscribe-teal"></div>
+                  <div className="ml-auto w-4 h-4 rounded-full bg-white"></div>
                 </div>
-                <div className="flex-1 p-4 bg-devscribe-card-bg border border-devscribe-border rounded-md flex items-center gap-3 cursor-pointer hover:border-devscribe-teal/50 transition-colors">
+                <div className="flex-1 p-4 bg-devscribe-card-bg border border-devscribe-border rounded-md flex items-center gap-3 cursor-pointer hover:border-white/50 transition-colors">
                   <span>Markdown</span>
                 </div>
               </div>
@@ -141,7 +141,7 @@ const GlobalSettings = () => {
                   <input
                     id="auto-save"
                     type="checkbox"
-                    className="w-4 h-4 text-devscribe-teal bg-devscribe-card-bg border-devscribe-border rounded focus:ring-devscribe-teal"
+                    className="w-4 h-4 text-white bg-devscribe-card-bg border-devscribe-border rounded focus:ring-devscribe-teal"
                     defaultChecked
                   />
                   <label htmlFor="auto-save" className="ml-2 text-sm">
@@ -179,7 +179,7 @@ const GlobalSettings = () => {
                   <input
                     id="ai-suggestions"
                     type="checkbox"
-                    className="w-4 h-4 text-devscribe-teal bg-devscribe-card-bg border-devscribe-border rounded focus:ring-devscribe-teal"
+                    className="w-4 h-4 text-white bg-devscribe-card-bg border-devscribe-border rounded focus:ring-devscribe-teal"
                     defaultChecked
                   />
                   <label htmlFor="ai-suggestions" className="ml-2 text-sm">
@@ -190,7 +190,7 @@ const GlobalSettings = () => {
                   <input
                     id="ai-completions"
                     type="checkbox"
-                    className="w-4 h-4 text-devscribe-teal bg-devscribe-card-bg border-devscribe-border rounded focus:ring-devscribe-teal"
+                    className="w-4 h-4 text-white bg-devscribe-card-bg border-devscribe-border rounded focus:ring-devscribe-teal"
                     defaultChecked
                   />
                   <label htmlFor="ai-completions" className="ml-2 text-sm">
@@ -201,7 +201,7 @@ const GlobalSettings = () => {
                   <input
                     id="ai-context"
                     type="checkbox"
-                    className="w-4 h-4 text-devscribe-teal bg-devscribe-card-bg border-devscribe-border rounded focus:ring-devscribe-teal"
+                    className="w-4 h-4 text-white bg-devscribe-card-bg border-devscribe-border rounded focus:ring-devscribe-teal"
                     defaultChecked
                   />
                   <label htmlFor="ai-context" className="ml-2 text-sm">
@@ -218,7 +218,7 @@ const GlobalSettings = () => {
               </p>
               <div className="p-4 bg-devscribe-card-bg border border-devscribe-border rounded-md">
                 <div className="flex items-center gap-3 mb-4">
-                  <Shield size={18} className="text-devscribe-teal" />
+                  <Shield size={18} className="text-white" />
                   <span className="font-medium">Data Privacy Settings</span>
                 </div>
                 <div className="space-y-3">
@@ -226,7 +226,7 @@ const GlobalSettings = () => {
                     <input
                       id="telemetry"
                       type="checkbox"
-                      className="w-4 h-4 text-devscribe-teal bg-devscribe-card-bg border-devscribe-border rounded focus:ring-devscribe-teal"
+                      className="w-4 h-4 text-white bg-devscribe-card-bg border-devscribe-border rounded focus:ring-devscribe-teal"
                       defaultChecked
                     />
                     <label htmlFor="telemetry" className="ml-2 text-sm">
@@ -237,7 +237,7 @@ const GlobalSettings = () => {
                     <input
                       id="crash-reports"
                       type="checkbox"
-                      className="w-4 h-4 text-devscribe-teal bg-devscribe-card-bg border-devscribe-border rounded focus:ring-devscribe-teal"
+                      className="w-4 h-4 text-white bg-devscribe-card-bg border-devscribe-border rounded focus:ring-devscribe-teal"
                       defaultChecked
                     />
                     <label htmlFor="crash-reports" className="ml-2 text-sm">
@@ -248,7 +248,7 @@ const GlobalSettings = () => {
                     <input
                       id="third-party"
                       type="checkbox"
-                      className="w-4 h-4 text-devscribe-teal bg-devscribe-card-bg border-devscribe-border rounded focus:ring-devscribe-teal"
+                      className="w-4 h-4 text-white bg-devscribe-card-bg border-devscribe-border rounded focus:ring-devscribe-teal"
                     />
                     <label htmlFor="third-party" className="ml-2 text-sm">
                       Allow third-party integrations to access your data
@@ -270,16 +270,16 @@ const GlobalSettings = () => {
                 Choose where your documents are stored.
               </p>
               <div className="flex items-center gap-4">
-                <div className="flex-1 p-4 bg-devscribe-card-bg border border-devscribe-border rounded-md flex items-center gap-3 cursor-pointer hover:border-devscribe-teal/50 transition-colors">
+                <div className="flex-1 p-4 bg-devscribe-card-bg border border-devscribe-border rounded-md flex items-center gap-3 cursor-pointer hover:border-white/50 transition-colors">
                   <Database size={18} className="text-devscribe-text-secondary" />
                   <span>Cloud</span>
-                  <div className="ml-auto w-4 h-4 rounded-full bg-devscribe-teal"></div>
+                  <div className="ml-auto w-4 h-4 rounded-full bg-white"></div>
                 </div>
-                <div className="flex-1 p-4 bg-devscribe-card-bg border border-devscribe-border rounded-md flex items-center gap-3 cursor-pointer hover:border-devscribe-teal/50 transition-colors">
+                <div className="flex-1 p-4 bg-devscribe-card-bg border border-devscribe-border rounded-md flex items-center gap-3 cursor-pointer hover:border-white/50 transition-colors">
                   <Laptop size={18} className="text-devscribe-text-secondary" />
                   <span>Local</span>
                 </div>
-                <div className="flex-1 p-4 bg-devscribe-card-bg border border-devscribe-border rounded-md flex items-center gap-3 cursor-pointer hover:border-devscribe-teal/50 transition-colors">
+                <div className="flex-1 p-4 bg-devscribe-card-bg border border-devscribe-border rounded-md flex items-center gap-3 cursor-pointer hover:border-white/50 transition-colors">
                   <Settings size={18} className="text-devscribe-text-secondary" />
                   <span>Custom</span>
                 </div>
@@ -299,7 +299,7 @@ const GlobalSettings = () => {
                   <div className="flex items-center gap-4">
                     <span className="text-sm">Low</span>
                     <div className="flex-1 h-2 bg-devscribe-card-bg rounded-full overflow-hidden">
-                      <div className="w-2/3 h-full bg-devscribe-teal"></div>
+                      <div className="w-2/3 h-full bg-white"></div>
                     </div>
                     <span className="text-sm">High</span>
                   </div>

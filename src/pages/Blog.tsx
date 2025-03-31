@@ -57,7 +57,7 @@ const Blog = () => {
       
       <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
         {blogPosts.map(post => (
-          <div key={post.id} className="flex flex-col overflow-hidden border border-devscribe-border rounded-xl hover:border-devscribe-teal/50 transition-all duration-200 group">
+          <div key={post.id} className="flex flex-col overflow-hidden border border-devscribe-border rounded-xl hover:border-white/50 transition-all duration-200 group">
             <div className="h-48 overflow-hidden">
               <img 
                 src={post.image} 
@@ -67,11 +67,11 @@ const Blog = () => {
             </div>
             <div className="flex-1 p-6 flex flex-col">
               <div className="mb-2">
-                <span className="inline-block text-xs font-medium bg-devscribe-teal/10 text-devscribe-teal px-2.5 py-1 rounded">
+                <span className="inline-block text-xs font-medium bg-white/10 text-white px-2.5 py-1 rounded">
                   {post.category}
                 </span>
               </div>
-              <h3 className="text-xl font-semibold mb-3 group-hover:text-devscribe-teal transition-colors">
+              <h3 className="text-xl font-semibold mb-3 group-hover:text-white transition-colors">
                 {post.title}
               </h3>
               <p className="text-devscribe-text-secondary mb-4 flex-1">

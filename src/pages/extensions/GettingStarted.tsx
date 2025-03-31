@@ -21,8 +21,8 @@ const ExtensionsGettingStarted = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
           <div className="bg-devscribe-hover-bg border border-devscribe-border rounded-lg p-6">
             <div className="flex items-start gap-4">
-              <div className="p-3 bg-devscribe-teal/10 rounded-lg">
-                <Puzzle size={24} className="text-devscribe-teal" />
+              <div className="p-3 bg-white/10 rounded-lg">
+                <Puzzle size={24} className="text-white" />
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">What are Extensions?</h3>
@@ -35,8 +35,8 @@ const ExtensionsGettingStarted = () => {
           
           <div className="bg-devscribe-hover-bg border border-devscribe-border rounded-lg p-6">
             <div className="flex items-start gap-4">
-              <div className="p-3 bg-devscribe-teal/10 rounded-lg">
-                <Download size={24} className="text-devscribe-teal" />
+              <div className="p-3 bg-white/10 rounded-lg">
+                <Download size={24} className="text-white" />
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">Extension Marketplace</h3>
@@ -52,8 +52,8 @@ const ExtensionsGettingStarted = () => {
         
         <div className="space-y-4 mb-8">
           <div className="flex items-start gap-4">
-            <div className="flex-shrink-0 h-8 w-8 bg-devscribe-teal/10 rounded-full flex items-center justify-center">
-              <span className="text-devscribe-teal font-medium">1</span>
+            <div className="flex-shrink-0 h-8 w-8 bg-white/10 rounded-full flex items-center justify-center">
+              <span className="text-white font-medium">1</span>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-1">Open the Extensions Panel</h3>
@@ -64,8 +64,8 @@ const ExtensionsGettingStarted = () => {
           </div>
           
           <div className="flex items-start gap-4">
-            <div className="flex-shrink-0 h-8 w-8 bg-devscribe-teal/10 rounded-full flex items-center justify-center">
-              <span className="text-devscribe-teal font-medium">2</span>
+            <div className="flex-shrink-0 h-8 w-8 bg-white/10 rounded-full flex items-center justify-center">
+              <span className="text-white font-medium">2</span>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-1">Search for Extensions</h3>
@@ -76,8 +76,8 @@ const ExtensionsGettingStarted = () => {
           </div>
           
           <div className="flex items-start gap-4">
-            <div className="flex-shrink-0 h-8 w-8 bg-devscribe-teal/10 rounded-full flex items-center justify-center">
-              <span className="text-devscribe-teal font-medium">3</span>
+            <div className="flex-shrink-0 h-8 w-8 bg-white/10 rounded-full flex items-center justify-center">
+              <span className="text-white font-medium">3</span>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-1">Install and Enable</h3>
@@ -102,7 +102,7 @@ const ExtensionsGettingStarted = () => {
                   <p className="text-xs text-devscribe-text-secondary">Seamlessly connect Devscribe with GitHub repositories</p>
                 </div>
               </div>
-              <button className="text-xs bg-devscribe-teal/10 text-devscribe-teal px-3 py-1 rounded hover:bg-devscribe-teal/20 transition-colors">
+              <button className="text-xs bg-white/10 text-white px-3 py-1 rounded hover:bg-white/20 transition-colors">
                 Install
               </button>
             </div>
@@ -119,7 +119,7 @@ const ExtensionsGettingStarted = () => {
                   <p className="text-xs text-devscribe-text-secondary">Create and customize your own Devscribe themes</p>
                 </div>
               </div>
-              <button className="text-xs bg-devscribe-teal/10 text-devscribe-teal px-3 py-1 rounded hover:bg-devscribe-teal/20 transition-colors">
+              <button className="text-xs bg-white/10 text-white px-3 py-1 rounded hover:bg-white/20 transition-colors">
                 Install
               </button>
             </div>

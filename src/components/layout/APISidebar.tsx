@@ -246,19 +246,18 @@ const APISidebar = () => {
                 >
                   <CollapsibleTrigger className={`
                     sidebar-link font-bold
-                    flex items-center 
+                    flex items-center justify-between 
                     px-10 py-2 rounded-md 
                     transition-all duration-200 
                     hover:bg-codium-hover-bg 
                     text-codium-text-secondary
                     w-full
-                    relative
                   `}>
                     <div className="flex items-center gap-4 flex-grow">
                       <category.icon size={18} className="flex-shrink-0" />
                       <span className="truncate">{category.name}</span>
                     </div>
-                    <div className="absolute right-10 top-1/2 transform -translate-y-1/2">
+                    <div className="flex-shrink-0">
                       {isOpen ? <ChevronDown size={18} /> : <ChevronRight size={18} />}
                     </div>
                   </CollapsibleTrigger>

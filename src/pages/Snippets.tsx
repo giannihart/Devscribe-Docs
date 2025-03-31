@@ -101,7 +101,7 @@ const Snippets = () => {
               </ol>
               <div className="mt-4 p-4 bg-devscribe-card-bg border border-devscribe-border rounded-md">
                 <div className="flex items-center gap-3 mb-4">
-                  <Plus size={18} className="text-devscribe-teal" />
+                  <Plus size={18} className="text-white" />
                   <span className="font-medium">New Snippet</span>
                 </div>
                 <div className="space-y-4">
@@ -160,7 +160,7 @@ export default $1;`}
                     <button className="px-4 py-2 bg-transparent border border-devscribe-border text-white rounded-md hover:bg-devscribe-hover-bg transition-colors">
                       Cancel
                     </button>
-                    <button className="px-4 py-2 bg-devscribe-teal text-black rounded-md hover:bg-devscribe-teal/90 transition-colors">
+                    <button className="px-4 py-2 bg-white text-black rounded-md hover:bg-white/90 transition-colors">
                       Save Snippet
                     </button>
                   </div>
@@ -240,7 +240,7 @@ export default $1;`}
                   <pre className="font-mono text-sm text-white">
 {`import React from 'react';
 
-const `}<span className="bg-devscribe-teal/20 px-1">ComponentName</span>{` = () => {
+const `}<span className="bg-white/20 px-1">ComponentName</span>{` = () => {
   return (
     <div>
       
@@ -268,7 +268,7 @@ export default ComponentName;`}
               <div className="bg-devscribe-card-bg p-4 rounded-md border border-devscribe-border">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-3">
-                    <Scissors size={18} className="text-devscribe-teal" />
+                    <Scissors size={18} className="text-white" />
                     <span className="font-medium">Snippet Library</span>
                   </div>
                   <button className="p-1.5 rounded-md hover:bg-devscribe-hover-bg transition-colors">
@@ -371,7 +371,7 @@ export default ComponentName;`}
                   </svg>
                   <span>Snippets are synced across all your devices</span>
                 </div>
-                <button className="px-4 py-2 bg-devscribe-teal text-black rounded-md hover:bg-devscribe-teal/90 transition-colors">
+                <button className="px-4 py-2 bg-white text-black rounded-md hover:bg-white/90 transition-colors">
                   Sync Now
                 </button>
               </div>
@@ -384,7 +384,7 @@ export default ComponentName;`}
               Check out our comprehensive documentation or join our community forum to learn more about creating and using snippets effectively.
             </p>
             <div className="flex items-center gap-4">
-              <a href="/documentation" className="px-4 py-2 bg-devscribe-teal text-black rounded-md font-medium hover:bg-devscribe-teal/90 transition-colors">
+              <a href="/documentation" className="px-4 py-2 bg-white text-black rounded-md font-medium hover:bg-white/90 transition-colors">
                 View Documentation
               </a>
               <a href="/community" className="px-4 py-2 bg-transparent border border-devscribe-border text-white rounded-md font-medium hover:bg-devscribe-hover-bg transition-colors">

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { ArrowLeft, Copy, Download, ExternalLink } from 'lucide-react';
 import { Link, useParams } from 'react-router-dom';
@@ -8,6 +7,7 @@ import InfoBox from '@/components/ui/InfoBox';
 import SwaggerUI from 'swagger-ui-react';
 import 'swagger-ui-react/swagger-ui.css';
 import { useToast } from '@/hooks/use-toast';
+import TableOfContents from '../components/ui/TableOfContents';
 
 // Mock API data - in a real app, this would come from an API or database
 const apiData = {
@@ -243,7 +243,6 @@ curl -X POST https://api.paystream.com/v3/payments \\
       }
     }
   },
-  // Add other APIs with similar structure...
   'messagenet': {
     name: 'MessageNet',
     description: 'Send SMS, email, and push notifications through a single API.',
@@ -339,30 +338,1053 @@ curl -X POST 'https://api.messagenet.io/v1/sms?api_key=YOUR_API_KEY' \\
       }
     }
   },
+  'metricflow': {
+    name: 'MetricFlow',
+    description: 'Advanced data analytics and metric calculation platform for businesses.',
+    version: 'v1.2',
+    baseURL: 'https://api.metricflow.com/v1',
+    authentication: 'Bearer Token (Authorization header)',
+    logo: 'https://via.placeholder.com/80',
+    pricing: 'Tiered pricing starting at $99/month',
+    swaggerUrl: 'https://petstore.swagger.io/v2/swagger.json',
+    documentation: {
+      overview: `
+        MetricFlow provides a powerful API for calculating and tracking complex business metrics. 
+        Easily aggregate, transform, and analyze your data with our flexible metric calculation engine.
+      `,
+      endpoints: [
+        {
+          name: 'Create Metric',
+          method: 'POST',
+          path: '/metrics',
+          description: 'Define a new custom metric for tracking',
+          parameters: [
+            { name: 'name', type: 'string', required: true, description: 'Name of the metric' },
+            { name: 'calculation', type: 'string', required: true, description: 'Calculation formula for the metric' },
+            { name: 'data_sources', type: 'array', required: true, description: 'Data sources to use for calculation' },
+          ],
+          response: '{ "metric_id": "mtc_123456", "status": "created" }',
+        },
+        {
+          name: 'Get Metric Data',
+          method: 'GET',
+          path: '/metrics/{metric_id}',
+          description: 'Retrieve calculated metric data',
+          parameters: [
+            { name: 'metric_id', type: 'string', required: true, description: 'Unique identifier for the metric' },
+            { name: 'start_date', type: 'string', required: false, description: 'Start date for data retrieval' },
+            { name: 'end_date', type: 'string', required: false, description: 'End date for data retrieval' },
+          ],
+          response: '{ "metric_id": "mtc_123456", "value": 1234.56, "trend": "increasing" }',
+        },
+      ],
+      codeExamples: {
+        javascript: `
+const createMetric = async () => {
+  const response = await fetch('https://api.metricflow.com/v1/metrics', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer YOUR_API_KEY'
+    },
+    body: JSON.stringify({
+      name: 'Customer Acquisition Cost',
+      calculation: 'total_marketing_spend / new_customers',
+      data_sources: ['marketing_expenses', 'customer_registrations']
+    })
+  });
+  
+  const data = await response.json();
+  console.log('Metric created:', data.metric_id);
+};
+
+createMetric();
+        `,
+        python: `
+import requests
+
+def create_metric():
+    response = requests.post(
+        'https://api.metricflow.com/v1/metrics',
+        headers={
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer YOUR_API_KEY'
+        },
+        json={
+            'name': 'Customer Acquisition Cost',
+            'calculation': 'total_marketing_spend / new_customers',
+            'data_sources': ['marketing_expenses', 'customer_registrations']
+        }
+    )
+    
+    data = response.json()
+    print(f'Metric created: {data["metric_id"]}')
+
+create_metric()
+        `,
+        curl: `
+curl -X POST https://api.metricflow.com/v1/metrics \\
+  -H "Content-Type: application/json" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -d '{
+    "name": "Customer Acquisition Cost",
+    "calculation": "total_marketing_spend / new_customers",
+    "data_sources": ["marketing_expenses", "customer_registrations"]
+  }'
+        `
+      }
+    }
+  },
+  'insightiq': {
+    name: 'InsightIQ',
+    description: 'Business intelligence and data visualization platform.',
+    version: 'v2.0',
+    baseURL: 'https://api.insightiq.com/v2',
+    authentication: 'API Key (Header: X-API-Key)',
+    logo: 'https://via.placeholder.com/80',
+    pricing: 'Starting at $249/month',
+    swaggerUrl: 'https://petstore.swagger.io/v2/swagger.json',
+    documentation: {
+      overview: `
+        InsightIQ transforms raw data into actionable insights with powerful 
+        visualization and reporting tools. Create dynamic dashboards, 
+        generate intelligent reports, and uncover hidden patterns in your data.
+      `,
+      endpoints: [
+        {
+          name: 'Create Dashboard',
+          method: 'POST',
+          path: '/dashboards',
+          description: 'Create a new interactive dashboard',
+          parameters: [
+            { name: 'name', type: 'string', required: true, description: 'Name of the dashboard' },
+            { name: 'widgets', type: 'array', required: true, description: 'List of widgets to include' },
+            { name: 'data_sources', type: 'array', required: true, description: 'Data sources for the dashboard' },
+          ],
+          response: '{ "dashboard_id": "dsh_123456", "status": "created" }',
+        },
+        {
+          name: 'Generate Report',
+          method: 'POST',
+          path: '/reports',
+          description: 'Generate a comprehensive business report',
+          parameters: [
+            { name: 'type', type: 'string', required: true, description: 'Type of report (quarterly, annual, custom)' },
+            { name: 'metrics', type: 'array', required: true, description: 'Metrics to include in the report' },
+            { name: 'format', type: 'string', required: false, description: 'Output format (PDF, CSV, interactive)' },
+          ],
+          response: '{ "report_id": "rpt_789012", "download_url": "https://cdn.insightiq.com/reports/rpt_789012.pdf" }',
+        },
+      ],
+      codeExamples: {
+        javascript: `
+const createDashboard = async () => {
+  const response = await fetch('https://api.insightiq.com/v2/dashboards', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-API-Key': 'YOUR_API_KEY'
+    },
+    body: JSON.stringify({
+      name: 'Sales Performance Dashboard',
+      widgets: ['revenue_chart', 'conversion_rate', 'top_products'],
+      data_sources: ['sales_database', 'crm_system']
+    })
+  });
+  
+  const data = await response.json();
+  console.log('Dashboard created:', data.dashboard_id);
+};
+
+createDashboard();
+        `,
+        python: `
+import requests
+
+def create_dashboard():
+    response = requests.post(
+        'https://api.insightiq.com/v2/dashboards',
+        headers={
+            'Content-Type': 'application/json',
+            'X-API-Key': 'YOUR_API_KEY'
+        },
+        json={
+            'name': 'Sales Performance Dashboard',
+            'widgets': ['revenue_chart', 'conversion_rate', 'top_products'],
+            'data_sources': ['sales_database', 'crm_system']
+        }
+    )
+    
+    data = response.json()
+    print(f'Dashboard created: {data["dashboard_id"]}')
+
+create_dashboard()
+        `,
+        curl: `
+curl -X POST https://api.insightiq.com/v2/dashboards \\
+  -H "Content-Type: application/json" \\
+  -H "X-API-Key: YOUR_API_KEY" \\
+  -d '{
+    "name": "Sales Performance Dashboard",
+    "widgets": ["revenue_chart", "conversion_rate", "top_products"],
+    "data_sources": ["sales_database", "crm_system"]
+  }'
+        `
+      }
+    }
+  },
+  'invoicepal': {
+    name: 'InvoicePal',
+    description: 'Automated invoicing and billing management solution.',
+    version: 'v1.1',
+    baseURL: 'https://api.invoicepal.com/v1',
+    authentication: 'Bearer Token (Authorization header)',
+    logo: 'https://via.placeholder.com/80',
+    pricing: 'Starting at $49/month',
+    swaggerUrl: 'https://petstore.swagger.io/v2/swagger.json',
+    documentation: {
+      overview: `
+        InvoicePal simplifies billing and invoicing for businesses of all sizes. 
+        Automate invoice generation, track payments, and manage financial workflows 
+        with our comprehensive API.
+      `,
+      endpoints: [
+        {
+          name: 'Create Invoice',
+          method: 'POST',
+          path: '/invoices',
+          description: 'Generate a new invoice for a client',
+          parameters: [
+            { name: 'client_id', type: 'string', required: true, description: 'Unique identifier for the client' },
+            { name: 'items', type: 'array', required: true, description: 'List of billable items' },
+            { name: 'due_date', type: 'string', required: false, description: 'Invoice due date' },
+          ],
+          response: '{ "invoice_id": "inv_123456", "status": "draft", "total": 1500.00 }',
+        },
+        {
+          name: 'Send Invoice',
+          method: 'POST',
+          path: '/invoices/{invoice_id}/send',
+          description: 'Send an invoice to the client',
+          parameters: [
+            { name: 'invoice_id', type: 'string', required: true, description: 'Unique identifier for the invoice' },
+            { name: 'email', type: 'string', required: false, description: 'Client email address' },
+          ],
+          response: '{ "status": "sent", "delivery_method": "email" }',
+        },
+      ],
+      codeExamples: {
+        javascript: `
+const createInvoice = async () => {
+  const response = await fetch('https://api.invoicepal.com/v1/invoices', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer YOUR_API_KEY'
+    },
+    body: JSON.stringify({
+      client_id: 'client_789',
+      items: [
+        { description: 'Web Design Services', quantity: 1, unit_price: 1500 }
+      ],
+      due_date: '2023-06-30'
+    })
+  });
+  
+  const data = await response.json();
+  console.log('Invoice created:', data.invoice_id);
+};
+
+createInvoice();
+        `,
+        python: `
+import requests
+
+def create_invoice():
+    response = requests.post(
+        'https://api.invoicepal.com/v1/invoices',
+        headers={
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer YOUR_API_KEY'
+        },
+        json={
+            'client_id': 'client_789',
+            'items': [
+                {'description': 'Web Design Services', 'quantity': 1, 'unit_price': 1500}
+            ],
+            'due_date': '2023-06-30'
+        }
+    )
+    
+    data = response.json()
+    print(f'Invoice created: {data["invoice_id"]}')
+
+create_invoice()
+        `,
+        curl: `
+curl -X POST https://api.invoicepal.com/v1/invoices \\
+  -H "Content-Type: application/json" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -d '{
+    "client_id": "client_789",
+    "items": [
+      {
+        "description": "Web Design Services",
+        "quantity": 1,
+        "unit_price": 1500
+      }
+    ],
+    "due_date": "2023-06-30"
+  }'
+        `
+      }
+    }
+  },
+  'transacto': {
+    name: 'Transacto',
+    description: 'Financial transaction monitoring and fraud detection API.',
+    version: 'v2.0',
+    baseURL: 'https://api.transacto.com/v2',
+    authentication: 'API Key (Header: X-API-Key)',
+    logo: 'https://via.placeholder.com/80',
+    pricing: 'Pay per transaction, starting at $0.01',
+    swaggerUrl: 'https://petstore.swagger.io/v2/swagger.json',
+    documentation: {
+      overview: `
+        Transacto provides real-time transaction monitoring and advanced fraud 
+        detection capabilities. Protect your business with machine learning-powered 
+        risk assessment and comprehensive transaction analysis.
+      `,
+      endpoints: [
+        {
+          name: 'Analyze Transaction',
+          method: 'POST',
+          path: '/transactions/analyze',
+          description: 'Perform risk analysis on a financial transaction',
+          parameters: [
+            { name: 'amount', type: 'number', required: true, description: 'Transaction amount' },
+            { name: 'currency', type: 'string', required: true, description: 'Transaction currency' },
+            { name: 'merchant', type: 'string', required: true, description: 'Merchant identifier' },
+            { name: 'customer_id', type: 'string', required: true, description: 'Customer unique identifier' },
+          ],
+          response: '{ "transaction_id": "txn_123456", "risk_score": 25, "status": "approved" }',
+        },
+        {
+          name: 'Get Transaction History',
+          method: 'GET',
+          path: '/transactions',
+          description: 'Retrieve transaction history for a customer',
+          parameters: [
+            { name: 'customer_id', type: 'string', required: true, description: 'Customer unique identifier' },
+            { name: 'start_date', type: 'string', required: false, description: 'Start date for transaction history' },
+            { name: 'end_date', type: 'string', required: false, description: 'End date for transaction history' },
+          ],
+          response: '{ "transactions": [ { "id": "txn_789012", "amount": 100.00, "date": "2023-05-15T12:30:00Z" } ] }',
+        },
+      ],
+      codeExamples: {
+        javascript: `
+const analyzeTransaction = async () => {
+  const response = await fetch('https://api.transacto.com/v2/transactions/analyze', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-API-Key': 'YOUR_API_KEY'
+    },
+    body: JSON.stringify({
+      amount: 250.00,
+      currency: 'USD',
+      merchant: 'online_retailer',
+      customer_id: 'cust_123456'
+    })
+  });
+  
+  const data = await response.json();
+  console.log('Transaction risk score:', data.risk_score);
+};
+
+analyzeTransaction();
+        `,
+        python: `
+import requests
+
+def analyze_transaction():
+    response = requests.post(
+        'https://api.transacto.com/v2/transactions/analyze',
+        headers={
+            'Content-Type': 'application/json',
+            'X-API-Key': 'YOUR_API_KEY'
+        },
+        json={
+            'amount': 250.00,
+            'currency': 'USD',
+            'merchant': 'online_retailer',
+            'customer_id': 'cust_123456'
+        }
+    )
+    
+    data = response.json()
+    print(f'Transaction risk score: {data["risk_score"]}')
+
+analyze_transaction()
+        `,
+        curl: `
+curl -X POST https://api.transacto.com/v2/transactions/analyze \\
+  -H "Content-Type: application/json" \\
+  -H "X-API-Key: YOUR_API_KEY" \\
+  -d '{
+    "amount": 250.00,
+    "currency": "USD",
+    "merchant": "online_retailer",
+    "customer_id": "cust_123456"
+  }'
+        `
+      }
+    }
+  },
+  'chatbridge': {
+    name: 'ChatBridge',
+    description: 'Unified communication and chat integration API.',
+    version: 'v1.5',
+    baseURL: 'https://api.chatbridge.com/v1',
+    authentication: 'Bearer Token (Authorization header)',
+    logo: 'https://via.placeholder.com/80',
+    pricing: 'Starting at $99/month',
+    swaggerUrl: 'https://petstore.swagger.io/v2/swagger.json',
+    documentation: {
+      overview: `
+        ChatBridge provides a seamless communication API that integrates 
+        multiple chat platforms and messaging services. Connect with your 
+        users across various channels with a single, unified API.
+      `,
+      endpoints: [
+        {
+          name: 'Send Message',
+          method: 'POST',
+          path: '/messages',
+          description: 'Send a message across multiple communication channels',
+          parameters: [
+            { name: 'channels', type: 'array', required: true, description: 'List of communication channels' },
+            { name: 'message', type: 'object', required: true, description: 'Message content and metadata' },
+            { name: 'recipients', type: 'array', required: true, description: 'List of recipient identifiers' },
+          ],
+          response: '{ "message_id": "msg_123456", "status": "sent", "channels": ["sms", "email"] }',
+        },
+        {
+          name: 'Get Conversation',
+          method: 'GET',
+          path: '/conversations/{conversation_id}',
+          description: 'Retrieve conversation history',
+          parameters: [
+            { name: 'conversation_id', type: 'string', required: true, description: 'Unique identifier for the conversation' },
+            { name: 'limit', type: 'number', required: false, description: 'Maximum number of messages to retrieve' },
+          ],
+          response: '{ "messages": [ { "id": "msg_789012", "content": "Hello!", "timestamp": "2023-05-15T12:30:00Z" } ] }',
+        },
+      ],
+      codeExamples: {
+        javascript: `
+const sendMultiChannelMessage = async () => {
+  const response = await fetch('https://api.chatbridge.com/v1/messages', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer YOUR_API_KEY'
+    },
+    body: JSON.stringify({
+      channels: ['sms', 'email'],
+      message: {
+        subject: 'Important Update',
+        body: 'Your account has been activated.'
+      },
+      recipients: ['user_123456', 'user_789012']
+    })
+  });
+  
+  const data = await response.json();
+  console.log('Message sent:', data.message_id);
+};
+
+sendMultiChannelMessage();
+        `,
+        python: `
+import requests
+
+def send_multi_channel_message():
+    response = requests.post(
+        'https://api.chatbridge.com/v1/messages',
+        headers={
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer YOUR_API_KEY'
+        },
+        json={
+            'channels': ['sms', 'email'],
+            'message': {
+                'subject': 'Important Update',
+                'body': 'Your account has been activated.'
+            },
+            'recipients': ['user_123456', 'user_789012']
+        }
+    )
+    
+    data = response.json()
+    print(f'Message sent: {data["message_id"]}')
+
+send_multi_channel_message()
+        `,
+        curl: `
+curl -X POST https://api.chatbridge.com/v1/messages \\
+  -H "Content-Type: application/json" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -d '{
+    "channels": ["sms", "email"],
+    "message": {
+      "subject": "Important Update",
+      "body": "Your account has been activated."
+    },
+    "recipients": ["user_123456", "user_789012"]
+  }'
+        `
+      }
+    }
+  },
+  'notifyplus': {
+    name: 'NotifyPlus',
+    description: 'Advanced notification and alert management system.',
+    version: 'v2.0',
+    baseURL: 'https://api.notifyplus.com/v2',
+    authentication: 'API Key (Header: X-API-Key)',
+    logo: 'https://via.placeholder.com/80',
+    pricing: 'Free tier, then $0.01 per notification',
+    swaggerUrl: 'https://petstore.swagger.io/v2/swagger.json',
+    documentation: {
+      overview: `
+        NotifyPlus offers a comprehensive notification management API 
+        that supports multiple channels and advanced delivery rules. 
+        Create, schedule, and track notifications with ease.
+      `,
+      endpoints: [
+        {
+          name: 'Create Notification Template',
+          method: 'POST',
+          path: '/templates',
+          description: 'Create a reusable notification template',
+          parameters: [
+            { name: 'name', type: 'string', required: true, description: 'Template name' },
+            { name: 'channels', type: 'array', required: true, description: 'Notification channels' },
+            { name: 'content', type: 'object', required: true, description: 'Notification content template' },
+          ],
+          response: '{ "template_id": "tpl_123456", "status": "created" }',
+        },
+        {
+          name: 'Send Notification',
+          method: 'POST',
+          path: '/notifications',
+          description: 'Send a notification using a template or custom content',
+          parameters: [
+            { name: 'template_id', type: 'string', required: false, description: 'Template to use' },
+            { name: 'recipients', type: 'array', required: true, description: 'List of recipient identifiers' },
+            { name: 'custom_content', type: 'object', required: false, description: 'Override template content' },
+          ],
+          response: '{ "notification_id": "ntf_789012", "status": "sent", "recipients": 5 }',
+        },
+      ],
+      codeExamples: {
+        javascript: `
+const sendNotification = async () => {
+  const response = await fetch('https://api.notifyplus.com/v2/notifications', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-API-Key': 'YOUR_API_KEY'
+    },
+    body: JSON.stringify({
+      template_id: 'tpl_welcome',
+      recipients: ['user_123', 'user_456', 'user_789'],
+      custom_content: {
+        name: 'John Doe',
+        product: 'Premium Plan'
+      }
+    })
+  });
+  
+  const data = await response.json();
+  console.log('Notification sent:', data.notification_id);
+};
+
+sendNotification();
+        `,
+        python: `
+import requests
+
+def send_notification():
+    response = requests.post(
+        'https://api.notifyplus.com/v2/notifications',
+        headers={
+            'Content-Type': 'application/json',
+            'X-API-Key': 'YOUR_API_KEY'
+        },
+        json={
+            'template_id': 'tpl_welcome',
+            'recipients': ['user_123', 'user_456', 'user_789'],
+            'custom_content': {
+                'name': 'John Doe',
+                'product': 'Premium Plan'
+            }
+        }
+    )
+    
+    data = response.json()
+    print(f'Notification sent: {data["notification_id"]}')
+
+send_notification()
+        `,
+        curl: `
+curl -X POST https://api.notifyplus.com/v2/notifications \\
+  -H "Content-Type: application/json" \\
+  -H "X-API-Key: YOUR_API_KEY" \\
+  -d '{
+    "template_id": "tpl_welcome",
+    "recipients": ["user_123", "user_456", "user_789"],
+    "custom_content": {
+      "name": "John Doe",
+      "product": "Premium Plan"
+    }
+  }'
+        `
+      }
+    }
+  },
+  'visionai': {
+    name: 'Vision AI',
+    description: 'Advanced computer vision and image recognition API.',
+    version: 'v1.3',
+    baseURL: 'https://api.visionai.com/v1',
+    authentication: 'Bearer Token (Authorization header)',
+    logo: 'https://via.placeholder.com/80',
+    pricing: 'Pay per API call, starting at $0.10 per 1000 requests',
+    swaggerUrl: 'https://petstore.swagger.io/v2/swagger.json',
+    documentation: {
+      overview: `
+        Vision AI provides cutting-edge computer vision capabilities, 
+        enabling developers to build intelligent image and video analysis 
+        features into their applications with ease.
+      `,
+      endpoints: [
+        {
+          name: 'Analyze Image',
+          method: 'POST',
+          path: '/images/analyze',
+          description: 'Perform comprehensive image analysis',
+          parameters: [
+            { name: 'image_url', type: 'string', required: true, description: 'URL of the image to analyze' },
+            { name: 'features', type: 'array', required: false, description: 'Specific analysis features to extract' },
+          ],
+          response: '{ "objects": [ { "name": "car", "confidence": 0.95 } ], "labels": [ "transportation" ] }',
+        },
+        {
+          name: 'Face Detection',
+          method: 'POST',
+          path: '/images/faces',
+          description: 'Detect and analyze faces in an image',
+          parameters: [
+            { name: 'image_url', type: 'string', required: true, description: 'URL of the image to analyze' },
+            { name: 'attributes', type: 'array', required: false, description: 'Face attributes to detect' },
+          ],
+          response: '{ "faces": [ { "age": 35, "gender": "male", "emotions": ["neutral"] } ] }',
+        },
+      ],
+      codeExamples: {
+        javascript: `
+const analyzeImage = async () => {
+  const response = await fetch('https://api.visionai.com/v1/images/analyze', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer YOUR_API_KEY'
+    },
+    body: JSON.stringify({
+      image_url: 'https://example.com/sample-image.jpg',
+      features: ['objects', 'labels', 'colors']
+    })
+  });
+  
+  const data = await response.json();
+  console.log('Image analysis:', data);
+};
+
+analyzeImage();
+        `,
+        python: `
+import requests
+
+def analyze_image():
+    response = requests.post(
+        'https://api.visionai.com/v1/images/analyze',
+        headers={
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer YOUR_API_KEY'
+        },
+        json={
+            'image_url': 'https://example.com/sample-image.jpg',
+            'features': ['objects', 'labels', 'colors']
+        }
+    )
+    
+    data = response.json()
+    print('Image analysis:', data)
+
+analyze_image()
+        `,
+        curl: `
+curl -X POST https://api.visionai.com/v1/images/analyze \\
+  -H "Content-Type: application/json" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -d '{
+    "image_url": "https://example.com/sample-image.jpg",
+    "features": ["objects", "labels", "colors"]
+  }'
+        `
+      }
+    }
+  },
+  'predictionml': {
+    name: 'PredictionML',
+    description: 'Machine learning model deployment and prediction API.',
+    version: 'v2.1',
+    baseURL: 'https://api.predictionml.com/v2',
+    authentication: 'API Key (Header: X-API-Key)',
+    logo: 'https://via.placeholder.com/80',
+    pricing: 'Starting at $199/month',
+    swaggerUrl: 'https://petstore.swagger.io/v2/swagger.json',
+    documentation: {
+      overview: `
+        PredictionML allows developers to deploy, manage, and 
+        execute machine learning models through a simple, 
+        scalable API. Train, deploy, and make predictions 
+        across various domains.
+      `,
+      endpoints: [
+        {
+          name: 'Deploy Model',
+          method: 'POST',
+          path: '/models',
+          description: 'Deploy a new machine learning model',
+          parameters: [
+            { name: 'model_type', type: 'string', required: true, description: 'Type of machine learning model' },
+            { name: 'training_data', type: 'object', required: true, description: 'Training dataset for the model' },
+            { name: 'hyperparameters', type: 'object', required: false, description: 'Model configuration parameters' },
+          ],
+          response: '{ "model_id": "mdl_123456", "status": "training", "estimated_completion": "2023-05-20T14:30:00Z" }',
+        },
+        {
+          name: 'Make Prediction',
+          method: 'POST',
+          path: '/predictions/{model_id}',
+          description: 'Generate a prediction using a deployed model',
+          parameters: [
+            { name: 'model_id', type: 'string', required: true, description: 'Unique identifier for the model' },
+            { name: 'input_data', type: 'object', required: true, description: 'Input features for prediction' },
+          ],
+          response: '{ "prediction": 0.85, "confidence": 0.92, "explanation": "High likelihood of positive outcome" }',
+        },
+      ],
+      codeExamples: {
+        javascript: `
+const makePrediction = async () => {
+  const response = await fetch('https://api.predictionml.com/v2/predictions/mdl_123456', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-API-Key': 'YOUR_API_KEY'
+    },
+    body: JSON.stringify({
+      input_data: {
+        age: 35,
+        income: 75000,
+        credit_score: 720
+      }
+    })
+  });
+  
+  const data = await response.json();
+  console.log('Prediction:', data.prediction);
+};
+
+makePrediction();
+        `,
+        python: `
+import requests
+
+def make_prediction():
+    response = requests.post(
+        'https://api.predictionml.com/v2/predictions/mdl_123456',
+        headers={
+            'Content-Type': 'application/json',
+            'X-API-Key': 'YOUR_API_KEY'
+        },
+        json={
+            'input_data': {
+                'age': 35,
+                'income': 75000,
+                'credit_score': 720
+            }
+        }
+    )
+    
+    data = response.json()
+    print(f'Prediction: {data["prediction"]}')
+
+make_prediction()
+        `,
+        curl: `
+curl -X POST https://api.predictionml.com/v2/predictions/mdl_123456 \\
+  -H "Content-Type: application/json" \\
+  -H "X-API-Key: YOUR_API_KEY" \\
+  -d '{
+    "input_data": {
+      "age": 35,
+      "income": 75000,
+      "credit_score": 720
+    }
+  }'
+        `
+      }
+    }
+  },
+  'bobvault': {
+    name: 'BobVault',
+    description: 'Secure document storage and management API.',
+    version: 'v1.2',
+    baseURL: 'https://api.bobvault.com/v1',
+    authentication: 'Bearer Token (Authorization header)',
+    logo: 'https://via.placeholder.com/80',
+    pricing: 'Starting at $29/month',
+    swaggerUrl: 'https://petstore.swagger.io/v2/swagger.json',
+    documentation: {
+      overview: `
+        BobVault provides a secure, scalable document storage and 
+        management solution. Easily store, retrieve, and manage 
+        sensitive documents with advanced encryption and access controls.
+      `,
+      endpoints: [
+        {
+          name: 'Upload Document',
+          method: 'POST',
+          path: '/documents',
+          description: 'Upload a new document to secure storage',
+          parameters: [
+            { name: 'file', type: 'binary', required: true, description: 'Document file to upload' },
+            { name: 'metadata', type: 'object', required: false, description: 'Additional document metadata' },
+            { name: 'access_level', type: 'string', required: false, description: 'Access permissions for the document' },
+          ],
+          response: '{ "document_id": "doc_123456", "status": "uploaded", "secure_url": "https://secure.bobvault.com/doc/abc123" }',
+        },
+        {
+          name: 'Get Document',
+          method: 'GET',
+          path: '/documents/{document_id}',
+          description: 'Retrieve a specific document',
+          parameters: [
+            { name: 'document_id', type: 'string', required: true, description: 'Unique identifier for the document' },
+            { name: 'download', type: 'boolean', required: false, description: 'Force file download' },
+          ],
+          response: '{ "name": "contract.pdf", "size": 1024, "last_modified": "2023-05-15T12:30:00Z", "download_url": "https://secure.bobvault.com/download/doc_123456" }',
+        },
+      ],
+      codeExamples: {
+        javascript: `
+const uploadDocument = async () => {
+  const formData = new FormData();
+  formData.append('file', fileInput.files[0]);
+  formData.append('metadata', JSON.stringify({
+    title: 'Company Contract',
+    department: 'Legal'
+  }));
+
+  const response = await fetch('https://api.bobvault.com/v1/documents', {
+    method: 'POST',
+    headers: {
+      'Authorization': 'Bearer YOUR_API_KEY'
+    },
+    body: formData
+  });
+  
+  const data = await response.json();
+  console.log('Document uploaded:', data.document_id);
+};
+
+uploadDocument();
+        `,
+        python: `
+import requests
+
+def upload_document():
+    response = requests.post(
+        'https://api.bobvault.com/v1/documents',
+        headers={
+            'Authorization': 'Bearer YOUR_API_KEY'
+        },
+        files={'file': file},
+        data={
+            'metadata': json.dumps({
+                'title': 'Company Contract',
+                'department': 'Legal'
+            })
+        }
+    )
+    
+    data = response.json()
+    print(f'Document uploaded: {data["document_id"]}')
+
+upload_document()
+        `,
+        curl: `
+curl -X POST https://api.bobvault.com/v1/documents \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -F "file=@/path/to/contract.pdf" \\
+  -F 'metadata={"title":"Company Contract","department":"Legal"}'
+        `
+      }
+    }
+  },
+  'datawarehouse': {
+    name: 'DataWarehouse',
+    description: 'Cloud-based data warehousing and analytics platform.',
+    version: 'v3.0',
+    baseURL: 'https://api.datawarehouse.com/v3',
+    authentication: 'API Key (Header: X-API-Key)',
+    logo: 'https://via.placeholder.com/80',
+    pricing: 'Starting at $499/month',
+    swaggerUrl: 'https://petstore.swagger.io/v2/swagger.json',
+    documentation: {
+      overview: `
+        DataWarehouse offers a comprehensive cloud-based data warehousing 
+        solution that enables businesses to store, transform, and analyze 
+        large volumes of data with unprecedented ease and performance.
+      `,
+      endpoints: [
+        {
+          name: 'Create Dataset',
+          method: 'POST',
+          path: '/datasets',
+          description: 'Create a new dataset in the data warehouse',
+          parameters: [
+            { name: 'name', type: 'string', required: true, description: 'Name of the dataset' },
+            { name: 'schema', type: 'object', required: true, description: 'Dataset schema definition' },
+            { name: 'source', type: 'string', required: false, description: 'Data source for the dataset' },
+          ],
+          response: '{ "dataset_id": "dst_123456", "status": "creating", "estimated_completion": "2023-05-20T14:30:00Z" }',
+        },
+        {
+          name: 'Query Dataset',
+          method: 'POST',
+          path: '/query',
+          description: 'Run a SQL query on a dataset',
+          parameters: [
+            { name: 'dataset_id', type: 'string', required: true, description: 'Identifier of the dataset to query' },
+            { name: 'query', type: 'string', required: true, description: 'SQL query to execute' },
+            { name: 'limit', type: 'number', required: false, description: 'Maximum number of rows to return' },
+          ],
+          response: '{ "results": [ { "id": 1, "name": "John Doe", "age": 35 } ], "total_rows": 1000 }',
+        },
+      ],
+      codeExamples: {
+        javascript: `
+const queryDataset = async () => {
+  const response = await fetch('https://api.datawarehouse.com/v3/query', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-API-Key': 'YOUR_API_KEY'
+    },
+    body: JSON.stringify({
+      dataset_id: 'dst_customer_data',
+      query: 'SELECT * FROM customers WHERE age > 30 LIMIT 100',
+      limit: 100
+    })
+  });
+  
+  const data = await response.json();
+  console.log('Query results:', data.results);
+};
+
+queryDataset();
+        `,
+        python: `
+import requests
+
+def query_dataset():
+    response = requests.post(
+        'https://api.datawarehouse.com/v3/query',
+        headers={
+            'Content-Type': 'application/json',
+            'X-API-Key': 'YOUR_API_KEY'
+        },
+        json={
+            'dataset_id': 'dst_customer_data',
+            'query': 'SELECT * FROM customers WHERE age > 30 LIMIT 100',
+            'limit': 100
+        }
+    )
+    
+    data = response.json()
+    print('Query results:', data['results'])
+
+query_dataset()
+        `,
+        curl: `
+curl -X POST https://api.datawarehouse.com/v3/query \\
+  -H "Content-Type: application/json" \\
+  -H "X-API-Key: YOUR_API_KEY" \\
+  -d '{
+    "dataset_id": "dst_customer_data",
+    "query": "SELECT * FROM customers WHERE age > 30 LIMIT 100",
+    "limit": 100
+  }'
+        `
+      }
+    }
+  },
 };
 
 const APIDocumentation = () => {
-  const { apiId } = useParams();
-  const apiInfo = apiData[apiId as keyof typeof apiData];
-  const { toast } = useToast();
-  
+  const { apiId } = useParams<{ apiId: string }>();
   const [selectedLanguage, setSelectedLanguage] = useState<'javascript' | 'python' | 'curl'>('javascript');
   const [showSwagger, setShowSwagger] = useState(false);
+  const { toast } = useToast();
   
+  // Find the specific API documentation
+  const apiInfo = apiData[apiId || 'analyticshq'];
+
+  // If no API found, handle the error case
   if (!apiInfo) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-devscribe-dark-gray to-black py-12 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-3xl font-bold mb-4">API Not Found</h1>
-          <p className="text-devscribe-text-secondary mb-8">The API documentation you're looking for doesn't exist.</p>
-          <Link to="/api-marketplace" className="text-devscribe-teal hover:underline">
-            Return to API Marketplace
-          </Link>
+      <div className="flex">
+        <div className="flex-1 px-12 py-10 max-w-4xl">
+          <PageHeading 
+            subtitle="API Documentation" 
+            title="API Not Found"
+            description="The API documentation you're looking for doesn't exist."
+          />
+          <p className="text-devscribe-text-secondary mb-8">
+            Please return to the <a href="/api-marketplace" className="text-devscribe-teal hover:underline">API Marketplace</a> to find available APIs.
+          </p>
         </div>
       </div>
     );
   }
 
+  // Table of Contents items
+  const tocItems = [
+    { id: 'overview', title: 'Overview' },
+    { id: 'authentication', title: 'Authentication' },
+    { id: 'endpoints', title: 'Endpoints' },
+    { id: 'code-examples', title: 'Code Examples' },
+    { id: 'api-explorer', title: 'API Explorer' },
+  ];
+
+  // Utility function to copy to clipboard
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
     toast({
@@ -372,137 +1394,36 @@ const APIDocumentation = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-devscribe-dark-gray to-black py-12 px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="mb-8">
-          <Link to="/api-marketplace" className="inline-flex items-center text-devscribe-text-secondary hover:text-white transition-colors">
-            <ArrowLeft size={16} className="mr-2" />
-            Back to API Marketplace
-          </Link>
-        </div>
-        
-        <div className="flex items-center gap-6 mb-8">
-          <img src={apiInfo.logo} alt={apiInfo.name} className="w-16 h-16 rounded-xl bg-black/20" />
-          <div>
+    <div className="flex">
+      <div className="flex-1 px-12 py-10 max-w-4xl">
             <PageHeading 
               subtitle={`API Documentation • ${apiInfo.version}`} 
               title={apiInfo.name}
               description={apiInfo.description}
             />
-          </div>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-          <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-6">
-            <h3 className="text-sm font-medium text-devscribe-text-secondary mb-2">Base URL</h3>
-            <div className="flex items-center justify-between">
-              <code className="text-devscribe-teal">{apiInfo.baseURL}</code>
-              <button 
-                onClick={() => {
-                  copyToClipboard(apiInfo.baseURL);
-                }} 
-                className="text-devscribe-text-secondary hover:text-white"
-              >
-                <Copy size={16} />
-              </button>
-            </div>
-          </div>
-          
-          <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-6">
-            <h3 className="text-sm font-medium text-devscribe-text-secondary mb-2">Authentication</h3>
-            <p>{apiInfo.authentication}</p>
-          </div>
-          
-          <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-6">
-            <h3 className="text-sm font-medium text-devscribe-text-secondary mb-2">Pricing</h3>
-            <p>{apiInfo.pricing}</p>
-          </div>
-        </div>
-        
-        {/* Modified layout to make Swagger UI wider */}
-        <div className="mb-10">
-          <div className="mb-6 flex justify-between items-center">
-            <h2 className="text-2xl font-semibold">API Explorer</h2>
-            <div className="space-y-2 flex items-center gap-4">
-              <Button 
-                onClick={() => setShowSwagger(!showSwagger)} 
-                variant="outline" 
-                className="bg-devscribe-teal text-black hover:bg-devscribe-teal/90 border-none">
-                {showSwagger ? 'Hide API Explorer' : 'Try API Explorer'}
-              </Button>
-              <a href="#" className="text-devscribe-teal hover:underline flex items-center gap-1 text-sm">
-                <Download size={16} />
-                Download SDK
-              </a>
-              <a href="#" className="text-devscribe-teal hover:underline flex items-center gap-1 text-sm">
-                <ExternalLink size={16} />
-                View Full API Reference
-              </a>
-            </div>
-          </div>
-          
-          {showSwagger && (
-            <div className="bg-white rounded-xl p-4 mb-10 overflow-hidden">
-              <SwaggerUI url={apiInfo.swaggerUrl} />
-            </div>
-          )}
-          
-          <InfoBox className="mb-10">
-            Need help integrating this API? Our support team is available to assist you. Contact us at support@devscribe.com
+
+        <div className="mb-8">
+          <InfoBox>
+            Need help integrating this API? Our support team is available to assist you. Contact us at <a href="mailto:support@devscribe.com" className="text-devscribe-teal hover:underline">support@devscribe.com</a>
           </InfoBox>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2">
-            <div className="mb-10">
+        <section id="overview" className="mt-12">
               <h2 className="text-2xl font-semibold mb-4">Overview</h2>
               <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-6">
                 <p className="text-devscribe-text-secondary whitespace-pre-line">{apiInfo.documentation.overview}</p>
               </div>
-            </div>
-            
-            <div className="mb-10">
-              <h2 className="text-2xl font-semibold mb-6">Code Examples</h2>
-              
-              <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl overflow-hidden">
-                <div className="flex border-b border-devscribe-border">
-                  <button 
-                    className={`px-4 py-3 text-sm ${selectedLanguage === 'javascript' ? 'bg-black/20 text-white' : 'text-devscribe-text-secondary'}`}
-                    onClick={() => setSelectedLanguage('javascript')}
-                  >
-                    JavaScript
-                  </button>
-                  <button 
-                    className={`px-4 py-3 text-sm ${selectedLanguage === 'python' ? 'bg-black/20 text-white' : 'text-devscribe-text-secondary'}`}
-                    onClick={() => setSelectedLanguage('python')}
-                  >
-                    Python
-                  </button>
-                  <button 
-                    className={`px-4 py-3 text-sm ${selectedLanguage === 'curl' ? 'bg-black/20 text-white' : 'text-devscribe-text-secondary'}`}
-                    onClick={() => setSelectedLanguage('curl')}
-                  >
-                    cURL
-                  </button>
+        </section>
+
+        <section id="authentication" className="mt-12">
+          <h2 className="text-2xl font-semibold mb-4">Authentication</h2>
+          <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-6">
+            <p className="text-devscribe-text-secondary">{apiInfo.authentication}</p>
                 </div>
-                
-                <div className="relative">
-                  <pre className="p-6 overflow-x-auto text-sm">
-                    <code>{apiInfo.documentation.codeExamples[selectedLanguage]}</code>
-                  </pre>
-                  <button 
-                    onClick={() => copyToClipboard(apiInfo.documentation.codeExamples[selectedLanguage])} 
-                    className="absolute top-4 right-4 text-devscribe-text-secondary hover:text-white p-1 rounded-md hover:bg-devscribe-hover-bg"
-                  >
-                    <Copy size={16} />
-                  </button>
-                </div>
-              </div>
-            </div>
-            
-            <div className="mb-10">
+        </section>
+
+        <section id="endpoints" className="mt-12">
               <h2 className="text-2xl font-semibold mb-6">Endpoints</h2>
-              
               <div className="space-y-6">
                 {apiInfo.documentation.endpoints.map((endpoint, index) => (
                   <div key={index} className="bg-devscribe-card-bg border border-devscribe-border rounded-xl overflow-hidden">
@@ -555,13 +1476,69 @@ const APIDocumentation = () => {
                   </div>
                 ))}
               </div>
-            </div>
-          </div>
+        </section>
 
-          <div className="lg:col-span-1">
-            {/* Additional content can be placed here if needed */}
+        <section id="code-examples" className="mt-12">
+          <h2 className="text-2xl font-semibold mb-6">Code Examples</h2>
+          <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl overflow-hidden">
+            <div className="flex border-b border-devscribe-border">
+              {(['javascript', 'python', 'curl'] as const).map((lang) => (
+                <button 
+                  key={lang}
+                  className={`px-4 py-3 text-sm ${selectedLanguage === lang ? 'bg-black/20 text-white' : 'text-devscribe-text-secondary'}`}
+                  onClick={() => setSelectedLanguage(lang)}
+                >
+                  {lang.charAt(0).toUpperCase() + lang.slice(1)}
+                </button>
+              ))}
+            </div>
+            
+            <div className="relative">
+              <pre className="p-6 overflow-x-auto text-sm">
+                <code>{apiInfo.documentation.codeExamples[selectedLanguage]}</code>
+              </pre>
+              <button 
+                onClick={() => copyToClipboard(apiInfo.documentation.codeExamples[selectedLanguage])} 
+                className="absolute top-4 right-4 text-devscribe-text-secondary hover:text-white p-1 rounded-md hover:bg-devscribe-hover-bg"
+              >
+                <Copy size={16} />
+              </button>
+          </div>
+          </div>
+        </section>
+
+        <section id="api-explorer" className="mt-12">
+          <h2 className="text-2xl font-semibold mb-6">API Explorer</h2>
+          <div className="mb-6 flex justify-between items-center">
+            <div className="space-y-2 flex items-center gap-4">
+              <Button 
+                onClick={() => setShowSwagger(!showSwagger)} 
+                variant="outline" 
+                className="bg-devscribe-teal text-black hover:bg-devscribe-teal/90 border-none"
+              >
+                {showSwagger ? 'Hide API Explorer' : 'Try API Explorer'}
+              </Button>
+              <a href="#" className="text-devscribe-teal hover:underline flex items-center gap-1 text-sm">
+                <Download size={16} />
+                Download SDK
+              </a>
+              <a href="#" className="text-devscribe-teal hover:underline flex items-center gap-1 text-sm">
+                <ExternalLink size={16} />
+                View Full API Reference
+              </a>
           </div>
         </div>
+          
+          {showSwagger && (
+            <div className="bg-white rounded-xl p-4 mb-10 overflow-hidden">
+              <SwaggerUI url={apiInfo.swaggerUrl} />
+            </div>
+          )}
+        </section>
+      </div>
+      
+      <div className="w-64 px-6 py-10">
+        <TableOfContents items={tocItems} />
       </div>
     </div>
   );

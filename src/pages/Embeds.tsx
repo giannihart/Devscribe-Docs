@@ -115,7 +115,7 @@ const Embeds = () => {
                 </div>
                 <div className="bg-devscribe-hover-bg p-4 rounded-md flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 rounded-full bg-devscribe-teal flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5 3L19 12L5 21V3Z" fill="black" />
                       </svg>
@@ -126,7 +126,7 @@ const Embeds = () => {
                     </div>
                   </div>
                   <div className="w-1/2 h-1 bg-devscribe-border rounded-full overflow-hidden">
-                    <div className="w-1/3 h-full bg-devscribe-teal"></div>
+                    <div className="w-1/3 h-full bg-white"></div>
                   </div>
                 </div>
               </div>
@@ -196,7 +196,7 @@ const Embeds = () => {
                       <span className="text-xs">JS</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <button className="text-xs bg-devscribe-teal text-black px-2 py-1 rounded">Run</button>
+                      <button className="text-xs bg-white text-black px-2 py-1 rounded">Run</button>
                       <ExternalLink size={14} className="text-devscribe-text-secondary" />
                     </div>
                   </div>
@@ -307,7 +307,7 @@ const Embeds = () => {
               Check out our comprehensive documentation or join our community forum to learn more about creating and customizing embeds.
             </p>
             <div className="flex items-center gap-4">
-              <a href="/documentation" className="px-4 py-2 bg-devscribe-teal text-black rounded-md font-medium hover:bg-devscribe-teal/90 transition-colors">
+              <a href="/documentation" className="px-4 py-2 bg-white text-black rounded-md font-medium hover:bg-white/90 transition-colors">
                 View Documentation
               </a>
               <a href="/community" className="px-4 py-2 bg-transparent border border-devscribe-border text-white rounded-md font-medium hover:bg-devscribe-hover-bg transition-colors">

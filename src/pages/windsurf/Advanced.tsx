@@ -21,8 +21,8 @@ const WindsurfAdvanced = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
           <div className="bg-devscribe-hover-bg border border-devscribe-border rounded-lg p-6">
             <div className="flex items-start gap-4 mb-4">
-              <div className="p-2 bg-devscribe-teal/10 rounded-md">
-                <Sliders size={20} className="text-devscribe-teal" />
+              <div className="p-2 bg-white/10 rounded-md">
+                <Sliders size={20} className="text-white" />
               </div>
               <h3 className="text-lg font-semibold">Parameter Tuning</h3>
             </div>
@@ -47,8 +47,8 @@ const WindsurfAdvanced = () => {
           
           <div className="bg-devscribe-hover-bg border border-devscribe-border rounded-lg p-6">
             <div className="flex items-start gap-4 mb-4">
-              <div className="p-2 bg-devscribe-teal/10 rounded-md">
-                <Code size={20} className="text-devscribe-teal" />
+              <div className="p-2 bg-white/10 rounded-md">
+                <Code size={20} className="text-white" />
               </div>
               <h3 className="text-lg font-semibold">Code Style Enforcement</h3>
             </div>
@@ -79,8 +79,8 @@ const WindsurfAdvanced = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-devscribe-hover-bg border border-devscribe-border rounded-lg p-6">
             <div className="flex items-start gap-4 mb-4">
-              <div className="p-2 bg-devscribe-teal/10 rounded-md">
-                <Cpu size={20} className="text-devscribe-teal" />
+              <div className="p-2 bg-white/10 rounded-md">
+                <Cpu size={20} className="text-white" />
               </div>
               <h3 className="text-lg font-semibold">Private Model Deployment</h3>
             </div>
@@ -91,8 +91,8 @@ const WindsurfAdvanced = () => {
           
           <div className="bg-devscribe-hover-bg border border-devscribe-border rounded-lg p-6">
             <div className="flex items-start gap-4 mb-4">
-              <div className="p-2 bg-devscribe-teal/10 rounded-md">
-                <RefreshCw size={20} className="text-devscribe-teal" />
+              <div className="p-2 bg-white/10 rounded-md">
+                <RefreshCw size={20} className="text-white" />
               </div>
               <h3 className="text-lg font-semibold">Continuous Learning</h3>
             </div>

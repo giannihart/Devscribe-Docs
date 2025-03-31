@@ -48,8 +48,8 @@ const FeaturesCommand = () => {
       <div className="mt-8 space-y-6">
         <div className="bg-devscribe-hover-bg border border-devscribe-border rounded-lg p-6">
           <div className="flex items-start gap-4">
-            <div className="p-3 bg-devscribe-teal/10 rounded-lg">
-              <CommandIcon size={24} className="text-devscribe-teal" />
+            <div className="p-3 bg-white/10 rounded-lg">
+              <CommandIcon size={24} className="text-white" />
             </div>
             <div>
               <h3 className="text-xl font-semibold mb-2">Powerful AI Commands at Your Fingertips</h3>
@@ -62,7 +62,7 @@ const FeaturesCommand = () => {
         </div>
         
         <div className="flex items-center justify-center gap-2 my-10 text-sm text-devscribe-text-secondary">
-          <Keyboard size={16} className="text-devscribe-teal" />
+          <Keyboard size={16} className="text-white" />
           <span>Press</span>
           <kbd className="px-2 py-1 bg-devscribe-dark-gray border border-devscribe-border rounded">Ctrl</kbd>
           <span>+</span>
@@ -86,7 +86,7 @@ const FeaturesCommand = () => {
             <tbody className="divide-y divide-devscribe-border">
               {commands.map((item, index) => (
                 <tr key={index} className={index % 2 === 0 ? "bg-devscribe-dark-gray" : ""}>
-                  <td className="px-6 py-4 font-mono text-sm text-devscribe-teal">{item.command}</td>
+                  <td className="px-6 py-4 font-mono text-sm text-white">{item.command}</td>
                   <td className="px-6 py-4 text-sm">{item.description}</td>
                   <td className="px-6 py-4 font-mono text-xs text-devscribe-text-secondary">{item.example}</td>
                 </tr>
@@ -100,13 +100,13 @@ const FeaturesCommand = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
           <div className="bg-devscribe-dark-gray border border-devscribe-border rounded-lg p-6">
             <div className="flex items-start gap-4 mb-4">
-              <div className="p-2 bg-devscribe-teal/10 rounded-md">
-                <RefreshCw size={20} className="text-devscribe-teal" />
+              <div className="p-2 bg-white/10 rounded-md">
+                <RefreshCw size={20} className="text-white" />
               </div>
               <h3 className="text-lg font-semibold">Code Refactoring</h3>
             </div>
             <p className="text-devscribe-text-secondary mb-4">
-              Select code that needs improvement, then use the <span className="font-mono text-devscribe-teal">/refactor</span> command to transform it into cleaner, more maintainable code.
+              Select code that needs improvement, then use the <span className="font-mono text-white">/refactor</span> command to transform it into cleaner, more maintainable code.
             </p>
             <div className="bg-devscribe-hover-bg p-4 rounded-md">
               <p className="text-xs text-devscribe-text-secondary mb-2">Before:</p>
@@ -126,7 +126,7 @@ const FeaturesCommand = () => {
 }`}
                 </code>
               </pre>
-              <p className="text-xs text-devscribe-text-secondary mb-2">After <span className="font-mono text-devscribe-teal">/refactor</span>:</p>
+              <p className="text-xs text-devscribe-text-secondary mb-2">After <span className="font-mono text-white">/refactor</span>:</p>
               <pre className="font-mono text-xs">
                 <code className="text-devscribe-text-secondary">
 {`const processData = (data) => 
@@ -143,13 +143,13 @@ const FeaturesCommand = () => {
           
           <div className="bg-devscribe-dark-gray border border-devscribe-border rounded-lg p-6">
             <div className="flex items-start gap-4 mb-4">
-              <div className="p-2 bg-devscribe-teal/10 rounded-md">
-                <GitPullRequest size={20} className="text-devscribe-teal" />
+              <div className="p-2 bg-white/10 rounded-md">
+                <GitPullRequest size={20} className="text-white" />
               </div>
               <h3 className="text-lg font-semibold">Test Generation</h3>
             </div>
             <p className="text-devscribe-text-secondary mb-4">
-              Write better quality code by using the <span className="font-mono text-devscribe-teal">/test</span> command to generate comprehensive tests for your functions and components.
+              Write better quality code by using the <span className="font-mono text-white">/test</span> command to generate comprehensive tests for your functions and components.
             </p>
             <div className="bg-devscribe-hover-bg p-4 rounded-md">
               <p className="text-xs text-devscribe-text-secondary mb-2">Function to test:</p>
@@ -161,7 +161,7 @@ const FeaturesCommand = () => {
 }`}
                 </code>
               </pre>
-              <p className="text-xs text-devscribe-text-secondary mb-2">After <span className="font-mono text-devscribe-teal">/test --framework=jest</span>:</p>
+              <p className="text-xs text-devscribe-text-secondary mb-2">After <span className="font-mono text-white">/test --framework=jest</span>:</p>
               <pre className="font-mono text-xs">
                 <code className="text-devscribe-text-secondary">
 {`describe('validateEmail', () => {

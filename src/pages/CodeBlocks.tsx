@@ -132,7 +132,7 @@ hello_world()
                     <Copy size={16} className="text-devscribe-text-secondary" />
                   </button>
                   <button className="p-1.5 rounded-md hover:bg-devscribe-hover-bg transition-colors">
-                    <Play size={16} className="text-devscribe-teal" />
+                    <Play size={16} className="text-white" />
                   </button>
                 </div>
                 <div className="bg-devscribe-card-bg p-4 rounded-md border border-devscribe-border font-mono text-sm">
@@ -228,7 +228,7 @@ function calculateTotal(items) {
               Check out our comprehensive documentation on code blocks or ask the community for assistance.
             </p>
             <div className="flex items-center gap-4">
-              <a href="/documentation" className="px-4 py-2 bg-devscribe-teal text-black rounded-md font-medium hover:bg-devscribe-teal/90 transition-colors">
+              <a href="/documentation" className="px-4 py-2 bg-white text-black rounded-md font-medium hover:bg-white/90 transition-colors">
                 View Documentation
               </a>
               <a href="/community" className="px-4 py-2 bg-transparent border border-devscribe-border text-white rounded-md font-medium hover:bg-devscribe-hover-bg transition-colors">

@@ -15,8 +15,8 @@ const FeaturesAutocomplete = () => {
       <div className="mt-8 space-y-6">
         <div className="bg-devscribe-hover-bg border border-devscribe-border rounded-lg p-6">
           <div className="flex items-start gap-4">
-            <div className="p-3 bg-devscribe-teal/10 rounded-lg">
-              <Zap size={24} className="text-devscribe-teal" />
+            <div className="p-3 bg-white/10 rounded-lg">
+              <Zap size={24} className="text-white" />
             </div>
             <div>
               <h3 className="text-xl font-semibold mb-2">Contextual Code Completion</h3>
@@ -33,7 +33,7 @@ const FeaturesAutocomplete = () => {
           <div className="bg-devscribe-dark-gray border border-devscribe-border rounded-lg p-6">
             <div className="text-center mb-4">
               <div className="inline-flex items-center justify-center p-3 bg-devscribe-hover-bg rounded-full mb-3">
-                <Code size={24} className="text-devscribe-teal" />
+                <Code size={24} className="text-white" />
               </div>
               <h3 className="text-lg font-semibold">Understands Your Code</h3>
             </div>
@@ -45,7 +45,7 @@ const FeaturesAutocomplete = () => {
           <div className="bg-devscribe-dark-gray border border-devscribe-border rounded-lg p-6">
             <div className="text-center mb-4">
               <div className="inline-flex items-center justify-center p-3 bg-devscribe-hover-bg rounded-full mb-3">
-                <Sparkles size={24} className="text-devscribe-teal" />
+                <Sparkles size={24} className="text-white" />
               </div>
               <h3 className="text-lg font-semibold">Generates Suggestions</h3>
             </div>
@@ -57,7 +57,7 @@ const FeaturesAutocomplete = () => {
           <div className="bg-devscribe-dark-gray border border-devscribe-border rounded-lg p-6">
             <div className="text-center mb-4">
               <div className="inline-flex items-center justify-center p-3 bg-devscribe-hover-bg rounded-full mb-3">
-                <Settings size={24} className="text-devscribe-teal" />
+                <Settings size={24} className="text-white" />
               </div>
               <h3 className="text-lg font-semibold">Learns From You</h3>
             </div>

@@ -36,7 +36,7 @@ const Navigation = () => {
               </p>
               <div className="bg-devscribe-card-bg p-4 rounded-md border border-devscribe-border">
                 <div className="flex items-center gap-3 mb-4">
-                  <Menu size={18} className="text-devscribe-teal" />
+                  <Menu size={18} className="text-white" />
                   <span className="font-medium">Sidebar Sections</span>
                 </div>
                 <ul className="space-y-2 pl-7">
@@ -69,11 +69,11 @@ const Navigation = () => {
               </p>
               <div className="bg-devscribe-card-bg p-4 rounded-md border border-devscribe-border">
                 <div className="flex items-center gap-2 text-sm">
-                  <a href="/" className="text-devscribe-text-secondary hover:text-devscribe-teal transition-colors">Home</a>
+                  <a href="/" className="text-devscribe-text-secondary hover:text-white transition-colors">Home</a>
                   <ChevronRight size={14} className="text-devscribe-text-secondary" />
-                  <a href="/documentation" className="text-devscribe-text-secondary hover:text-devscribe-teal transition-colors">Documentation</a>
+                  <a href="/documentation" className="text-devscribe-text-secondary hover:text-white transition-colors">Documentation</a>
                   <ChevronRight size={14} className="text-devscribe-text-secondary" />
-                  <a href="/essentials" className="text-devscribe-text-secondary hover:text-devscribe-teal transition-colors">Essentials</a>
+                  <a href="/essentials" className="text-devscribe-text-secondary hover:text-white transition-colors">Essentials</a>
                   <ChevronRight size={14} className="text-devscribe-text-secondary" />
                   <span className="text-white">Navigation</span>
                 </div>
@@ -175,7 +175,7 @@ const Navigation = () => {
               </p>
               <div className="bg-devscribe-card-bg p-4 rounded-md border border-devscribe-border">
                 <div className="flex items-center gap-3 mb-4">
-                  <Command size={18} className="text-devscribe-teal" />
+                  <Command size={18} className="text-white" />
                   <span className="font-medium">Command Palette</span>
                 </div>
                 <div className="bg-devscribe-hover-bg p-3 rounded-md mb-3 flex items-center gap-3">
@@ -232,7 +232,7 @@ const Navigation = () => {
               <p className="text-devscribe-text-secondary mb-4">
                 You can create custom keyboard shortcuts for frequently used navigation paths in the settings menu.
               </p>
-              <a href="/global-settings" className="inline-flex items-center gap-2 text-devscribe-teal hover:underline">
+              <a href="/global-settings" className="inline-flex items-center gap-2 text-white hover:underline">
                 Configure custom shortcuts <ChevronRight size={16} />
               </a>
             </div>
@@ -287,7 +287,7 @@ const Navigation = () => {
               Check out our comprehensive documentation or join our community forum to learn more about navigating Devscribe efficiently.
             </p>
             <div className="flex items-center gap-4">
-              <a href="/documentation" className="px-4 py-2 bg-devscribe-teal text-black rounded-md font-medium hover:bg-devscribe-teal/90 transition-colors">
+              <a href="/documentation" className="px-4 py-2 bg-white text-black rounded-md font-medium hover:bg-white/90 transition-colors">
                 View Documentation
               </a>
               <a href="/community" className="px-4 py-2 bg-transparent border border-devscribe-border text-white rounded-md font-medium hover:bg-devscribe-hover-bg transition-colors">

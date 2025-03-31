@@ -9,10 +9,10 @@ interface InfoBoxProps {
 const InfoBox: React.FC<InfoBoxProps> = ({ children }) => {
   return (
     <div className="bg-devscribe-hover-bg border border-devscribe-border rounded-xl p-6 flex gap-4 items-start mb-8">
-      <div className="text-devscribe-teal mt-0.5">
+      <div className="text-white mt-0.5">
         <Info size={20} />
       </div>
-      <div className="text-sm [&_a]:text-devscribe-teal [&_a]:hover:underline">{children}</div>
+      <div className="text-sm [&_a]:text-white [&_a]:hover:underline">{children}</div>
     </div>
   );
 };

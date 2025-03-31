@@ -22,7 +22,7 @@ const WindsurfUsage = () => {
               
               <div className="space-y-6">
                 <div className="flex gap-4 items-start">
-                  <div className="w-8 h-8 flex items-center justify-center rounded-full bg-devscribe-teal/10 text-devscribe-teal flex-shrink-0">
+                  <div className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-white flex-shrink-0">
                     1
                   </div>
                   <div>
@@ -37,7 +37,7 @@ const WindsurfUsage = () => {
                 </div>
                 
                 <div className="flex gap-4 items-start">
-                  <div className="w-8 h-8 flex items-center justify-center rounded-full bg-devscribe-teal/10 text-devscribe-teal flex-shrink-0">
+                  <div className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-white flex-shrink-0">
                     2
                   </div>
                   <div>
@@ -52,7 +52,7 @@ const WindsurfUsage = () => {
                 </div>
                 
                 <div className="flex gap-4 items-start">
-                  <div className="w-8 h-8 flex items-center justify-center rounded-full bg-devscribe-teal/10 text-devscribe-teal flex-shrink-0">
+                  <div className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-white flex-shrink-0">
                     3
                   </div>
                   <div>
@@ -67,7 +67,7 @@ const WindsurfUsage = () => {
                 </div>
                 
                 <div className="flex gap-4 items-start">
-                  <div className="w-8 h-8 flex items-center justify-center rounded-full bg-devscribe-teal/10 text-devscribe-teal flex-shrink-0">
+                  <div className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-white flex-shrink-0">
                     4
                   </div>
                   <div>
@@ -91,7 +91,7 @@ const WindsurfUsage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-6">
               <div className="mb-4">
-                <Code size={24} className="text-devscribe-teal" />
+                <Code size={24} className="text-white" />
               </div>
               <h3 className="text-lg font-medium mb-2">Code Generation</h3>
               <p className="text-devscribe-text-secondary text-sm mb-4">
@@ -110,7 +110,7 @@ const WindsurfUsage = () => {
             
             <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-6">
               <div className="mb-4">
-                <PencilRuler size={24} className="text-devscribe-teal" />
+                <PencilRuler size={24} className="text-white" />
               </div>
               <h3 className="text-lg font-medium mb-2">Code Transformation</h3>
               <p className="text-devscribe-text-secondary text-sm mb-4">
@@ -129,7 +129,7 @@ const WindsurfUsage = () => {
             
             <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-6">
               <div className="mb-4">
-                <GitBranch size={24} className="text-devscribe-teal" />
+                <GitBranch size={24} className="text-white" />
               </div>
               <h3 className="text-lg font-medium mb-2">Bug Fixing</h3>
               <p className="text-devscribe-text-secondary text-sm mb-4">
@@ -148,7 +148,7 @@ const WindsurfUsage = () => {
             
             <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-6">
               <div className="mb-4">
-                <GitMerge size={24} className="text-devscribe-teal" />
+                <GitMerge size={24} className="text-white" />
               </div>
               <h3 className="text-lg font-medium mb-2">Learning & Understanding</h3>
               <p className="text-devscribe-text-secondary text-sm mb-4">

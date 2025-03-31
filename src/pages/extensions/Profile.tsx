@@ -25,7 +25,7 @@ const ExtensionsProfile = () => {
           <div className="bg-devscribe-dark-gray border border-devscribe-border rounded-lg p-5">
             <div className="flex items-center justify-between mb-4">
               <h3 className="font-medium">Code Quality Metrics</h3>
-              <PieChart size={20} className="text-devscribe-teal" />
+              <PieChart size={20} className="text-white" />
             </div>
             <div className="h-40 bg-devscribe-hover-bg rounded-md flex items-center justify-center">
               <span className="text-sm text-devscribe-text-secondary">Code Quality Chart</span>
@@ -49,7 +49,7 @@ const ExtensionsProfile = () => {
           <div className="bg-devscribe-dark-gray border border-devscribe-border rounded-lg p-5">
             <div className="flex items-center justify-between mb-4">
               <h3 className="font-medium">Time Distribution</h3>
-              <BarChart size={20} className="text-devscribe-teal" />
+              <BarChart size={20} className="text-white" />
             </div>
             <div className="h-40 bg-devscribe-hover-bg rounded-md flex items-center justify-center">
               <span className="text-sm text-devscribe-text-secondary">Time Distribution Chart</span>
@@ -73,7 +73,7 @@ const ExtensionsProfile = () => {
           <div className="bg-devscribe-dark-gray border border-devscribe-border rounded-lg p-5">
             <div className="flex items-center justify-between mb-4">
               <h3 className="font-medium">AI Impact</h3>
-              <LineChart size={20} className="text-devscribe-teal" />
+              <LineChart size={20} className="text-white" />
             </div>
             <div className="h-40 bg-devscribe-hover-bg rounded-md flex items-center justify-center">
               <span className="text-sm text-devscribe-text-secondary">AI Impact Chart</span>

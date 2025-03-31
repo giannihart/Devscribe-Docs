@@ -23,7 +23,7 @@ const WindsurfCascade = () => {
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-6">
               <div className="mb-4">
-                <Layers size={24} className="text-devscribe-teal" />
+                <Layers size={24} className="text-white" />
               </div>
               <h3 className="text-lg font-medium mb-2">Contextual Understanding</h3>
               <p className="text-devscribe-text-secondary text-sm">
@@ -33,7 +33,7 @@ const WindsurfCascade = () => {
             
             <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-6">
               <div className="mb-4">
-                <RefreshCw size={24} className="text-devscribe-teal" />
+                <RefreshCw size={24} className="text-white" />
               </div>
               <h3 className="text-lg font-medium mb-2">Agentic Workflow</h3>
               <p className="text-devscribe-text-secondary text-sm">
@@ -48,7 +48,7 @@ const WindsurfCascade = () => {
           
           <div className="space-y-6">
             <div className="flex gap-4 items-start">
-              <div className="w-8 h-8 flex items-center justify-center rounded-full bg-devscribe-teal/10 text-devscribe-teal flex-shrink-0 mt-1">
+              <div className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-white flex-shrink-0 mt-1">
                 1
               </div>
               <div>
@@ -57,7 +57,7 @@ const WindsurfCascade = () => {
                   Access Cascade by clicking the chat icon in the sidebar or using the keyboard shortcut <kbd className="px-2 py-0.5 bg-devscribe-hover-bg rounded text-xs">Ctrl</kbd> + <kbd className="px-2 py-0.5 bg-devscribe-hover-bg rounded text-xs">Shift</kbd> + <kbd className="px-2 py-0.5 bg-devscribe-hover-bg rounded text-xs">C</kbd>.
                 </p>
                 <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-4 flex items-center gap-4">
-                  <MessageSquare size={32} className="text-devscribe-teal" />
+                  <MessageSquare size={32} className="text-white" />
                   <div>
                     <p className="text-sm font-medium">Chat Panel Location</p>
                     <p className="text-xs text-devscribe-text-secondary">
@@ -69,7 +69,7 @@ const WindsurfCascade = () => {
             </div>
             
             <div className="flex gap-4 items-start">
-              <div className="w-8 h-8 flex items-center justify-center rounded-full bg-devscribe-teal/10 text-devscribe-teal flex-shrink-0 mt-1">
+              <div className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-white flex-shrink-0 mt-1">
                 2
               </div>
               <div>
@@ -98,7 +98,7 @@ const WindsurfCascade = () => {
             </div>
             
             <div className="flex gap-4 items-start">
-              <div className="w-8 h-8 flex items-center justify-center rounded-full bg-devscribe-teal/10 text-devscribe-teal flex-shrink-0 mt-1">
+              <div className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-white flex-shrink-0 mt-1">
                 3
               </div>
               <div>
@@ -114,7 +114,7 @@ const WindsurfCascade = () => {
             </div>
             
             <div className="flex gap-4 items-start">
-              <div className="w-8 h-8 flex items-center justify-center rounded-full bg-devscribe-teal/10 text-devscribe-teal flex-shrink-0 mt-1">
+              <div className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-white flex-shrink-0 mt-1">
                 4
               </div>
               <div>
@@ -125,7 +125,7 @@ const WindsurfCascade = () => {
                 
                 <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-4">
                   <div className="flex items-center gap-2 mb-2">
-                    <Code size={16} className="text-devscribe-teal" />
+                    <Code size={16} className="text-white" />
                     <span className="text-sm font-medium">Pro tip:</span>
                   </div>
                   <p className="text-sm text-devscribe-text-secondary">

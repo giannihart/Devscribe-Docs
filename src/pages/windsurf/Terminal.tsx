@@ -15,8 +15,8 @@ const WindsurfTerminal = () => {
       <div className="mt-8 space-y-6">
         <div className="bg-devscribe-hover-bg border border-devscribe-border rounded-lg p-6">
           <div className="flex items-start gap-4">
-            <div className="p-3 bg-devscribe-teal/10 rounded-lg">
-              <TerminalIcon size={24} className="text-devscribe-teal" />
+            <div className="p-3 bg-white/10 rounded-lg">
+              <TerminalIcon size={24} className="text-white" />
             </div>
             <div>
               <h3 className="text-xl font-semibold mb-2">Command Line Interface</h3>
@@ -34,17 +34,17 @@ const WindsurfTerminal = () => {
         
         <div className="grid gap-4">
           <div className="bg-devscribe-dark-gray border border-devscribe-border rounded-lg p-4">
-            <code className="text-devscribe-teal">windsurf ask "How do I implement authentication in Next.js?"</code>
+            <code className="text-white">windsurf ask "How do I implement authentication in Next.js?"</code>
             <p className="text-sm text-devscribe-text-secondary mt-2">Ask Windsurf AI a question directly from your terminal</p>
           </div>
           
           <div className="bg-devscribe-dark-gray border border-devscribe-border rounded-lg p-4">
-            <code className="text-devscribe-teal">windsurf explain ./path/to/file.js</code>
+            <code className="text-white">windsurf explain ./path/to/file.js</code>
             <p className="text-sm text-devscribe-text-secondary mt-2">Get an explanation of what a file or code snippet does</p>
           </div>
           
           <div className="bg-devscribe-dark-gray border border-devscribe-border rounded-lg p-4">
-            <code className="text-devscribe-teal">windsurf refactor ./path/to/file.js --pattern="singleton"</code>
+            <code className="text-white">windsurf refactor ./path/to/file.js --pattern="singleton"</code>
             <p className="text-sm text-devscribe-text-secondary mt-2">Refactor a file to implement a specific design pattern</p>
           </div>
         </div>

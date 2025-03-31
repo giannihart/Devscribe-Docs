@@ -173,10 +173,10 @@ const DocEditing = () => {
           
           <div className="mt-6 flex items-center justify-between p-4 bg-devscribe-card-bg border border-devscribe-border rounded-lg">
             <div className="flex items-center gap-2">
-              <Code size={20} className="text-devscribe-teal" />
+              <Code size={20} className="text-white" />
               <span>Want to see all keyboard shortcuts?</span>
             </div>
-            <button className="px-4 py-2 bg-devscribe-teal text-black rounded-md font-medium hover:bg-devscribe-teal/90 transition-colors flex items-center gap-2">
+            <button className="px-4 py-2 bg-white text-black rounded-md font-medium hover:bg-white/90 transition-colors flex items-center gap-2">
               <Copy size={16} />
               <span>View All Shortcuts</span>
             </button>

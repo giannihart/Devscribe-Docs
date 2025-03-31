@@ -10,7 +10,7 @@ interface PageHeadingProps {
 const PageHeading: React.FC<PageHeadingProps> = ({ subtitle, title, description }) => {
   return (
     <div className="mb-10 animate-fade-in">
-      <div className="text-devscribe-teal text-sm font-medium mb-2">{subtitle}</div>
+      <div className="text-white text-sm font-medium mb-2">{subtitle}</div>
       <h1 className="text-3xl font-semibold mb-3">{title}</h1>
       {description && <p className="text-devscribe-text-secondary max-w-2xl">{description}</p>}
     </div>

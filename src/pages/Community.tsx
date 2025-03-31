@@ -38,8 +38,8 @@ const Community = () => {
         {/* Community Forums */}
         <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-8">
           <div className="flex items-start gap-6">
-            <div className="w-16 h-16 flex items-center justify-center bg-devscribe-teal/10 rounded-xl">
-              <Users size={32} className="text-devscribe-teal" />
+            <div className="w-16 h-16 flex items-center justify-center bg-white/10 rounded-xl">
+              <Users size={32} className="text-white" />
             </div>
             <div>
               <h2 className="text-2xl font-semibold mb-2">Community Forums</h2>
@@ -60,8 +60,8 @@ const Community = () => {
         {/* GitHub */}
         <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-8">
           <div className="flex items-start gap-6">
-            <div className="w-16 h-16 flex items-center justify-center bg-devscribe-teal/10 rounded-xl">
-              <Code size={32} className="text-devscribe-teal" />
+            <div className="w-16 h-16 flex items-center justify-center bg-white/10 rounded-xl">
+              <Code size={32} className="text-white" />
             </div>
             <div>
               <h2 className="text-2xl font-semibold mb-2">GitHub</h2>
@@ -82,8 +82,8 @@ const Community = () => {
         {/* Events */}
         <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-8">
           <div className="flex items-start gap-6">
-            <div className="w-16 h-16 flex items-center justify-center bg-devscribe-teal/10 rounded-xl">
-              <Globe size={32} className="text-devscribe-teal" />
+            <div className="w-16 h-16 flex items-center justify-center bg-white/10 rounded-xl">
+              <Globe size={32} className="text-white" />
             </div>
             <div>
               <h2 className="text-2xl font-semibold mb-2">Community Events</h2>

@@ -34,8 +34,8 @@ const FeaturesChat = () => {
       <div className="mt-8 space-y-6">
         <div className="bg-devscribe-hover-bg border border-devscribe-border rounded-lg p-6">
           <div className="flex items-start gap-4">
-            <div className="p-3 bg-devscribe-teal/10 rounded-lg">
-              <MessageSquare size={24} className="text-devscribe-teal" />
+            <div className="p-3 bg-white/10 rounded-lg">
+              <MessageSquare size={24} className="text-white" />
             </div>
             <div>
               <h3 className="text-xl font-semibold mb-2">Context-Aware Conversations</h3>
@@ -52,8 +52,8 @@ const FeaturesChat = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
           <div className="bg-devscribe-dark-gray border border-devscribe-border rounded-lg p-6">
             <div className="flex items-start gap-4 mb-4">
-              <div className="p-2 bg-devscribe-teal/10 rounded-md">
-                <Code size={20} className="text-devscribe-teal" />
+              <div className="p-2 bg-white/10 rounded-md">
+                <Code size={20} className="text-white" />
               </div>
               <h3 className="text-lg font-semibold">Code Generation</h3>
             </div>
@@ -61,14 +61,14 @@ const FeaturesChat = () => {
               Ask the chat to generate code snippets, complete functions, or implement specific features in your preferred language.
             </p>
             <div className="mt-4 bg-devscribe-hover-bg p-3 rounded-md">
-              <p className="text-xs text-devscribe-teal mb-1.5">Example: "Generate a React component for a responsive navigation bar"</p>
+              <p className="text-xs text-white mb-1.5">Example: "Generate a React component for a responsive navigation bar"</p>
             </div>
           </div>
           
           <div className="bg-devscribe-dark-gray border border-devscribe-border rounded-lg p-6">
             <div className="flex items-start gap-4 mb-4">
-              <div className="p-2 bg-devscribe-teal/10 rounded-md">
-                <FileCode size={20} className="text-devscribe-teal" />
+              <div className="p-2 bg-white/10 rounded-md">
+                <FileCode size={20} className="text-white" />
               </div>
               <h3 className="text-lg font-semibold">Code Explanation</h3>
             </div>
@@ -76,14 +76,14 @@ const FeaturesChat = () => {
               Get detailed explanations of complex code blocks, functions, or algorithms to better understand your codebase.
             </p>
             <div className="mt-4 bg-devscribe-hover-bg p-3 rounded-md">
-              <p className="text-xs text-devscribe-teal mb-1.5">Example: "Explain how this useReducer hook works"</p>
+              <p className="text-xs text-white mb-1.5">Example: "Explain how this useReducer hook works"</p>
             </div>
           </div>
           
           <div className="bg-devscribe-dark-gray border border-devscribe-border rounded-lg p-6">
             <div className="flex items-start gap-4 mb-4">
-              <div className="p-2 bg-devscribe-teal/10 rounded-md">
-                <RefreshCw size={20} className="text-devscribe-teal" />
+              <div className="p-2 bg-white/10 rounded-md">
+                <RefreshCw size={20} className="text-white" />
               </div>
               <h3 className="text-lg font-semibold">Code Refactoring</h3>
             </div>
@@ -91,14 +91,14 @@ const FeaturesChat = () => {
               Ask for suggestions on how to refactor existing code to improve performance, readability, or maintainability.
             </p>
             <div className="mt-4 bg-devscribe-hover-bg p-3 rounded-md">
-              <p className="text-xs text-devscribe-teal mb-1.5">Example: "Refactor this function to use async/await instead of promises"</p>
+              <p className="text-xs text-white mb-1.5">Example: "Refactor this function to use async/await instead of promises"</p>
             </div>
           </div>
           
           <div className="bg-devscribe-dark-gray border border-devscribe-border rounded-lg p-6">
             <div className="flex items-start gap-4 mb-4">
-              <div className="p-2 bg-devscribe-teal/10 rounded-md">
-                <MessageSquare size={20} className="text-devscribe-teal" />
+              <div className="p-2 bg-white/10 rounded-md">
+                <MessageSquare size={20} className="text-white" />
               </div>
               <h3 className="text-lg font-semibold">General Help</h3>
             </div>
@@ -106,7 +106,7 @@ const FeaturesChat = () => {
               Get answers to programming questions, best practices, debugging help, and guidance on project architecture.
             </p>
             <div className="mt-4 bg-devscribe-hover-bg p-3 rounded-md">
-              <p className="text-xs text-devscribe-teal mb-1.5">Example: "What's the best way to handle state in a large React application?"</p>
+              <p className="text-xs text-white mb-1.5">Example: "What's the best way to handle state in a large React application?"</p>
             </div>
           </div>
         </div>
@@ -121,7 +121,7 @@ const FeaturesChat = () => {
           <div className="p-4 max-h-96 overflow-y-auto space-y-6">
             {exampleConversation.map((message, index) => (
               <div key={index} className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                <div className={`max-w-[80%] rounded-lg p-4 ${message.role === 'user' ? 'bg-devscribe-teal/20 text-white' : 'bg-devscribe-hover-bg text-devscribe-text-secondary'}`}>
+                <div className={`max-w-[80%] rounded-lg p-4 ${message.role === 'user' ? 'bg-white/20 text-white' : 'bg-devscribe-hover-bg text-devscribe-text-secondary'}`}>
                   <div className="text-xs mb-1 text-devscribe-text-secondary">
                     {message.role === 'user' ? 'You' : 'Devscribe Assistant'}
                   </div>
@@ -144,7 +144,7 @@ const FeaturesChat = () => {
                 placeholder="Ask something..."
                 className="flex-1 bg-devscribe-hover-bg border border-devscribe-border rounded-md px-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-devscribe-teal"
               />
-              <button className="bg-devscribe-teal text-black px-4 py-2 rounded-md text-sm font-medium">
+              <button className="bg-white text-black px-4 py-2 rounded-md text-sm font-medium">
                 Send
               </button>
             </div>

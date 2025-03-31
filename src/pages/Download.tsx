@@ -38,10 +38,10 @@ const Download = () => {
       <div className="max-w-3xl mx-auto text-center">
         <div className="mb-12">
           <div className="flex justify-center items-center gap-3 mb-4">
-            <div className="w-10 h-10 rounded bg-devscribe-teal flex items-center justify-center">
+            <div className="w-10 h-10 rounded bg-white flex items-center justify-center">
               <span className="text-black font-bold text-sm">C</span>
             </div>
-            <span className="text-devscribe-teal font-medium text-2xl">devscribe</span>
+            <span className="text-white font-medium text-2xl">devscribe</span>
           </div>
           
           <h1 className="text-4xl font-bold mb-4">Download Devscribe</h1>
@@ -66,13 +66,13 @@ const Download = () => {
                   <a 
                     key={version.name} 
                     href={version.url}
-                    className="flex items-center justify-between p-3 bg-devscribe-card-bg border border-devscribe-border rounded-lg hover:border-devscribe-teal/50 transition-all"
+                    className="flex items-center justify-between p-3 bg-devscribe-card-bg border border-devscribe-border rounded-lg hover:border-white/50 transition-all"
                   >
                     <div>
                       <p className="text-sm">{version.name}</p>
                       <p className="text-xs text-devscribe-text-secondary">{version.size}</p>
                     </div>
-                    <ArrowDown size={16} className="text-devscribe-teal" />
+                    <ArrowDown size={16} className="text-white" />
                   </a>
                 ))}
               </div>
@@ -87,32 +87,32 @@ const Download = () => {
           </p>
           
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <a href="#" className="flex flex-col items-center p-4 bg-devscribe-card-bg border border-devscribe-border rounded-lg hover:border-devscribe-teal/50 transition-all">
+            <a href="#" className="flex flex-col items-center p-4 bg-devscribe-card-bg border border-devscribe-border rounded-lg hover:border-white/50 transition-all">
               <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="VS Code" className="w-10 h-10 mb-2" />
               <span className="text-sm">VS Code</span>
             </a>
             
-            <a href="#" className="flex flex-col items-center p-4 bg-devscribe-card-bg border border-devscribe-border rounded-lg hover:border-devscribe-teal/50 transition-all">
+            <a href="#" className="flex flex-col items-center p-4 bg-devscribe-card-bg border border-devscribe-border rounded-lg hover:border-white/50 transition-all">
               <img src="https://resources.jetbrains.com/storage/products/intellij-idea/img/meta/intellij-idea_logo_300x300.png" alt="IntelliJ" className="w-10 h-10 mb-2" />
               <span className="text-sm">IntelliJ</span>
             </a>
             
-            <a href="#" className="flex flex-col items-center p-4 bg-devscribe-card-bg border border-devscribe-border rounded-lg hover:border-devscribe-teal/50 transition-all">
+            <a href="#" className="flex flex-col items-center p-4 bg-devscribe-card-bg border border-devscribe-border rounded-lg hover:border-white/50 transition-all">
               <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Neovim-logo.svg" alt="Neovim" className="w-10 h-10 mb-2" />
               <span className="text-sm">Neovim</span>
             </a>
             
-            <a href="#" className="flex flex-col items-center p-4 bg-devscribe-card-bg border border-devscribe-border rounded-lg hover:border-devscribe-teal/50 transition-all">
+            <a href="#" className="flex flex-col items-center p-4 bg-devscribe-card-bg border border-devscribe-border rounded-lg hover:border-white/50 transition-all">
               <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/EmacsIcon.svg" alt="Emacs" className="w-10 h-10 mb-2" />
               <span className="text-sm">Emacs</span>
             </a>
             
-            <a href="#" className="flex flex-col items-center p-4 bg-devscribe-card-bg border border-devscribe-border rounded-lg hover:border-devscribe-teal/50 transition-all">
+            <a href="#" className="flex flex-col items-center p-4 bg-devscribe-card-bg border border-devscribe-border rounded-lg hover:border-white/50 transition-all">
               <img src="https://www.sublimehq.com/images/sublime_text.png" alt="Sublime Text" className="w-10 h-10 mb-2" />
               <span className="text-sm">Sublime Text</span>
             </a>
             
-            <a href="/extensions/getting-started" className="flex flex-col items-center justify-center p-4 bg-devscribe-card-bg border border-devscribe-border rounded-lg hover:border-devscribe-teal/50 transition-all">
+            <a href="/extensions/getting-started" className="flex flex-col items-center justify-center p-4 bg-devscribe-card-bg border border-devscribe-border rounded-lg hover:border-white/50 transition-all">
               <span className="text-3xl mb-1">...</span>
               <span className="text-sm">More Editors</span>
             </a>
@@ -126,7 +126,7 @@ const Download = () => {
           </p>
           <Link 
             to="/api-marketplace" 
-            className="inline-flex items-center px-6 py-3 bg-devscribe-teal text-black font-medium rounded-full hover:bg-devscribe-teal/90 transition-colors"
+            className="inline-flex items-center px-6 py-3 bg-white text-black font-medium rounded-full hover:bg-white/90 transition-colors"
           >
             Browse API Marketplace
             <ExternalLink size={16} className="ml-2" />
