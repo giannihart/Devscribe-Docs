@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -97,43 +98,99 @@
   }
 
   /* Swagger UI Dark Theme Customization */
-  .swagger-ui {
-    @apply text-white;
+  .swagger-ui-container .swagger-ui {
+    @apply text-white rounded-xl overflow-hidden;
   }
 
-  .swagger-ui .opblock {
-    @apply border-devscribe-border;
+  .swagger-ui-container .swagger-ui .opblock {
+    @apply border-devscribe-border rounded-lg mb-4 shadow-sm;
   }
 
-  .swagger-ui .opblock-summary {
+  .swagger-ui-container .swagger-ui .opblock-summary {
+    @apply bg-devscribe-card-bg border-b border-devscribe-border rounded-t-lg;
+  }
+
+  .swagger-ui-container .swagger-ui .opblock-summary-get {
+    @apply bg-blue-900/20 text-blue-400;
+  }
+
+  .swagger-ui-container .swagger-ui .opblock-summary-post {
+    @apply bg-green-900/20 text-green-400;
+  }
+
+  .swagger-ui-container .swagger-ui .opblock-summary-put {
+    @apply bg-yellow-900/20 text-yellow-400;
+  }
+
+  .swagger-ui-container .swagger-ui .opblock-summary-delete {
+    @apply bg-red-900/20 text-red-400;
+  }
+
+  .swagger-ui-container .swagger-ui .opblock-description-wrapper {
     @apply bg-devscribe-dark-gray;
   }
 
-  .swagger-ui .opblock-summary-get {
-    @apply bg-green-900/30;
+  .swagger-ui-container .swagger-ui .opblock.opblock-get .opblock-summary-method {
+    @apply bg-blue-500;
   }
 
-  .swagger-ui .opblock-summary-post {
-    @apply bg-blue-900/30;
+  .swagger-ui-container .swagger-ui .opblock.opblock-post .opblock-summary-method {
+    @apply bg-green-500;
   }
 
-  .swagger-ui .opblock-summary-put {
-    @apply bg-yellow-900/30;
+  .swagger-ui-container .swagger-ui .opblock.opblock-put .opblock-summary-method {
+    @apply bg-yellow-500;
   }
 
-  .swagger-ui .opblock-summary-delete {
-    @apply bg-red-900/30;
+  .swagger-ui-container .swagger-ui .opblock.opblock-delete .opblock-summary-method {
+    @apply bg-red-500;
   }
 
-  .swagger-ui .parameters-col_description {
+  .swagger-ui-container .swagger-ui .btn {
+    @apply bg-devscribe-teal text-white border-0 hover:bg-devscribe-teal/90;
+  }
+
+  .swagger-ui-container .swagger-ui select {
+    @apply bg-devscribe-dark-gray border border-devscribe-border text-white;
+  }
+
+  .swagger-ui-container .swagger-ui input[type=text] {
+    @apply bg-devscribe-dark-gray border border-devscribe-border text-white;
+  }
+
+  .swagger-ui-container .swagger-ui textarea {
+    @apply bg-devscribe-dark-gray border border-devscribe-border text-white;
+  }
+
+  .swagger-ui-container .swagger-ui .parameter__name {
+    @apply text-white;
+  }
+
+  .swagger-ui-container .swagger-ui .parameter__in {
     @apply text-devscribe-text-secondary;
   }
 
-  .swagger-ui .response-col_description {
+  .swagger-ui-container .swagger-ui .response-col_status {
+    @apply text-white;
+  }
+
+  .swagger-ui-container .swagger-ui .response-col_description {
     @apply text-devscribe-text-secondary;
   }
 
-  .swagger-ui .model-container {
-    @apply bg-devscribe-card-bg;
+  .swagger-ui-container .swagger-ui .tab {
+    @apply text-white;
+  }
+
+  .swagger-ui-container .swagger-ui .model-box {
+    @apply bg-devscribe-card-bg border border-devscribe-border;
+  }
+
+  .swagger-ui-container .swagger-ui section.models {
+    @apply border border-devscribe-border bg-devscribe-card-bg;
+  }
+
+  .swagger-ui-container .swagger-ui section.models h4 {
+    @apply text-white;
   }
 }

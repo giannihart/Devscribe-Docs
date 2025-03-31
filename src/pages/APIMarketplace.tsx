@@ -96,9 +96,6 @@ const APIMarketplace = () => {
     return matchesSearch && matchesCategory;
   });
 
-  // Available categories
-  const categories: APICategory[] = ['All', 'Analytics', 'Payments', 'Communication', 'AI', 'Storage', 'Authentication'];
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-devscribe-dark-gray to-black py-12 px-6">
       <div className="max-w-6xl mx-auto">
@@ -112,89 +109,64 @@ const APIMarketplace = () => {
           Looking for our SDK instead? Visit our <a href="/download" className="text-devscribe-teal hover:underline">download page</a> to get Devscribe tools for your development environment.
         </InfoBox>
 
-        <div className="mt-8 flex flex-col md:flex-row gap-6">
-          {/* Filters sidebar */}
-          <div className="w-full md:w-64 flex-shrink-0">
-            <div className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-6">
-              <h3 className="text-lg font-medium mb-4">Categories</h3>
-              <div className="space-y-2">
-                {categories.map((category) => (
-                  <button
-                    key={category}
-                    onClick={() => setSelectedCategory(category)}
-                    className={`w-full text-left px-3 py-2 rounded-md text-sm transition-colors ${
-                      selectedCategory === category 
-                      ? 'bg-devscribe-teal/20 text-devscribe-teal' 
-                      : 'hover:bg-devscribe-hover-bg'
-                    }`}
-                  >
-                    {category}
-                  </button>
-                ))}
-              </div>
+        <div className="mt-8">
+          {/* Search bar */}
+          <div className="relative mb-6">
+            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <Search size={18} className="text-devscribe-text-secondary" />
             </div>
+            <input
+              type="text"
+              placeholder="Search APIs..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="bg-devscribe-card-bg border border-devscribe-border rounded-xl pl-10 pr-4 py-3 w-full focus:outline-none focus:ring-1 focus:ring-devscribe-teal/50 focus:border-devscribe-teal/50"
+            />
           </div>
 
-          {/* Main content */}
-          <div className="flex-1">
-            {/* Search bar */}
-            <div className="relative mb-6">
-              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <Search size={18} className="text-devscribe-text-secondary" />
-              </div>
-              <input
-                type="text"
-                placeholder="Search APIs..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="bg-devscribe-card-bg border border-devscribe-border rounded-xl pl-10 pr-4 py-3 w-full focus:outline-none focus:ring-1 focus:ring-devscribe-teal/50 focus:border-devscribe-teal/50"
-              />
-            </div>
-
-            {/* API cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {filteredApis.map((api) => (
-                <div key={api.id} className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-6 hover:border-devscribe-teal/50 transition-all relative group">
-                  <div className="flex items-center gap-4 mb-4">
-                    <img src={api.logo} alt={api.name} className="w-12 h-12 rounded-lg bg-black/20" />
-                    <div>
-                      <h3 className="font-medium">{api.name}</h3>
-                      <span className="text-xs px-2 py-0.5 bg-devscribe-hover-bg rounded-full text-devscribe-text-secondary">
-                        {api.category}
-                      </span>
-                    </div>
+          {/* API cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredApis.map((api) => (
+              <div key={api.id} className="bg-devscribe-card-bg border border-devscribe-border rounded-xl p-6 hover:border-devscribe-teal/50 transition-all relative group">
+                <div className="flex items-center gap-4 mb-4">
+                  <img src={api.logo} alt={api.name} className="w-12 h-12 rounded-lg bg-black/20" />
+                  <div>
+                    <h3 className="font-medium">{api.name}</h3>
+                    <span className="text-xs px-2 py-0.5 bg-devscribe-hover-bg rounded-full text-devscribe-text-secondary">
+                      {api.category}
+                    </span>
                   </div>
-                  <p className="text-devscribe-text-secondary text-sm mb-6">{api.description}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs text-devscribe-text-secondary">{api.pricing}</span>
-                    <div className="flex items-center gap-1">
-                      <span className="text-sm font-medium">{api.popularity}</span>
-                      <div className="flex">
-                        {[...Array(5)].map((_, i) => (
-                          <svg
-                            key={i}
-                            className={`w-4 h-4 ${i < Math.floor(api.popularity) ? 'text-devscribe-teal' : 'text-devscribe-border'}`}
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                          >
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                          </svg>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                  <a
-                    href={api.url}
-                    className="absolute inset-0 rounded-xl"
-                    aria-hidden="true"
-                  ></a>
-                  <ArrowUpRight 
-                    size={20} 
-                    className="absolute top-6 right-6 text-devscribe-text-secondary opacity-0 group-hover:opacity-100 transition-opacity" 
-                  />
                 </div>
-              ))}
-            </div>
+                <p className="text-devscribe-text-secondary text-sm mb-6">{api.description}</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-devscribe-text-secondary">{api.pricing}</span>
+                  <div className="flex items-center gap-1">
+                    <span className="text-sm font-medium">{api.popularity}</span>
+                    <div className="flex">
+                      {[...Array(5)].map((_, i) => (
+                        <svg
+                          key={i}
+                          className={`w-4 h-4 ${i < Math.floor(api.popularity) ? 'text-devscribe-teal' : 'text-devscribe-border'}`}
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <a
+                  href={api.url}
+                  className="absolute inset-0 rounded-xl"
+                  aria-hidden="true"
+                ></a>
+                <ArrowUpRight 
+                  size={20} 
+                  className="absolute top-6 right-6 text-devscribe-text-secondary opacity-0 group-hover:opacity-100 transition-opacity" 
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>

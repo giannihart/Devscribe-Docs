@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
@@ -152,7 +151,7 @@ const APISidebar = () => {
                     <category.icon size={16} />
                     <span>{category.name}</span>
                   </div>
-                  {/* Fix: Using a render prop pattern with proper JSX */}
+                  {/* Using a function that returns ReactNode instead of a render prop */}
                   {({ open }: { open: boolean }) => (
                     open ? <ChevronDown size={16} /> : <ChevronRight size={16} />
                   )}

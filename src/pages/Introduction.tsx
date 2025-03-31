@@ -68,7 +68,7 @@ const Introduction = () => {
                 Update API Documentation
               </button>
             </div>
-            <div className="w-full overflow-x-auto">
+            <div className="w-full overflow-x-auto swagger-ui-container">
               <SwaggerUI 
                 spec={swaggerSpec} 
                 docExpansion="list"
@@ -167,4 +167,4 @@ const Introduction = () => {
   );
 };
 
-export default Introduction; 
+export default Introduction;
