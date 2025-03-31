@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import { Search, Filter, ArrowUpRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Search } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import PageHeading from '@/components/ui/PageHeading';
 import InfoBox from '@/components/ui/InfoBox';
 
