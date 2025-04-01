@@ -1,11 +1,11 @@
 
+import * as React from "react"
 import * as CollapsiblePrimitive from "@radix-ui/react-collapsible"
-import { ReactNode } from "react"
 
 const Collapsible = CollapsiblePrimitive.Root
 
 type CollapsibleTriggerProps = React.ComponentPropsWithoutRef<typeof CollapsiblePrimitive.CollapsibleTrigger> & {
-  children: ReactNode | ((open: boolean) => ReactNode)
+  children: React.ReactNode | ((open: boolean) => React.ReactNode)
 }
 
 const CollapsibleTrigger = React.forwardRef<
@@ -14,7 +14,7 @@ const CollapsibleTrigger = React.forwardRef<
 >(({ children, ...props }, ref) => (
   <CollapsiblePrimitive.CollapsibleTrigger {...props} ref={ref}>
     {typeof children === "function" 
-      ? ({ open }: { open: boolean }) => (children as (open: boolean) => ReactNode)(open)
+      ? ({ open }: { open: boolean }) => (children as (open: boolean) => React.ReactNode)(open)
       : children}
   </CollapsiblePrimitive.CollapsibleTrigger>
 ))
