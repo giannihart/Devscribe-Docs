@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -37,6 +36,7 @@ body {
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import 'swagger-ui-react/swagger-ui.css';
+@import 'swagger-ui-themes/themes/3.x/theme-material.css';
 
 @layer base {
   :root {
@@ -130,193 +130,98 @@ body {
 
   /* Swagger UI Dark Theme Customization */
   .swagger-ui-container .swagger-ui {
-    @apply text-white bg-devscribe-dark-gray border border-devscribe-border rounded-xl overflow-hidden w-full;
+    @apply text-white rounded-xl overflow-hidden;
   }
 
-  /* Swagger UI Background Color */
-  .swagger-ui-container .swagger-ui,
-  .swagger-ui-container .swagger-ui .scheme-container,
-  .swagger-ui-container .swagger-ui .opblock-body,
-  .swagger-ui-container .swagger-ui .opblock-description-wrapper,
-  .swagger-ui-container .swagger-ui .opblock-summary-control,
-  .swagger-ui-container .swagger-ui .opblock-tag,
-  .swagger-ui-container .swagger-ui .info,
-  .swagger-ui-container .swagger-ui .dialog-ux .modal,
-  .swagger-ui-container .swagger-ui select,
-  .swagger-ui-container .swagger-ui input,
-  .swagger-ui-container .swagger-ui textarea,
-  .swagger-ui-container .swagger-ui .opblock .tab-header,
-  .swagger-ui-container .swagger-ui .opblock .opblock-section-header,
-  .swagger-ui-container .swagger-ui section.models,
-  .swagger-ui-container .swagger-ui section.models .model-container {
-    @apply bg-devscribe-card-bg;
-  }
-
-  /* Text color */
-  .swagger-ui-container .swagger-ui,
-  .swagger-ui-container .swagger-ui .opblock-summary-description,
-  .swagger-ui-container .swagger-ui .opblock-title_normal,
-  .swagger-ui-container .swagger-ui .opblock-description,
-  .swagger-ui-container .swagger-ui table thead tr th,
-  .swagger-ui-container .swagger-ui .parameters-col_description,
-  .swagger-ui-container .swagger-ui .parameter__name,
-  .swagger-ui-container .swagger-ui .model-title,
-  .swagger-ui-container .swagger-ui label,
-  .swagger-ui-container .swagger-ui select,
-  .swagger-ui-container .swagger-ui input,
-  .swagger-ui-container .swagger-ui .tab,
-  .swagger-ui-container .swagger-ui .info .title,
-  .swagger-ui-container .swagger-ui .info li, 
-  .swagger-ui-container .swagger-ui .info p,
-  .swagger-ui-container .swagger-ui .model .property,
-  .swagger-ui-container .swagger-ui .model-toggle:after,
-  .swagger-ui-container .swagger-ui textarea,
-  .swagger-ui-container .swagger-ui .dialog-ux .modal-header h3 {
-    @apply text-white;
-  }
-
-  /* Lighter text for secondary elements */
-  .swagger-ui-container .swagger-ui .parameter__in,
-  .swagger-ui-container .swagger-ui .parameter__type,
-  .swagger-ui-container .swagger-ui .info h4, 
-  .swagger-ui-container .swagger-ui .info h5,
-  .swagger-ui-container .swagger-ui .response-col_status,
-  .swagger-ui-container .swagger-ui .response-col_links,
-  .swagger-ui-container .swagger-ui .prop-format,
-  .swagger-ui-container .swagger-ui .model-title__text {
-    @apply text-devscribe-text-secondary;
-  }
-
-  /* Methods styling */
   .swagger-ui-container .swagger-ui .opblock {
-    @apply border-devscribe-border shadow-none mb-4 rounded-lg overflow-hidden;
+    @apply border-devscribe-border rounded-lg mb-4 shadow-sm;
   }
 
   .swagger-ui-container .swagger-ui .opblock-summary {
-    @apply border-b border-devscribe-border;
+    @apply bg-devscribe-card-bg border-b border-devscribe-border rounded-t-lg;
   }
 
-  .swagger-ui-container .swagger-ui .opblock.opblock-get {
-    @apply bg-blue-900/20 border-blue-800/50;
+  .swagger-ui-container .swagger-ui .opblock-summary-get {
+    @apply bg-blue-900/20 text-blue-400;
   }
 
-  .swagger-ui-container .swagger-ui .opblock.opblock-post {
-    @apply bg-green-900/20 border-green-800/50;
+  .swagger-ui-container .swagger-ui .opblock-summary-post {
+    @apply bg-green-900/20 text-green-400;
   }
 
-  .swagger-ui-container .swagger-ui .opblock.opblock-put {
-    @apply bg-yellow-900/20 border-yellow-800/50;
+  .swagger-ui-container .swagger-ui .opblock-summary-put {
+    @apply bg-yellow-900/20 text-yellow-400;
   }
 
-  .swagger-ui-container .swagger-ui .opblock.opblock-delete {
-    @apply bg-red-900/20 border-red-800/50;
+  .swagger-ui-container .swagger-ui .opblock-summary-delete {
+    @apply bg-red-900/20 text-red-400;
   }
 
-  .swagger-ui-container .swagger-ui .opblock.opblock-patch {
-    @apply bg-purple-900/20 border-purple-800/50;
+  .swagger-ui-container .swagger-ui .opblock-description-wrapper {
+    @apply bg-devscribe-dark-gray;
   }
 
-  /* Method badges */
   .swagger-ui-container .swagger-ui .opblock.opblock-get .opblock-summary-method {
-    @apply bg-blue-600;
+    @apply bg-blue-500;
   }
 
   .swagger-ui-container .swagger-ui .opblock.opblock-post .opblock-summary-method {
-    @apply bg-green-600;
+    @apply bg-green-500;
   }
 
   .swagger-ui-container .swagger-ui .opblock.opblock-put .opblock-summary-method {
-    @apply bg-yellow-600;
+    @apply bg-yellow-500;
   }
 
   .swagger-ui-container .swagger-ui .opblock.opblock-delete .opblock-summary-method {
-    @apply bg-red-600;
+    @apply bg-red-500;
   }
 
-  .swagger-ui-container .swagger-ui .opblock.opblock-patch .opblock-summary-method {
-    @apply bg-purple-600;
+  .swagger-ui-container .swagger-ui .btn {
+    @apply bg-devscribe-teal text-white border-0 hover:bg-devscribe-teal/90;
   }
 
-  /* Buttons and interactive elements */
-  .swagger-ui-container .swagger-ui .btn,
-  .swagger-ui-container .swagger-ui select,
-  .swagger-ui-container .swagger-ui input,
+  .swagger-ui-container .swagger-ui select {
+    @apply bg-devscribe-dark-gray border border-devscribe-border text-white;
+  }
+
+  .swagger-ui-container .swagger-ui input[type=text] {
+    @apply bg-devscribe-dark-gray border border-devscribe-border text-white;
+  }
+
   .swagger-ui-container .swagger-ui textarea {
-    @apply bg-devscribe-hover-bg border-devscribe-border text-white;
+    @apply bg-devscribe-dark-gray border border-devscribe-border text-white;
   }
 
-  .swagger-ui-container .swagger-ui .btn.execute {
-    @apply bg-devscribe-teal text-black hover:bg-devscribe-teal/90 border-none;
-  }
-
-  .swagger-ui-container .swagger-ui .try-out__btn {
-    @apply bg-devscribe-hover-bg text-white border-none hover:bg-devscribe-border;
-  }
-
-  /* Tables */
-  .swagger-ui-container .swagger-ui table,
-  .swagger-ui-container .swagger-ui .parameters-container,
-  .swagger-ui-container .swagger-ui .model-container,
-  .swagger-ui-container .swagger-ui section.models,
-  .swagger-ui-container .swagger-ui section.models .model,
-  .swagger-ui-container .swagger-ui .response-col_description__inner div {
-    @apply border-devscribe-border;
-  }
-
-  .swagger-ui-container .swagger-ui tr {
-    @apply border-b border-devscribe-border;
-  }
-
-  .swagger-ui-container .swagger-ui .responses-table .response,
-  .swagger-ui-container .swagger-ui .parameters-table tr {
-    @apply border-devscribe-border;
-  }
-
-  /* Code and schema display */
-  .swagger-ui-container .swagger-ui .opblock-section-header {
-    @apply border-b border-devscribe-border bg-transparent;
-  }
-
-  .swagger-ui-container .swagger-ui .model-example {
-    @apply bg-black/30;
-  }
-
-  .swagger-ui-container .swagger-ui .model {
+  .swagger-ui-container .swagger-ui .parameter__name {
     @apply text-white;
   }
 
-  .swagger-ui-container .swagger-ui .code, 
-  .swagger-ui-container .swagger-ui code,
-  .swagger-ui-container .swagger-ui pre,
-  .swagger-ui-container .swagger-ui .response-col_description__inner pre,
-  .swagger-ui-container .swagger-ui .microlight {
-    @apply bg-black/30 text-white;
+  .swagger-ui-container .swagger-ui .parameter__in {
+    @apply text-devscribe-text-secondary;
   }
 
-  /* Arrow icons and toggles */
-  .swagger-ui-container .swagger-ui .arrow,
-  .swagger-ui-container .swagger-ui .arrow:hover {
-    @apply fill-white;
-  }
-
-  .swagger-ui-container .swagger-ui .model-toggle::after {
+  .swagger-ui-container .swagger-ui .response-col_status {
     @apply text-white;
   }
 
-  /* Make Authorization button more visible */
-  .swagger-ui-container .swagger-ui .auth-wrapper .authorize {
-    @apply bg-devscribe-hover-bg text-white border border-devscribe-border;
+  .swagger-ui-container .swagger-ui .response-col_description {
+    @apply text-devscribe-text-secondary;
   }
 
-  .swagger-ui-container .swagger-ui .auth-btn-wrapper {
-    @apply text-center;
+  .swagger-ui-container .swagger-ui .tab {
+    @apply text-white;
   }
 
-  /* Console logs in response */
-  .swagger-ui-container .swagger-ui .highlight-code,
-  .swagger-ui-container .swagger-ui .curl-command {
-    @apply bg-black/50;
+  .swagger-ui-container .swagger-ui .model-box {
+    @apply bg-devscribe-card-bg border border-devscribe-border;
   }
 
-  /* Remove theme-material.css import since we're handling our own styling */
+  .swagger-ui-container .swagger-ui section.models {
+    @apply border border-devscribe-border bg-devscribe-card-bg;
+  }
+
+  .swagger-ui-container .swagger-ui section.models h4 {
+    @apply text-white;
+  }
 }
