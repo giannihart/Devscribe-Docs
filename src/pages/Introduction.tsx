@@ -1,6 +1,4 @@
-
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import PageNavigation from '@/components/ui/PageNavigation';
 import { Code2, FileJson, Bot, CheckCircle } from 'lucide-react';
 import SwaggerUI from 'swagger-ui-react';
@@ -27,17 +25,6 @@ const Introduction = () => {
     } catch (e) {
       alert('Invalid JSON format. Please check your specification.');
     }
-  };
-
-  // Define the navigation links
-  const prevPage = {
-    name: "Home",
-    path: "/"
-  };
-  
-  const nextPage = {
-    name: "Quickstart",
-    path: "/quickstart"
   };
 
   return (
